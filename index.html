@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaveShare.io • Founding 20</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+    
+    :root {
+      --primary: #0F766E;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Inter', system_ui, sans-serif;
+      background: #F8FAFC;
+      color: #0F172A;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: #0F766E;
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      letter-spacing: 0.5px;
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 24px 0 16px;
+      color: #0F172A;
+    }
+    
+    .subtitle {
+      font-size: 20px;
+      color: #475569;
+      max-width: 560px;
+    }
+    
+    .section {
+      margin: 48px 0;
+    }
+    
+    .value-prop {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.05);
+      border: 1px solid #E2E8F0;
+    }
+    
+    .cta {
+      background: #0F766E;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .cta:hover {
+      background: #115E59;
+      transform: translateY(-1px);
+    }
+    
+    .footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #64748B;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div>
+      <div class="badge">FOUNDING 20</div>
+      <h1>SaveShare.io is<br>onboarding its first<br>20 UK finance creators.</h1>
+      <p class="subtitle">A verified directory connecting trusted personal finance creators with UK FinTech brands.</p>
+    </div>
+
+    <!-- Value Prop -->
+    <div class="section">
+      <div class="value-prop">
+        <h3 style="margin-top:0; font-size:22px;">Why join as a Founding 20 creator?</h3>
+        <ul style="padding-left: 20px; margin: 24px 0; color: #334155;">
+          <li><strong>Verified profile</strong> — Your reach, demographics, and content style shown to brands</li>
+          <li><strong>Direct brand access</strong> — Get pitched by UK FinTech companies looking for authentic creators</li>
+          <li><strong>Free forever</strong> — No cost to maintain your living media kit</li>
+          <li><strong>Early founder status</strong> — Shape the platform and get featured prominently</li>
+        </ul>
+        
+        <button onclick="document.getElementById('interest').scrollIntoView({behavior:'smooth'})" class="cta">
+          Join the Founding 20
+        </button>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="section">
+      <h3 style="font-size: 20px; margin-bottom: 16px;">How it works</h3>
+      <div style="display: grid; gap: 16px;">
+        <div style="display: flex; gap: 16px;">
+          <div style="width: 28px; height: 28px; background: #E0F2F1; color: #0F766E; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">1</div>
+          <div>Submit your details (takes ~2 minutes)</div>
+        </div>
+        <div style="display: flex; gap: 16px;">
+          <div style="width: 28px; height: 28px; background: #E0F2F1; color: #0F766E; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">2</div>
+          <div>We manually verify your profile and reach</div>
+        </div>
+        <div style="display: flex; gap: 16px;">
+          <div style="width: 28px; height: 28px; background: #E0F2F1; color: #0F766E; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">3</div>
+          <div>Get your verified <strong>saveshare.io/p/username</strong> link</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interest form anchor -->
+    <div id="interest" class="section" style="background: white; padding: 32px; border-radius: 16px; border: 1px solid #E2E8F0;">
+      <h3 style="margin-top:0;">Interested in joining?</h3>
+      <p style="color:#475569;">We're currently accepting applications for the Founding 20. Drop your email and we'll send you the intake form.</p>
+      
+      <div style="display: flex; gap: 12px; margin-top: 20px;">
+        <input type="email" placeholder="your@email.com" style="flex:1; padding:14px 18px; border:1px solid #CBD5E1; border-radius:9999px; font-size:15px;">
+        <button class="cta">Notify me</button>
+      </div>
+      <p style="font-size:12px; color:#94A3B8; margin-top:12px;">We'll only contact you about SaveShare. No spam.</p>
+    </div>
+
+    <div class="footer">
+      SaveShare.io — Verified creator directory for UK personal finance
+    </div>
+  </div>
+</body>
+</html>
