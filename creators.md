@@ -8,11 +8,11 @@ Source: Hector, via Telegram. Net worth figures are SELF-DESCRIBED by the creato
 | sophie-blank | Sophie Blank | [@itssophieblank](https://www.tiktok.com/@itssophieblank) | 200,000 |
 | james | James Money Stocker | [@jamesmoneystocker](https://www.tiktok.com/@jamesmoneystocker) | 209,000 |
 | trading | Trading & Traveling | [@tradingandtraveling](https://www.tiktok.com/@tradingandtraveling) | 131,000 |
-| sean | Sean | [@seansmoney](https://www.tiktok.com/@seansmoney) | 122,000 |
+| sean | Sean | [@seansmoney](https://www.tiktok.com/@seansmoney) | 75,000 (Sep 2026, self-stated — was 122,000, corrected 2026-10-05) |
 | neil | Neil Invests | [@neilinvests](https://www.tiktok.com/@neilinvests) | 120,000 |
 | hannah | Hannah Bevington | [@hannahbevington](https://www.tiktok.com/@hannahbevington) | 120,000 |
 | drjubair | Dr Jubair | [@drjubairsfinance](https://www.tiktok.com/@drjubairsfinance) | 114,700 |
-| ben | BenFinance | [@benfinance](https://www.tiktok.com/@benfinance) | 109,000 |
+| ben | BenFinance — REMOVED 2026-10-05 (account posts in Italian, wrong handle, needs re-identifying) | ~~@benfinance~~ | — |
 
 ### Additional creators (handles to resolve)
 | Name | TikTok (TBC) | Net Worth (self-described) |
