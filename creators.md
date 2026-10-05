@@ -36,3 +36,6 @@ Source: Hector, via Telegram. Net worth figures are SELF-DESCRIBED by the creato
 - Net worth figures are self-reported / estimated at time of listing — need verification method.
 - Next step: pull live TikTok stats via TokScript for each handle.
 - Missing: platform (assumed TikTok?), YouTube/Instagram handles, portfolio breakdowns, blog URLs.
+
+| chris | Intentional Finance (Chris) | [@intentional.finance](https://www.tiktok.com/@intentional.finance) | TBC (added 2026-10-05, 3.3K followers, 72 videos) |
+| ciara | Ciara / Curated Wealth | [@ciara__anne](https://www.tiktok.com/@ciara__anne) | TBC (added 2026-10-05, 59.7K followers, 214 videos) |
