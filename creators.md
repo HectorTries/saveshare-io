@@ -59,3 +59,46 @@ Avg engagement = (likes+comments+shares)/views averaged across 20 most recent vi
 - Per-creator profiles: `p/<handle>.html` (8 pages) — linked from each index.html card.
 - Advice blog hub: `blog/index.html` — 10 themed entries quoting multiple creators with TikTok source links.
 - Bulk transcript job: `ts_d3fea01f` (160 URLs, 125 with transcripts).
+
+## Expansion (2026-10-06) — 29 new creators, all net worth TBC, engagement TBC
+
+| Name | TikTok | Followers (verified 2026-10-06) |
+|------|--------|---------------------------------|
+| Gabriel Nussbaum (That Money Guy) | [@gabriel.nussbaum](https://www.tiktok.com/@gabriel.nussbaum) | 1.4M |
+| Dahlia (ex-BlackRock) | [@getontopwithdahlia](https://www.tiktok.com/@getontopwithdahlia) | 8.2K |
+| Rex (Everyday Millionaire) | [@theeverydaymillionaire](https://www.tiktok.com/@theeverydaymillionaire) | 39K |
+| Bret and Evey | [@bretandevey](https://www.tiktok.com/@bretandevey) | 294.6K |
+| Fellas Finance | [@fellasfinance](https://www.tiktok.com/@fellasfinance) | 85.3K |
+| Tommy Everitt | [@tommytalks.uk](https://www.tiktok.com/@tommytalks.uk) | 223 |
+| James (Money Stocker) | [@moneystocker](https://www.tiktok.com/@moneystocker) | 60.8K |
+| Emmie (quant finance) | [@emmieedit](https://www.tiktok.com/@emmieedit) | 108.1K |
+| Tatiana | [@tatianamamixo](https://www.tiktok.com/@tatianamamixo) | 14.9K |
+| Ola (All Things Money) | [@allthingsmoney_](https://www.tiktok.com/@allthingsmoney_) | 6.5K |
+| Krish Kara | [@krish.kara](https://www.tiktok.com/@krish.kara) | 104K |
+| Cam | [@camrusselluk](https://www.tiktok.com/@camrusselluk) | 3.7K |
+| Amy (Financially Her) | [@financiallyher_](https://www.tiktok.com/@financiallyher_) | 45.6K |
+| JNO | [@jno_pwnr](https://www.tiktok.com/@jno_pwnr) | 47.5K |
+| awright | [@awright.s](https://www.tiktok.com/@awright.s) | 3.3K |
+| Daniel (Gray Area Finance) | [@gray.area.finance](https://www.tiktok.com/@gray.area.finance) | 18.4K |
+| George Tuttle (accountant) | [@george_tuttle](https://www.tiktok.com/@george_tuttle) | 1.2K |
+| Kafilat | [@kafilat.finance](https://www.tiktok.com/@kafilat.finance) | 7.3K |
+| Charlie | [@wealthmadeaccessible](https://www.tiktok.com/@wealthmadeaccessible) | 43.9K |
+| Elly (teacher, millionaire track) | [@msellyphant](https://www.tiktok.com/@msellyphant) | 36.5K |
+| Amanda | [@amandainvests](https://www.tiktok.com/@amandainvests) | 3.4K |
+| DiDi | [@didifinance](https://www.tiktok.com/@didifinance) | 18.2K |
+| Ben (UK, Trading 212 code BEN) | [@bensfinance](https://www.tiktok.com/@bensfinance) | 26.9K |
+| Lupes | [@lupeslively](https://www.tiktok.com/@lupeslively) | 64K |
+| Holly Ann | [@holl_005](https://www.tiktok.com/@holl_005) | 6.5K |
+| Janice | [@janiice.myla](https://www.tiktok.com/@janiice.myla) | 1.7K |
+| Mark (pensions) | [@markonthemoney](https://www.tiktok.com/@markonthemoney) | 52.4K |
+| Adam Jay (accountant) | [@adm.jay](https://www.tiktok.com/@adm.jay) | 7K |
+| Will Gryba (NGPF) | [@nextgenngpf](https://www.tiktok.com/@nextgenngpf) | 37.7K |
+
+## Handle corrections (2026-10-06)
+- Sean: [@seansmoney](https://www.tiktok.com/@seansmoney) (4.1K, wrong) → [@seans.money](https://www.tiktok.com/@seans.money) (20.6K real). Net worth corrected to £165K invested (£89K pensions + £72K ISAs + £3.5K LISA, source transcripts/seansmoney/7675840516411395330.md).
+- Dr Jubair: [@drjubairsfinance](https://www.tiktok.com/@drjubairsfinance) → [@dr.jubairsfinance](https://www.tiktok.com/@dr.jubairsfinance) (17.5K real).
+- Iain: [@iainmoneyinsights](https://www.tiktok.com/@iainmoneyinsights) → [@iainjgeddes](https://www.tiktok.com/@iainjgeddes) (34.1K real).
+- Neil Invests: card £350K confirmed — transcripts/neilinvests/7690583705051614497.md quote "That's what I've got in my investment portfolios at the moment". Kept.
+
+## Blog long-form guides (2026-10-06)
+10 new articles in blog/: isa-beginners-guide, pension-basics-uk, emergency-funds-uk, kill-debt-first, teacher-to-millionaire, quant-investing-emmie, side-hustles-krish, women-money-uk, gen-z-start-investing, retire-350k-trinity-study. All third-person, UK focus, attributed with creator + TikTok links, disclaimer at foot.
