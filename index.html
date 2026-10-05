@@ -53,7 +53,7 @@ section{padding:72px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
 .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 10px 15px -3px rgb(15 23 42/.05);transition:transform .2s ease,box-shadow .2s ease;display:flex;flex-direction:column}
 .card:hover{transform:translateY(-4px);box-shadow:0 20px 25px -5px rgb(15 23 42/.1)}
-.card .avatar{width:56px;height:56px;border-radius:9999px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin-bottom:14px}
+.card .avatar{width:56px;height:56px;border-radius:9999px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin-bottom:14px;object-fit:cover}
 .card h3{margin:0;font-size:19px;font-family:'Inter',sans-serif;font-weight:700}
 .card .handle{margin:2px 0 12px}
 .card .handle a{color:var(--teal);font-weight:600;font-size:15px;text-decoration:none}
@@ -141,7 +141,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
     <div class="grid">
 
       <div class="card">
-        <div class="avatar">MR</div>
+        <img class="avatar" src="avatars/miarosemcgrath.jpg" alt="@miarosemcgrath" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>MR</div>'">
         <h3>Mia Rose</h3>
         <div class="handle"><a href="https://www.tiktok.com/@miarosemcgrath" target="_blank" rel="noopener">@miarosemcgrath ↗</a></div>
         <p class="bio">Frugal Chic® — build wealth, stylishly. Featured in Vogue, The Times.</p>
@@ -153,7 +153,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
       </div>
 
       <div class="card">
-        <div class="avatar">NI</div>
+        <img class="avatar" src="avatars/neilinvests.jpg" alt="@neilinvests" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>NI</div>'">
         <h3>Neil Invests</h3>
         <div class="handle"><a href="https://www.tiktok.com/@neilinvests" target="_blank" rel="noopener">@neilinvests ↗</a></div>
         <p class="bio">Helping beginners start investing.</p>
@@ -165,7 +165,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
       </div>
 
       <div class="card">
-        <div class="avatar">BF</div>
+        <img class="avatar" src="avatars/benfinance.jpg" alt="@benfinance" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>BF</div>'">
         <h3>Ben Finance</h3>
         <div class="handle"><a href="https://www.tiktok.com/@benfinance" target="_blank" rel="noopener">@benfinance ↗</a></div>
         <p class="bio">UK personal finance creator.</p>
@@ -177,7 +177,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
       </div>
 
       <div class="card">
-        <div class="avatar">HB</div>
+        <img class="avatar" src="avatars/hannahbevington.jpg" alt="@hannahbevington" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>HB</div>'">
         <h3>Hannah Bevington</h3>
         <div class="handle"><a href="https://www.tiktok.com/@hannahbevington" target="_blank" rel="noopener">@hannahbevington ↗</a></div>
         <p class="bio">Tall, blue eyes &amp; talks finance.</p>
@@ -189,7 +189,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
       </div>
 
       <div class="card">
-        <div class="avatar">SB</div>
+        <img class="avatar" src="avatars/itssophieblank.jpg" alt="@itssophieblank" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>SB</div>'">
         <h3>Sophie Blank</h3>
         <div class="handle"><a href="https://www.tiktok.com/@itssophieblank" target="_blank" rel="noopener">@itssophieblank ↗</a></div>
         <p class="bio">Wealth, career, life in my 30s. London, UK.</p>
@@ -201,7 +201,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
       </div>
 
       <div class="card">
-        <div class="avatar">SM</div>
+        <img class="avatar" src="avatars/seansmoney.jpg" alt="@seansmoney" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>SM</div>'">
         <h3>Sean</h3>
         <div class="handle"><a href="https://www.tiktok.com/@seansmoney" target="_blank" rel="noopener">@seansmoney ↗</a></div>
         <p class="bio">Documenting what I do with my money at age 30 while educating on personal finance.</p>
@@ -213,7 +213,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
       </div>
 
       <div class="card">
-        <div class="avatar">OI</div>
+        <img class="avatar" src="avatars/ollieinvests.jpg" alt="@ollieinvests" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>OI</div>'">
         <h3>Ollie Invests</h3>
         <div class="handle"><a href="https://www.tiktok.com/@ollieinvests" target="_blank" rel="noopener">@ollieinvests ↗</a></div>
         <p class="bio">23, Engineering Graduate. Engineering my financial freedom.</p>
@@ -225,7 +225,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
       </div>
 
       <div class="card">
-        <div class="avatar">DJ</div>
+        <img class="avatar" src="avatars/drjubairsfinance.jpg" alt="@drjubairsfinance" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>DJ</div>'">
         <h3>Dr Jubair</h3>
         <div class="handle"><a href="https://www.tiktok.com/@drjubairsfinance" target="_blank" rel="noopener">@drjubairsfinance ↗</a></div>
         <p class="bio">UK finance creator sharing investing content.</p>
@@ -237,7 +237,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
       </div>
 
       <div class="card">
-        <div class="avatar">IM</div>
+        <img class="avatar" src="avatars/iainmoneyinsights.jpg" alt="@iainmoneyinsights" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>IM</div>'">
         <h3>Iain's Money Insights</h3>
         <div class="handle"><a href="https://www.tiktok.com/@iainmoneyinsights" target="_blank" rel="noopener">@iainmoneyinsights ↗</a></div>
         <p class="bio">Building wealth from £0 &amp; showing it all.</p>
