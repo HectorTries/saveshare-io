@@ -12,16 +12,14 @@
 
   gtag('config', 'G-3T9QS61KD0');
 </script>
-<title>SaveShare.io — Discover Trusted UK Money Creators</title>
-<meta name="description" content="A verified directory of UK personal finance creators. Real people, real figures, linked back to their TikTok.">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+<title>SaveShare.io — Sourced UK Money Creator Directory</title>
+<meta name="description" content="A sourced directory of UK personal finance creators. Self-reported figures, linked back to their TikTok.">
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
 :root{--teal:#0F766E;--teal-dark:#115E59;--teal-soft:#E0F2F1;--ink:#0F172A;--muted:#475569;--line:#E2E8F0;--bg:#F8FAFC}
 *{box-sizing:border-box}
 body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
 h1,h2{font-family:'Playfair Display',Georgia,serif;line-height:1.15;margin:0}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-/* NAV */
 nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
 .logo{font-weight:800;font-size:20px;color:var(--teal);text-decoration:none}
@@ -29,60 +27,72 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-
 .nav-links{display:flex;gap:24px;align-items:center}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:500}
 .nav-links a:hover{color:var(--teal)}
-.btn{display:inline-block;background:var(--teal);color:#fff;border:none;padding:12px 28px;font-size:15px;font-weight:600;border-radius:9999px;cursor:pointer;text-decoration:none;transition:all .2s ease}
+.btn{display:inline-block;background:var(--teal);color:#fff;border:none;padding:12px 28px;font-size:15px;font-weight:600;border-radius:9999px;cursor:pointer;text-decoration:none;transition:all .2s ease;min-height:44px}
 .btn:hover{background:var(--teal-dark);transform:translateY(-1px)}
 .btn-outline{background:#fff;color:var(--teal);border:2px solid var(--teal)}
 .btn-outline:hover{background:var(--teal-soft)}
 @media(max-width:640px){.nav-links a:not(.btn){display:none}}
-/* HERO */
-.hero{background:linear-gradient(135deg,#0F766E 0%,#134E4A 100%);color:#fff;padding:80px 0 90px;text-align:center}
+.hero{background:linear-gradient(135deg,#0F766E 0%,#134E4A 100%);color:#fff;padding:64px 0 72px;text-align:center}
 .hero .badge{display:inline-block;background:rgba(255,255,255,.15);color:#fff;font-size:13px;font-weight:600;padding:6px 18px;border-radius:9999px;letter-spacing:.5px;margin-bottom:20px}
 .hero h1{font-size:clamp(34px,5vw,56px);max-width:760px;margin:0 auto 18px}
-.hero p{font-size:19px;opacity:.9;max-width:620px;margin:0 auto 32px}
+.hero p{font-size:19px;opacity:.9;max-width:620px;margin:0 auto 28px}
 .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .hero-ctas .btn-outline{border-color:#fff;color:#fff;background:transparent}
 .hero-ctas .btn-outline:hover{background:rgba(255,255,255,.12)}
 .hero .btn-light{background:#fff;color:var(--teal)}
-.hero-stats{display:flex;gap:40px;justify-content:center;margin-top:48px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:40px;justify-content:center;margin-top:36px;flex-wrap:wrap}
 .hero-stats div{text-align:center}
 .hero-stats strong{display:block;font-size:28px;font-weight:800}
 .hero-stats span{font-size:14px;opacity:.8}
-/* SECTIONS */
+.feat-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.feat-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;text-decoration:none;border-radius:12px;padding:10px 18px;text-align:left;min-height:44px}
+.feat-card:hover{background:rgba(255,255,255,.2)}
+.feat-card strong{display:block;font-size:15px}
+.feat-card span{font-size:12px;opacity:.85}
 section{padding:72px 0}
-.section-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.section-head{text-align:center;max-width:640px;margin:0 auto 32px}
 .section-head h2{font-size:32px;margin-bottom:12px}
 .section-head p{color:var(--muted);font-size:17px}
-/* HOW IT WORKS */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
 .step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 28px;box-shadow:0 10px 15px -3px rgb(15 23 42/.05)}
 .step .num{width:40px;height:40px;background:var(--teal-soft);color:var(--teal);border-radius:9999px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:16px}
 .step h3{margin:0 0 8px;font-size:18px}
 .step p{margin:0;color:var(--muted);font-size:15px}
-/* CREATOR GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 10px 15px -3px rgb(15 23 42/.05);transition:transform .2s ease,box-shadow .2s ease;display:flex;flex-direction:column}
+.controls{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+.controls input[type=search]{padding:12px 18px;font-size:15px;border:1px solid var(--line);border-radius:9999px;min-width:220px;min-height:44px;font-family:inherit}
+.controls select{padding:12px 16px;font-size:15px;border:1px solid var(--line);border-radius:9999px;background:#fff;font-family:inherit;min-height:44px}
+.controls label{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--muted);min-height:44px}
+.controls input[type=checkbox]{width:20px;height:20px;accent-color:var(--teal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 10px 15px -3px rgb(15 23 42/.05);transition:transform .2s ease,box-shadow .2s ease;display:flex;flex-direction:column;position:relative}
 .card:hover{transform:translateY(-4px);box-shadow:0 20px 25px -5px rgb(15 23 42/.1)}
 .card .avatar{width:56px;height:56px;border-radius:9999px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin-bottom:14px;object-fit:cover}
+.card .fallback-avatar{width:56px;height:56px;border-radius:9999px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin-bottom:14px}
+.tier{position:absolute;top:20px;right:20px;font-size:11px;font-weight:700;color:var(--teal-dark);background:var(--teal-soft);padding:3px 10px;border-radius:9999px}
 .card h3{margin:0;font-size:19px;font-family:'Inter',sans-serif;font-weight:700}
+.card h3 a{color:inherit;text-decoration:none;display:block;padding:6px 0}
 .card .handle{margin:2px 0 12px}
-.card .handle a{color:var(--teal);font-weight:600;font-size:15px;text-decoration:none}
+.card .handle a{color:var(--teal);font-weight:600;font-size:15px;text-decoration:none;display:inline-block;padding:6px 0;min-height:44px}
 .card .handle a:hover{text-decoration:underline}
 .card .bio{font-size:14px;color:var(--muted);margin:0 0 14px;flex:1}
 .card .figures{border-top:1px solid var(--line);padding-top:14px;display:flex;gap:20px}
 .card .figures div strong{display:block;font-size:17px}
 .card .figures div span{font-size:12px;color:var(--muted)}
+.pending{color:var(--muted);font-weight:500;font-size:14px}
+.sr-tag{display:inline-block;font-size:12px;color:var(--muted);margin-top:10px}
+.tag{display:inline-block;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:600;padding:3px 12px;border-radius:9999px;margin:2px 6px 2px 0}
+.pending-head{margin:40px 0 8px;font-size:22px;font-family:'Inter',sans-serif}
+.pending-sub{color:var(--muted);margin:0 0 24px}
 .networth-tag{display:inline-block;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:600;padding:3px 10px;border-radius:9999px;margin-top:8px}
-/* BRANDS */
 .brands{background:var(--ink);color:#fff;text-align:center;border-radius:24px;padding:64px 32px;margin:0 24px;max-width:1052px}
 .brands h2{font-size:30px;margin-bottom:12px}
 .brands p{opacity:.85;max-width:560px;margin:0 auto 28px;font-size:17px}
 .brands ul{list-style:none;padding:0;margin:0 auto 32px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;font-size:15px}
-.brands li::before{content:"✓ ";color:#2DD4BF;font-weight:700}
-/* FOOTER */
+.brands li::before{content:"\2713 ";color:#2DD4BF;font-weight:700}
 footer{background:#fff;border-top:1px solid var(--line);padding:40px 0;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.disclaimer{max-width:640px;font-size:13px;color:#94A3B8;margin-top:16px;line-height:1.5}
-</style>
+.disclaimer{max-width:640px;font-size:13px;color:#4B5563;margin-top:16px;line-height:1.5}
+#no-results{display:none;text-align:center;color:var(--muted);padding:32px}</style>
 </head>
 <body>
 
@@ -91,27 +101,33 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
     <a class="logo" href="#">SaveShare<span>.io</span></a>
     <div class="nav-links">
       <a href="#how">How it works</a>
-      <a href="#creators">Creators</a>
+      <a href="#creators">Directory</a>
       <a href="blog/index.html">Money Advice</a>
       <a href="#brands">For brands</a>
-      <a href="#creators" class="btn">Browse creators</a>
+      <a href="#creators" class="btn">Browse directory</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <div class="badge">VERIFIED UK CREATOR DIRECTORY</div>
-    <h1>Discover trusted UK money creators</h1>
-    <p>Real people sharing real numbers. Every creator self-describes their net worth in their own TikTok content — linked back so you can check the source.</p>
+    <div class="badge">SOURCED UK CREATOR DIRECTORY</div>
+    <h1>Discover UK money creators</h1>
+    <p>Real people sharing real numbers. Every net-worth figure is self-reported in the creator's own TikTok content — linked back so you can check the source.</p>
     <div class="hero-ctas">
       <a href="#creators" class="btn btn-light">Explore the directory</a>
-      <a href="#brands" class="btn btn-outline">I'm a brand</a>
+      <a href="#brands" class="btn btn-outline">I’m a brand</a>
     </div>
     <div class="hero-stats">
-      <div><strong>39</strong><span>Verified creators</span></div>
-      <div><strong>900K+</strong><span>Combined followers</span></div>
-      <div><strong>100%</strong><span>UK personal finance</span></div>
+      <div><strong>39</strong><span>Sourced creators</span></div>
+      <div><strong>3.6M</strong><span>Combined followers</span></div>
+      <div><strong>17</strong><span>With sourced net worth</span></div>
+    </div>
+    <div class="feat-row">
+<a class="feat-card" href="p/tatianamamixo.html"><strong>Tatiana</strong><span>14.9K followers · £400K net worth*</span></a>
+<a class="feat-card" href="p/neilinvests.html"><strong>Neil Invests</strong><span>146.5K followers · £350K net worth*</span></a>
+<a class="feat-card" href="p/admjay.html"><strong>Adam Jay</strong><span>7.0K followers · £290K+ net worth*</span></a>
+<a class="feat-card" href="p/itssophieblank.html"><strong>Sophie Blank</strong><span>28.9K followers · £230K net worth*</span></a>
     </div>
   </div>
 </header>
@@ -135,7 +151,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
       </div>
       <div class="step">
         <div class="num">3</div>
-        <h3>You verify via linkback</h3>
+        <h3>You check the source</h3>
         <p>Every profile links straight back to the creator's TikTok — check the source yourself. See the FAQ for how figures work.</p>
       </div>
     </div>
@@ -146,449 +162,667 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
   <div class="wrap">
     <div class="section-head">
       <h2>Creator directory</h2>
-      <p>UK personal finance creators sharing their money journeys openly. Click any creator for their full profile, net-worth sources and key quotes — plus our <a href="blog/index.html">money advice hub</a>.</p>
+      <p>UK personal finance creators sharing their money journeys openly. Figures last pulled 5 Oct 2026. Click any creator for their full profile, net-worth sources and key quotes — plus our <a href="blog/index.html">money advice hub</a>.</p>
+    </div>
+    <div class="controls">
+      <input type="search" id="q" placeholder="Search creators…" aria-label="Search creators">
+      <select id="sort" aria-label="Sort creators">
+        <option value="default">Sort: featured</option>
+        <option value="fol">Sort: followers</option>
+        <option value="nw">Sort: net worth</option>
+        <option value="eng">Sort: engagement</option>
+      </select>
+      <select id="topic" aria-label="Filter by topic">
+        <option value="">All topics</option>
+<option value="accountant">Accountant</option>
+<option value="accounting">Accounting</option>
+<option value="beginner">Beginner</option>
+<option value="beginner investing">Beginner investing</option>
+<option value="better decisions">Better decisions</option>
+<option value="budgeting">Budgeting</option>
+<option value="career">Career</option>
+<option value="coast fi">Coast FI</option>
+<option value="community">Community</option>
+<option value="couples money">Couples money</option>
+<option value="daily investing">Daily investing</option>
+<option value="etfs">ETFs</option>
+<option value="emergency funds">Emergency funds</option>
+<option value="ex-blackrock">Ex-BlackRock</option>
+<option value="financial freedom">Financial freedom</option>
+<option value="financial literacy">Financial literacy</option>
+<option value="frugal living">Frugal living</option>
+<option value="gen z money">Gen Z money</option>
+<option value="growth">Growth</option>
+<option value="homeownership">Homeownership</option>
+<option value="isa journey">ISA journey</option>
+<option value="isas">ISAs</option>
+<option value="index funds">Index funds</option>
+<option value="index investing">Index investing</option>
+<option value="intentional living">Intentional living</option>
+<option value="intentional spending">Intentional spending</option>
+<option value="investing">Investing</option>
+<option value="investing basics">Investing basics</option>
+<option value="learning">Learning</option>
+<option value="long-term investing">Long-term investing</option>
+<option value="long-term wealth">Long-term wealth</option>
+<option value="millionaire journey">Millionaire journey</option>
+<option value="millionaire track">Millionaire track</option>
+<option value="money & life">Money & life</option>
+<option value="money news">Money news</option>
+<option value="mum investors">Mum investors</option>
+<option value="payday systems">Payday systems</option>
+<option value="pensions">Pensions</option>
+<option value="portfolio updates">Portfolio updates</option>
+<option value="quant finance">Quant finance</option>
+<option value="retirement">Retirement</option>
+<option value="saving">Saving</option>
+<option value="side hustles">Side hustles</option>
+<option value="simple investing">Simple investing</option>
+<option value="starting out">Starting out</option>
+<option value="stocks">Stocks</option>
+<option value="student investing">Student investing</option>
+<option value="systems">Systems</option>
+<option value="tax">Tax</option>
+<option value="teacher fi">Teacher FI</option>
+<option value="women & money">Women & money</option>
+      </select>
+      <label><input type="checkbox" id="hasfig"> Has net-worth figure</label>
     </div>
     <div class="grid">
+<div id="fig-group">
+<div class="card" data-name="tatiana tatianamamixo" data-fol="14900" data-nw="1" data-topics="financial freedom pensions" data-eng="0">
+<img class="avatar" src="avatars/tatianamamixo.jpg" alt="Tatiana" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">T</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/tatianamamixo.html" style="color:inherit;text-decoration:none">Tatiana</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@tatianamamixo" target="_blank" rel="noopener">@tatianamamixo ↗</a></div>
+<p class="bio">London creator pursuing financial freedom in her 30s.</p>
+<p style="margin:0 0 10px"><span class="tag">Financial freedom</span> <span class="tag">Pensions</span></p>
+<div class="figures">
+<div><strong>14.9K</strong><span>Followers</span></div>
+<div><strong>£400K</strong><span>Net worth*</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/tatianamamixo.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="neil invests neilinvests" data-fol="146500" data-nw="1" data-topics="index investing retirement" data-eng="2.47">
+<img class="avatar" src="avatars/neilinvests.jpg" alt="Neil Invests" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">NI</div>'">
+<span class="tier">Mid-tier</span>
+<h3><a href="p/neilinvests.html" style="color:inherit;text-decoration:none">Neil Invests</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@neilinvests" target="_blank" rel="noopener">@neilinvests ↗</a></div>
+<p class="bio">Beginner-investing educator focused on low-cost index funds.</p>
+<p style="margin:0 0 10px"><span class="tag">Index investing</span> <span class="tag">Retirement</span></p>
+<div class="figures">
+<div><strong>146.5K</strong><span>Followers</span></div>
+<div><strong>£350K</strong><span>Net worth*</span></div>
+<div><strong>2.47%</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/neilinvests.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="adam jay adm.jay" data-fol="7000" data-nw="1" data-topics="accountant investing" data-eng="0">
+<img class="avatar" src="avatars/admjay.jpg" alt="Adam Jay" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">AJ</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/admjay.html" style="color:inherit;text-decoration:none">Adam Jay</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@adm.jay" target="_blank" rel="noopener">@adm.jay ↗</a></div>
+<p class="bio">London accountant breaking down investing for beginners.</p>
+<p style="margin:0 0 10px"><span class="tag">Accountant</span> <span class="tag">Investing</span></p>
+<div class="figures">
+<div><strong>7.0K</strong><span>Followers</span></div>
+<div><strong>£290K+</strong><span>Net worth*</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/admjay.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="sophie blank itssophieblank" data-fol="28900" data-nw="1" data-topics="coast fi etfs" data-eng="4.88">
+<img class="avatar" src="avatars/itssophieblank.jpg" alt="Sophie Blank" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">SB</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/itssophieblank.html" style="color:inherit;text-decoration:none">Sophie Blank</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@itssophieblank" target="_blank" rel="noopener">@itssophieblank ↗</a></div>
+<p class="bio">London AI strategist documenting her journey to Coast FI by 40.</p>
+<p style="margin:0 0 10px"><span class="tag">Coast FI</span> <span class="tag">ETFs</span></p>
+<div class="figures">
+<div><strong>28.9K</strong><span>Followers</span></div>
+<div><strong>£230K</strong><span>Net worth*</span></div>
+<div><strong>4.88%</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Sep 2026</span>
+<p style="margin:12px 0 0"><a href="p/itssophieblank.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="ben bensfinance" data-fol="26900" data-nw="1" data-topics="portfolio updates index funds" data-eng="0">
+<img class="avatar" src="avatars/bensfinance.jpg" alt="Ben" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">B</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/bensfinance.html" style="color:inherit;text-decoration:none">Ben</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@bensfinance" target="_blank" rel="noopener">@bensfinance ↗</a></div>
+<p class="bio">UK finance creator sharing honest portfolio updates.</p>
+<p style="margin:0 0 10px"><span class="tag">Portfolio updates</span> <span class="tag">Index funds</span></p>
+<div class="figures">
+<div><strong>26.9K</strong><span>Followers</span></div>
+<div><strong>£230K+</strong><span>Net worth*</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/bensfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="mia rose miarosemcgrath" data-fol="668300" data-nw="1" data-topics="frugal living investing" data-eng="7.16">
+<img class="avatar" src="avatars/miarosemcgrath.jpg" alt="Mia Rose" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">MR</div>'">
+<span class="tier">Mid-tier</span>
+<h3><a href="p/miarosemcgrath.html" style="color:inherit;text-decoration:none">Mia Rose</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@miarosemcgrath" target="_blank" rel="noopener">@miarosemcgrath ↗</a></div>
+<p class="bio">Frugal-living author (Vogue, The Times) building wealth stylishly.</p>
+<p style="margin:0 0 10px"><span class="tag">Frugal living</span> <span class="tag">Investing</span></p>
+<div class="figures">
+<div><strong>668.3K</strong><span>Followers</span></div>
+<div><strong>£200K+</strong><span>Net worth*</span></div>
+<div><strong>7.16%</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/miarosemcgrath.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="james moneystocker" data-fol="60800" data-nw="1" data-topics="pensions index funds" data-eng="0">
+<img class="avatar" src="avatars/moneystocker.jpg" alt="James" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">J</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/moneystocker.html" style="color:inherit;text-decoration:none">James</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@moneystocker" target="_blank" rel="noopener">@moneystocker ↗</a></div>
+<p class="bio">Personal finance educator breaking down pensions and index funds.</p>
+<p style="margin:0 0 10px"><span class="tag">Pensions</span> <span class="tag">Index funds</span></p>
+<div class="figures">
+<div><strong>60.8K</strong><span>Followers</span></div>
+<div><strong>£182K+</strong><span>Net worth*</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/moneystocker.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="sean seans.money" data-fol="20600" data-nw="1" data-topics="beginner investing isas" data-eng="0.97">
+<img class="avatar" src="avatars/seansmoney2.jpg" alt="Sean" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">S</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/seansmoney.html" style="color:inherit;text-decoration:none">Sean</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@seans.money" target="_blank" rel="noopener">@seans.money ↗</a></div>
+<p class="bio">Edinburgh creator documenting his money moves and ETF basics.</p>
+<p style="margin:0 0 10px"><span class="tag">Beginner investing</span> <span class="tag">ISAs</span></p>
+<div class="figures">
+<div><strong>20.6K</strong><span>Followers</span></div>
+<div><strong>£165K</strong><span>Net worth*</span></div>
+<div><strong>0.97%</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/seansmoney.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="fellas finance fellasfinance" data-fol="85300" data-nw="1" data-topics="long-term wealth index funds" data-eng="0">
+<img class="avatar" src="avatars/fellasfinance.jpg" alt="Fellas Finance" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">FF</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/fellasfinance.html" style="color:inherit;text-decoration:none">Fellas Finance</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@fellasfinance" target="_blank" rel="noopener">@fellasfinance ↗</a></div>
+<p class="bio">Helping people build long-term wealth, month by month.</p>
+<p style="margin:0 0 10px"><span class="tag">Long-term wealth</span> <span class="tag">Index funds</span></p>
+<div class="figures">
+<div><strong>85.3K</strong><span>Followers</span></div>
+<div><strong>£140K+</strong><span>Net worth*</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/fellasfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="hannah bevington hannahbevington" data-fol="41000" data-nw="1" data-topics="investing payday systems" data-eng="4.68">
+<img class="avatar" src="avatars/hannahbevington.jpg" alt="Hannah Bevington" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">HB</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/hannahbevington.html" style="color:inherit;text-decoration:none">Hannah Bevington</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@hannahbevington" target="_blank" rel="noopener">@hannahbevington ↗</a></div>
+<p class="bio">26-year-old sharing monthly portfolio breakdowns and payday systems.</p>
+<p style="margin:0 0 10px"><span class="tag">Investing</span> <span class="tag">Payday systems</span></p>
+<div class="figures">
+<div><strong>41.0K</strong><span>Followers</span></div>
+<div><strong>£135K</strong><span>Net worth*</span></div>
+<div><strong>4.68%</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Sep 2026</span>
+<p style="margin:12px 0 0"><a href="p/hannahbevington.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="dr jubair dr.jubairsfinance" data-fol="17500" data-nw="1" data-topics="daily investing etfs" data-eng="2.14">
+<img class="avatar" src="avatars/drjubairsfinance2.jpg" alt="Dr Jubair" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">DJ</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/drjubairsfinance.html" style="color:inherit;text-decoration:none">Dr Jubair</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@dr.jubairsfinance" target="_blank" rel="noopener">@dr.jubairsfinance ↗</a></div>
+<p class="bio">Doctor-turned-investor documenting a daily investing challenge.</p>
+<p style="margin:0 0 10px"><span class="tag">Daily investing</span> <span class="tag">ETFs</span></p>
+<div class="figures">
+<div><strong>17.5K</strong><span>Followers</span></div>
+<div><strong>£114.7K</strong><span>Net worth*</span></div>
+<div><strong>2.14%</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/drjubairsfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="mark markonthemoney" data-fol="52400" data-nw="1" data-topics="pensions retirement" data-eng="0">
+<img class="avatar" src="avatars/markonthemoney.jpg" alt="Mark" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">M</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/markonthemoney.html" style="color:inherit;text-decoration:none">Mark</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@markonthemoney" target="_blank" rel="noopener">@markonthemoney ↗</a></div>
+<p class="bio">Helping you retire comfortably — pensions and investing.</p>
+<p style="margin:0 0 10px"><span class="tag">Pensions</span> <span class="tag">Retirement</span></p>
+<div class="figures">
+<div><strong>52.4K</strong><span>Followers</span></div>
+<div><strong>£114K+</strong><span>Net worth*</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/markonthemoney.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="ciara | curated wealth ciara__anne" data-fol="59700" data-nw="1" data-topics="intentional spending investing" data-eng="0">
+<img class="avatar" src="avatars/ciaraanne.jpg" alt="Ciara | Curated Wealth" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">C|</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/ciaraanne.html" style="color:inherit;text-decoration:none">Ciara | Curated Wealth</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@ciara__anne" target="_blank" rel="noopener">@ciara__anne ↗</a></div>
+<p class="bio">Curating a richer life through intentional spending and investing.</p>
+<p style="margin:0 0 10px"><span class="tag">Intentional spending</span> <span class="tag">Investing</span></p>
+<div class="figures">
+<div><strong>59.7K</strong><span>Followers</span></div>
+<div><strong>£100K+</strong><span>Net worth*</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/ciaraanne.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="iain's money insights iainjgeddes" data-fol="34100" data-nw="1" data-topics="isa journey long-term investing" data-eng="0.26">
+<img class="avatar" src="avatars/iainjgeddes2.jpg" alt="Iain's Money Insights" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">IM</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/iainmoneyinsights.html" style="color:inherit;text-decoration:none">Iain's Money Insights</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@iainjgeddes" target="_blank" rel="noopener">@iainjgeddes ↗</a></div>
+<p class="bio">Scottish creator sharing his real-time ISA portfolio journey.</p>
+<p style="margin:0 0 10px"><span class="tag">ISA journey</span> <span class="tag">Long-term investing</span></p>
+<div class="figures">
+<div><strong>34.1K</strong><span>Followers</span></div>
+<div><strong>£94K</strong><span>Net worth*</span></div>
+<div><strong>0.26%</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/iainmoneyinsights.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="krish kara krish.kara" data-fol="104000" data-nw="1" data-topics="side hustles investing" data-eng="0">
+<img class="avatar" src="avatars/krishkara.jpg" alt="Krish Kara" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">KK</div>'">
+<span class="tier">Mid-tier</span>
+<h3><a href="p/krishkara.html" style="color:inherit;text-decoration:none">Krish Kara</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@krish.kara" target="_blank" rel="noopener">@krish.kara ↗</a></div>
+<p class="bio">Money tips, investing and side hustles for young earners.</p>
+<p style="margin:0 0 10px"><span class="tag">Side hustles</span> <span class="tag">Investing</span></p>
+<div class="figures">
+<div><strong>104.0K</strong><span>Followers</span></div>
+<div><strong>£37K+</strong><span>Net worth*</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/krishkara.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="george tuttle george_tuttle" data-fol="1200" data-nw="1" data-topics="accounting investing" data-eng="0">
+<img class="avatar" src="avatars/george_tuttle.jpg" alt="George Tuttle" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">GT</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/georgetuttle.html" style="color:inherit;text-decoration:none">George Tuttle</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@george_tuttle" target="_blank" rel="noopener">@george_tuttle ↗</a></div>
+<p class="bio">London accountant talking personal finance plainly.</p>
+<p style="margin:0 0 10px"><span class="tag">Accounting</span> <span class="tag">Investing</span></p>
+<div class="figures">
+<div><strong>1.2K</strong><span>Followers</span></div>
+<div><strong>£30K+</strong><span>Net worth*</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/georgetuttle.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="janice janiice.myla" data-fol="1700" data-nw="1" data-topics="student investing starting out" data-eng="0">
+<img class="avatar" src="avatars/janiicemyla.jpg" alt="Janice" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">J</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/janiicemyla.html" style="color:inherit;text-decoration:none">Janice</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@janiice.myla" target="_blank" rel="noopener">@janiice.myla ↗</a></div>
+<p class="bio">From student overdraft to a first invested portfolio.</p>
+<p style="margin:0 0 10px"><span class="tag">Student investing</span> <span class="tag">Starting out</span></p>
+<div class="figures">
+<div><strong>1.7K</strong><span>Followers</span></div>
+<div><strong>£10K+</strong><span>Net worth*</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+<span class="sr-tag">Self-reported · Oct 2026</span>
+<p style="margin:12px 0 0"><a href="p/janiicemyla.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+</div>
+<h3 class="pending-head">Figures pending — educators worth following</h3>
+<p class="pending-sub">These creators share money education but haven’t stated a personal net worth in archived videos yet.</p>
+<div id="pend-group">
+<div class="card" data-name="gabriel nussbaum gabriel.nussbaum" data-fol="1400000" data-nw="0" data-topics="money news tax" data-eng="0">
+<img class="avatar" src="avatars/gabriel.nussbaum.jpg" alt="Gabriel Nussbaum" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">GN</div>'">
+<span class="tier">Mid-tier</span>
+<h3><a href="p/gabrielnussbaum.html" style="color:inherit;text-decoration:none">Gabriel Nussbaum</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@gabriel.nussbaum" target="_blank" rel="noopener">@gabriel.nussbaum ↗</a></div>
+<p class="bio">That Money Guy — UK money news, tax bands and investing explainers.</p>
+<p style="margin:0 0 10px"><span class="tag">Money news</span> <span class="tag">Tax</span></p>
+<div class="figures">
+<div><strong>1.4M</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
-      <div class="card">
-        <img class="avatar" src="avatars/miarosemcgrath.jpg" alt="@miarosemcgrath" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>MR</div>'">
-        <h3><a href="p/miarosemcgrath.html" style="color:inherit;text-decoration:none">Mia Rose</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@miarosemcgrath" target="_blank" rel="noopener">@miarosemcgrath ↗</a></div>
-        <p class="bio">Frugal Chic® — build wealth, stylishly. Featured in Vogue, The Times.</p>
-        <div class="figures">
-          <div><strong>668.3K</strong><span>Followers</span></div>
-          <div><strong>£200K</strong><span>Net worth</span></div>
-        
-          <div><strong>7.16%</strong><span>Engagement</span></div></div>
-      </div>
+<p style="margin:12px 0 0"><a href="p/gabrielnussbaum.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="bret and evey bretandevey" data-fol="294600" data-nw="0" data-topics="simple investing couples money" data-eng="0">
+<img class="avatar" src="avatars/bretandevey.jpg" alt="Bret and Evey" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">BA</div>'">
+<span class="tier">Mid-tier</span>
+<h3><a href="p/bretandevey.html" style="color:inherit;text-decoration:none">Bret and Evey</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@bretandevey" target="_blank" rel="noopener">@bretandevey ↗</a></div>
+<p class="bio">Simple personal finance and investing for everyone.</p>
+<p style="margin:0 0 10px"><span class="tag">Simple investing</span> <span class="tag">Couples money</span></p>
+<div class="figures">
+<div><strong>294.6K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
-      <div class="card">
-        <img class="avatar" src="avatars/neilinvests.jpg" alt="@neilinvests" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>NI</div>'">
-        <h3><a href="p/neilinvests.html" style="color:inherit;text-decoration:none">Neil Invests</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@neilinvests" target="_blank" rel="noopener">@neilinvests ↗</a></div>
-        <p class="bio">Helping beginners start investing.</p>
-        <div class="figures">
-          <div><strong>146.5K</strong><span>Followers</span></div>
-          <div><strong>£350K</strong><span>Net worth</span></div>
-        
-          <div><strong>2.47%</strong><span>Engagement</span></div></div>
-      </div>
+<p style="margin:12px 0 0"><a href="p/bretandevey.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="emmie emmieedit" data-fol="108100" data-nw="0" data-topics="quant finance financial literacy" data-eng="0">
+<img class="avatar" src="avatars/emmieedit.jpg" alt="Emmie" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">E</div>'">
+<span class="tier">Mid-tier</span>
+<h3><a href="p/emmieedit.html" style="color:inherit;text-decoration:none">Emmie</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@emmieedit" target="_blank" rel="noopener">@emmieedit ↗</a></div>
+<p class="bio">11 years in quantitative finance, teaching financial literacy.</p>
+<p style="margin:0 0 10px"><span class="tag">Quant finance</span> <span class="tag">Financial literacy</span></p>
+<div class="figures">
+<div><strong>108.1K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
-      <div class="card">
-        <img class="avatar" src="avatars/hannahbevington.jpg" alt="@hannahbevington" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>HB</div>'">
-        <h3><a href="p/hannahbevington.html" style="color:inherit;text-decoration:none">Hannah Bevington</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@hannahbevington" target="_blank" rel="noopener">@hannahbevington ↗</a></div>
-        <p class="bio">Tall, blue eyes &amp; talks finance.</p>
-        <div class="figures">
-          <div><strong>41.0K</strong><span>Followers</span></div>
-          <div><strong>£135K</strong><span>Net worth</span></div>
-        
-          <div><strong>4.68%</strong><span>Engagement</span></div></div>
-      </div>
+<p style="margin:12px 0 0"><a href="p/emmieedit.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="lupes lupeslively" data-fol="64000" data-nw="0" data-topics="money & life investing" data-eng="0">
+<img class="avatar" src="avatars/lupeslively.jpg" alt="Lupes" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">L</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/lupeslively.html" style="color:inherit;text-decoration:none">Lupes</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@lupeslively" target="_blank" rel="noopener">@lupeslively ↗</a></div>
+<p class="bio">Talking money and life, honestly.</p>
+<p style="margin:0 0 10px"><span class="tag">Money & life</span> <span class="tag">Investing</span></p>
+<div class="figures">
+<div><strong>64.0K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
-      <div class="card">
-        <img class="avatar" src="avatars/itssophieblank.jpg" alt="@itssophieblank" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>SB</div>'">
-        <h3><a href="p/itssophieblank.html" style="color:inherit;text-decoration:none">Sophie Blank</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@itssophieblank" target="_blank" rel="noopener">@itssophieblank ↗</a></div>
-        <p class="bio">Wealth, career, life in my 30s. London, UK.</p>
-        <div class="figures">
-          <div><strong>28.9K</strong><span>Followers</span></div>
-          <div><strong>£230K</strong><span>Net worth</span></div>
-        
-          <div><strong>4.88%</strong><span>Engagement</span></div></div>
-      </div>
+<p style="margin:12px 0 0"><a href="p/lupeslively.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="jno jno_pwnr" data-fol="47500" data-nw="0" data-topics="emergency funds growth" data-eng="0">
+<img class="avatar" src="avatars/jno_pwnr.jpg" alt="JNO" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">J</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/jnopwnr.html" style="color:inherit;text-decoration:none">JNO</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@jno_pwnr" target="_blank" rel="noopener">@jno_pwnr ↗</a></div>
+<p class="bio">London-based creator on money, growth and building a life.</p>
+<p style="margin:0 0 10px"><span class="tag">Emergency funds</span> <span class="tag">Growth</span></p>
+<div class="figures">
+<div><strong>47.5K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
-      <div class="card">
-        <img class="avatar" src="avatars/seansmoney2.jpg" alt="@seans.money" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>SM</div>'">
-        <h3><a href="p/seansmoney.html" style="color:inherit;text-decoration:none">Sean</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@seans.money" target="_blank" rel="noopener">@seans.money ↗</a></div>
-        <p class="bio">Documenting what I do with my money at age 30 while educating on personal finance.</p>
-        <div class="figures">
-          <div><strong>20.6K</strong><span>Followers</span></div>
-          <div><strong>£165K</strong><span>Net worth</span></div>
-        
-          <div><strong>0.97%</strong><span>Engagement</span></div></div>
-      </div>
+<p style="margin:12px 0 0"><a href="p/jnopwnr.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="amy financiallyher_" data-fol="45600" data-nw="0" data-topics="women & money career" data-eng="0">
+<img class="avatar" src="avatars/financiallyher.jpg" alt="Amy" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">A</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/financiallyher.html" style="color:inherit;text-decoration:none">Amy</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@financiallyher_" target="_blank" rel="noopener">@financiallyher_ ↗</a></div>
+<p class="bio">For women who want more — money, career and confidence.</p>
+<p style="margin:0 0 10px"><span class="tag">Women & money</span> <span class="tag">Career</span></p>
+<div class="figures">
+<div><strong>45.6K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
-      <div class="card">
-        <img class="avatar" src="avatars/ollieinvests.jpg" alt="@ollieinvests" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>OI</div>'">
-        <h3><a href="p/ollieinvests.html" style="color:inherit;text-decoration:none">Ollie Invests</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@ollieinvests" target="_blank" rel="noopener">@ollieinvests ↗</a></div>
-        <p class="bio">23, Engineering Graduate. Engineering my financial freedom.</p>
-        <div class="figures">
-          <div><strong>2.2K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        
-          <div><strong>2.65%</strong><span>Engagement</span></div></div>
-      </div>
+<p style="margin:12px 0 0"><a href="p/financiallyher.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="charlie wealthmadeaccessible" data-fol="43900" data-nw="0" data-topics="budgeting saving" data-eng="0">
+<img class="avatar" src="avatars/wealthmadeaccessible.jpg" alt="Charlie" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">C</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/wealthmadeaccessible.html" style="color:inherit;text-decoration:none">Charlie</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@wealthmadeaccessible" target="_blank" rel="noopener">@wealthmadeaccessible ↗</a></div>
+<p class="bio">Helping you budget, save and build wealth — accessibly.</p>
+<p style="margin:0 0 10px"><span class="tag">Budgeting</span> <span class="tag">Saving</span></p>
+<div class="figures">
+<div><strong>43.9K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
-      <div class="card">
-        <img class="avatar" src="avatars/drjubairsfinance2.jpg" alt="@dr.jubairsfinance" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>DJ</div>'">
-        <h3><a href="p/drjubairsfinance.html" style="color:inherit;text-decoration:none">Dr Jubair</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@dr.jubairsfinance" target="_blank" rel="noopener">@dr.jubairsfinance ↗</a></div>
-        <p class="bio">UK finance creator sharing investing content.</p>
-        <div class="figures">
-          <div><strong>17.5K</strong><span>Followers</span></div>
-          <div><strong>£114.7K</strong><span>Net worth</span></div>
-        
-          <div><strong>2.14%</strong><span>Engagement</span></div></div>
-      </div>
+<p style="margin:12px 0 0"><a href="p/wealthmadeaccessible.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="rex theeverydaymillionaire" data-fol="39000" data-nw="0" data-topics="millionaire journey investing" data-eng="0">
+<img class="avatar" src="avatars/theeverydaymillionaire.jpg" alt="Rex" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">R</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/theeverydaymillionaire.html" style="color:inherit;text-decoration:none">Rex</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@theeverydaymillionaire" target="_blank" rel="noopener">@theeverydaymillionaire ↗</a></div>
+<p class="bio">Documenting the everyday journey to a million.</p>
+<p style="margin:0 0 10px"><span class="tag">Millionaire journey</span> <span class="tag">Investing</span></p>
+<div class="figures">
+<div><strong>39.0K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
-      <div class="card">
-        <img class="avatar" src="avatars/iainjgeddes2.jpg" alt="@iainjgeddes" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>IM</div>'">
-        <h3><a href="p/iainmoneyinsights.html" style="color:inherit;text-decoration:none">Iain's Money Insights</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@iainjgeddes" target="_blank" rel="noopener">@iainjgeddes ↗</a></div>
-        <p class="bio">Building wealth from £0 &amp; showing it all.</p>
-        <div class="figures">
-          <div><strong>34.1K</strong><span>Followers</span></div>
-          <div><strong>£94K</strong><span>Net worth</span></div>
-        
-          <div><strong>0.26%</strong><span>Engagement</span></div></div>
-      </div>
+<p style="margin:12px 0 0"><a href="p/theeverydaymillionaire.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="will gryba nextgenngpf" data-fol="37700" data-nw="0" data-topics="gen z money budgeting" data-eng="0">
+<img class="avatar" src="avatars/nextgenngpf.jpg" alt="Will Gryba" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">WG</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/nextgenngpf.html" style="color:inherit;text-decoration:none">Will Gryba</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@nextgenngpf" target="_blank" rel="noopener">@nextgenngpf ↗</a></div>
+<p class="bio">Next-gen personal finance for young earners.</p>
+<p style="margin:0 0 10px"><span class="tag">Gen Z money</span> <span class="tag">Budgeting</span></p>
+<div class="figures">
+<div><strong>37.7K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
+<p style="margin:12px 0 0"><a href="p/nextgenngpf.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="elly msellyphant" data-fol="36500" data-nw="0" data-topics="teacher fi millionaire track" data-eng="0">
+<img class="avatar" src="avatars/msellyphant.jpg" alt="Elly" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">E</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/msellyphant.html" style="color:inherit;text-decoration:none">Elly</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@msellyphant" target="_blank" rel="noopener">@msellyphant ↗</a></div>
+<p class="bio">Primary teacher on track to retire a millionaire.</p>
+<p style="margin:0 0 10px"><span class="tag">Teacher FI</span> <span class="tag">Millionaire track</span></p>
+<div class="figures">
+<div><strong>36.5K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
-      <div class="card">
-        <img class="avatar" src="avatars/intentionalfinance.jpg" alt="@intentional.finance" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>IF</div>'">
-        <h3><a href="p/intentionalfinance.html" style="color:inherit;text-decoration:none">Intentional Finance</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@intentional.finance" target="_blank" rel="noopener">@intentional.finance ↗</a></div>
-        <p class="bio">22-year-old homeowner building wealth intentionally. Chris.</p>
-        <div class="figures">
-          <div><strong>3.3K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/intentionalfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/ciaraanne.jpg" alt="@ciara__anne" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>CA</div>'">
-        <h3><a href="p/ciaraanne.html" style="color:inherit;text-decoration:none">Ciara | Curated Wealth</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@ciara__anne" target="_blank" rel="noopener">@ciara__anne ↗</a></div>
-        <p class="bio">Curating a richer life, in every sense. Intentional spending, finances, investing.</p>
-        <div class="figures">
-          <div><strong>59.7K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/ciaraanne.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/gabriel.nussbaum.jpg" alt="@gabriel.nussbaum" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>GN</div>'">
-        <h3><a href="p/gabrielnussbaum.html" style="color:inherit;text-decoration:none">Gabriel Nussbaum</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@gabriel.nussbaum" target="_blank" rel="noopener">@gabriel.nussbaum ↗</a></div>
-        <p class="bio">Money vids — That Money Guy.</p>
-        <div class="figures">
-          <div><strong>1.4M</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/gabrielnussbaum.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/getontopwithdahlia.jpg" alt="@getontopwithdahlia" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>D</div>'">
-        <h3><a href="p/getontopwithdahlia.html" style="color:inherit;text-decoration:none">Dahlia</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@getontopwithdahlia" target="_blank" rel="noopener">@getontopwithdahlia ↗</a></div>
-        <p class="bio">Get On Top of Your Finances! Ex-BlackRock.</p>
-        <div class="figures">
-          <div><strong>8.2K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/getontopwithdahlia.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/theeverydaymillionaire.jpg" alt="@theeverydaymillionaire" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>R</div>'">
-        <h3><a href="p/theeverydaymillionaire.html" style="color:inherit;text-decoration:none">Rex</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@theeverydaymillionaire" target="_blank" rel="noopener">@theeverydaymillionaire ↗</a></div>
-        <p class="bio">Personal finance & investing. Everyday millionaire journey.</p>
-        <div class="figures">
-          <div><strong>39.0K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/theeverydaymillionaire.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/bretandevey.jpg" alt="@bretandevey" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>BA</div>'">
-        <h3><a href="p/bretandevey.html" style="color:inherit;text-decoration:none">Bret and Evey</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@bretandevey" target="_blank" rel="noopener">@bretandevey ↗</a></div>
-        <p class="bio">Safe space for simple personal finance & investing.</p>
-        <div class="figures">
-          <div><strong>294.6K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/bretandevey.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/fellasfinance.jpg" alt="@fellasfinance" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>FF</div>'">
-        <h3><a href="p/fellasfinance.html" style="color:inherit;text-decoration:none">Fellas Finance</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@fellasfinance" target="_blank" rel="noopener">@fellasfinance ↗</a></div>
-        <p class="bio">Helping people build long-term wealth.</p>
-        <div class="figures">
-          <div><strong>85.3K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/fellasfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/tommytalksu.jpg" alt="@tommytalks.uk" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>TE</div>'">
-        <h3><a href="p/tommytalksuk.html" style="color:inherit;text-decoration:none">Tommy Everitt</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@tommytalks.uk" target="_blank" rel="noopener">@tommytalks.uk ↗</a></div>
-        <p class="bio">Ordinary guy talking investing & personal finance.</p>
-        <div class="figures">
-          <div><strong>223</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/tommytalksuk.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/moneystocker.jpg" alt="@moneystocker" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>J</div>'">
-        <h3><a href="p/moneystocker.html" style="color:inherit;text-decoration:none">James</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@moneystocker" target="_blank" rel="noopener">@moneystocker ↗</a></div>
-        <p class="bio">Personal Finance Educator. Money Stocker.</p>
-        <div class="figures">
-          <div><strong>60.8K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/moneystocker.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/emmieedit.jpg" alt="@emmieedit" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>E</div>'">
-        <h3><a href="p/emmieedit.html" style="color:inherit;text-decoration:none">Emmie</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@emmieedit" target="_blank" rel="noopener">@emmieedit ↗</a></div>
-        <p class="bio">11 years in quantitative finance. Financial literacy.</p>
-        <div class="figures">
-          <div><strong>108.1K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/emmieedit.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/tatianamamixo.jpg" alt="@tatianamamixo" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>T</div>'">
-        <h3><a href="p/tatianamamixo.html" style="color:inherit;text-decoration:none">Tatiana</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@tatianamamixo" target="_blank" rel="noopener">@tatianamamixo ↗</a></div>
-        <p class="bio">London. Pursuing financial freedom.</p>
-        <div class="figures">
-          <div><strong>14.9K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/tatianamamixo.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/allthingsmoney.jpg" alt="@allthingsmoney_" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>O</div>'">
-        <h3><a href="p/allthingsmoney.html" style="color:inherit;text-decoration:none">Ola</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@allthingsmoney_" target="_blank" rel="noopener">@allthingsmoney_ ↗</a></div>
-        <p class="bio">All Things Money — level up your personal finances.</p>
-        <div class="figures">
-          <div><strong>6.5K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/allthingsmoney.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/krishkara.jpg" alt="@krish.kara" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>KK</div>'">
-        <h3><a href="p/krishkara.html" style="color:inherit;text-decoration:none">Krish Kara</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@krish.kara" target="_blank" rel="noopener">@krish.kara ↗</a></div>
-        <p class="bio">Money tips, investing, side hustles.</p>
-        <div class="figures">
-          <div><strong>104.0K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/krishkara.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/camrusselluk.jpg" alt="@camrusselluk" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>C</div>'">
-        <h3><a href="p/camrusselluk.html" style="color:inherit;text-decoration:none">Cam</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@camrusselluk" target="_blank" rel="noopener">@camrusselluk ↗</a></div>
-        <p class="bio">Helping you understand money, investing and the stock market.</p>
-        <div class="figures">
-          <div><strong>3.7K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/camrusselluk.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/financiallyher.jpg" alt="@financiallyher_" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>A</div>'">
-        <h3><a href="p/financiallyher.html" style="color:inherit;text-decoration:none">Amy</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@financiallyher_" target="_blank" rel="noopener">@financiallyher_ ↗</a></div>
-        <p class="bio">Financially Her — for women that want more.</p>
-        <div class="figures">
-          <div><strong>45.6K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/financiallyher.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/jno_pwnr.jpg" alt="@jno_pwnr" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>J</div>'">
-        <h3><a href="p/jnopwnr.html" style="color:inherit;text-decoration:none">JNO</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@jno_pwnr" target="_blank" rel="noopener">@jno_pwnr ↗</a></div>
-        <p class="bio">London based. Money, growth, building a life.</p>
-        <div class="figures">
-          <div><strong>47.5K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/jnopwnr.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/awrights.jpg" alt="@awright.s" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>A</div>'">
-        <h3><a href="p/awrights.html" style="color:inherit;text-decoration:none">awright</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@awright.s" target="_blank" rel="noopener">@awright.s ↗</a></div>
-        <p class="bio">Building a life I love.</p>
-        <div class="figures">
-          <div><strong>3.3K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/awrights.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/grayareafinance.jpg" alt="@gray.area.finance" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>D</div>'">
-        <h3><a href="p/grayareafinance.html" style="color:inherit;text-decoration:none">Daniel</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@gray.area.finance" target="_blank" rel="noopener">@gray.area.finance ↗</a></div>
-        <p class="bio">Gray Area Finance — better money decisions.</p>
-        <div class="figures">
-          <div><strong>18.4K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/grayareafinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/george_tuttle.jpg" alt="@george_tuttle" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>GT</div>'">
-        <h3><a href="p/georgetuttle.html" style="color:inherit;text-decoration:none">George Tuttle</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@george_tuttle" target="_blank" rel="noopener">@george_tuttle ↗</a></div>
-        <p class="bio">London accountant talking personal finance.</p>
-        <div class="figures">
-          <div><strong>1.2K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/georgetuttle.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/kafilatfinance.jpg" alt="@kafilat.finance" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>K</div>'">
-        <h3><a href="p/kafilatfinance.html" style="color:inherit;text-decoration:none">Kafilat</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@kafilat.finance" target="_blank" rel="noopener">@kafilat.finance ↗</a></div>
-        <p class="bio">Helping millennial women build systems for money.</p>
-        <div class="figures">
-          <div><strong>7.3K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/kafilatfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/wealthmadeaccessible.jpg" alt="@wealthmadeaccessible" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>C</div>'">
-        <h3><a href="p/wealthmadeaccessible.html" style="color:inherit;text-decoration:none">Charlie</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@wealthmadeaccessible" target="_blank" rel="noopener">@wealthmadeaccessible ↗</a></div>
-        <p class="bio">Helping you budget, save and build wealth.</p>
-        <div class="figures">
-          <div><strong>43.9K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/wealthmadeaccessible.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/msellyphant.jpg" alt="@msellyphant" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>E</div>'">
-        <h3><a href="p/msellyphant.html" style="color:inherit;text-decoration:none">Elly</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@msellyphant" target="_blank" rel="noopener">@msellyphant ↗</a></div>
-        <p class="bio">Primary teacher on track to retire a millionaire.</p>
-        <div class="figures">
-          <div><strong>36.5K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/msellyphant.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/amandainvests.jpg" alt="@amandainvests" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>A</div>'">
-        <h3><a href="p/amandainvests.html" style="color:inherit;text-decoration:none">Amanda</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@amandainvests" target="_blank" rel="noopener">@amandainvests ↗</a></div>
-        <p class="bio">Mum, investor, author. Money & investing.</p>
-        <div class="figures">
-          <div><strong>3.4K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/amandainvests.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/didifinance.jpg" alt="@didifinance" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>D</div>'">
-        <h3><a href="p/didifinance.html" style="color:inherit;text-decoration:none">DiDi</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@didifinance" target="_blank" rel="noopener">@didifinance ↗</a></div>
-        <p class="bio">All Things Finance — become financially free together.</p>
-        <div class="figures">
-          <div><strong>18.2K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/didifinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/bensfinance.jpg" alt="@bensfinance" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>B</div>'">
-        <h3><a href="p/bensfinance.html" style="color:inherit;text-decoration:none">Ben</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@bensfinance" target="_blank" rel="noopener">@bensfinance ↗</a></div>
-        <p class="bio">UK finance creator. Trading 212 code: BEN.</p>
-        <div class="figures">
-          <div><strong>26.9K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/bensfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/lupeslively.jpg" alt="@lupeslively" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>L</div>'">
-        <h3><a href="p/lupeslively.html" style="color:inherit;text-decoration:none">Lupes</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@lupeslively" target="_blank" rel="noopener">@lupeslively ↗</a></div>
-        <p class="bio">Talking money and life.</p>
-        <div class="figures">
-          <div><strong>64.0K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/lupeslively.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/holl_005.jpg" alt="@holl_005" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>HA</div>'">
-        <h3><a href="p/holl005.html" style="color:inherit;text-decoration:none">Holly Ann</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@holl_005" target="_blank" rel="noopener">@holl_005 ↗</a></div>
-        <p class="bio">20, learning money, markets & life.</p>
-        <div class="figures">
-          <div><strong>6.5K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/holl005.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/janiicemyla.jpg" alt="@janiice.myla" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>J</div>'">
-        <h3><a href="p/janiicemyla.html" style="color:inherit;text-decoration:none">Janice</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@janiice.myla" target="_blank" rel="noopener">@janiice.myla ↗</a></div>
-        <p class="bio">Talking all things money and investing.</p>
-        <div class="figures">
-          <div><strong>1.7K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/janiicemyla.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/markonthemoney.jpg" alt="@markonthemoney" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>M</div>'">
-        <h3><a href="p/markonthemoney.html" style="color:inherit;text-decoration:none">Mark</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@markonthemoney" target="_blank" rel="noopener">@markonthemoney ↗</a></div>
-        <p class="bio">Helping you retire comfortably. Pensions & investing.</p>
-        <div class="figures">
-          <div><strong>52.4K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/markonthemoney.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/admjay.jpg" alt="@adm.jay" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>AJ</div>'">
-        <h3><a href="p/admjay.html" style="color:inherit;text-decoration:none">Adam Jay</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@adm.jay" target="_blank" rel="noopener">@adm.jay ↗</a></div>
-        <p class="bio">UK investing guy. London accountant.</p>
-        <div class="figures">
-          <div><strong>7.0K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
-        <p style="margin:12px 0 0"><a href="p/admjay.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      <div class="card">
-        <img class="avatar" src="avatars/nextgenngpf.jpg" alt="@nextgenngpf" loading="lazy" onerror="this.outerHTML='<div class=&quot;avatar&quot;>WG</div>'">
-        <h3><a href="p/nextgenngpf.html" style="color:inherit;text-decoration:none">Will Gryba</a></h3>
-        <div class="handle"><a href="https://www.tiktok.com/@nextgenngpf" target="_blank" rel="noopener">@nextgenngpf ↗</a></div>
-        <p class="bio">NGPF — next-gen personal finance.</p>
-        <div class="figures">
-          <div><strong>37.7K</strong><span>Followers</span></div>
-          <div><strong>TBC</strong><span>Net worth</span></div>
-        </div>
-      </div>
+<p style="margin:12px 0 0"><a href="p/msellyphant.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="daniel gray.area.finance" data-fol="18400" data-nw="0" data-topics="better decisions investing" data-eng="0">
+<img class="avatar" src="avatars/grayareafinance.jpg" alt="Daniel" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">D</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/grayareafinance.html" style="color:inherit;text-decoration:none">Daniel</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@gray.area.finance" target="_blank" rel="noopener">@gray.area.finance ↗</a></div>
+<p class="bio">Better money decisions without the jargon.</p>
+<p style="margin:0 0 10px"><span class="tag">Better decisions</span> <span class="tag">Investing</span></p>
+<div class="figures">
+<div><strong>18.4K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
 
+<p style="margin:12px 0 0"><a href="p/grayareafinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="didi didifinance" data-fol="18200" data-nw="0" data-topics="financial freedom community" data-eng="0">
+<img class="avatar" src="avatars/didifinance.jpg" alt="DiDi" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">D</div>'">
+<span class="tier">Micro</span>
+<h3><a href="p/didifinance.html" style="color:inherit;text-decoration:none">DiDi</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@didifinance" target="_blank" rel="noopener">@didifinance ↗</a></div>
+<p class="bio">Becoming financially free, together.</p>
+<p style="margin:0 0 10px"><span class="tag">Financial freedom</span> <span class="tag">Community</span></p>
+<div class="figures">
+<div><strong>18.2K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/didifinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="dahlia getontopwithdahlia" data-fol="8200" data-nw="0" data-topics="budgeting ex-blackrock" data-eng="0">
+<img class="avatar" src="avatars/getontopwithdahlia.jpg" alt="Dahlia" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">D</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/getontopwithdahlia.html" style="color:inherit;text-decoration:none">Dahlia</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@getontopwithdahlia" target="_blank" rel="noopener">@getontopwithdahlia ↗</a></div>
+<p class="bio">Ex-BlackRock educator helping you get on top of your finances.</p>
+<p style="margin:0 0 10px"><span class="tag">Budgeting</span> <span class="tag">Ex-BlackRock</span></p>
+<div class="figures">
+<div><strong>8.2K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/getontopwithdahlia.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="kafilat kafilat.finance" data-fol="7300" data-nw="0" data-topics="systems women & money" data-eng="0">
+<img class="avatar" src="avatars/kafilatfinance.jpg" alt="Kafilat" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">K</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/kafilatfinance.html" style="color:inherit;text-decoration:none">Kafilat</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@kafilat.finance" target="_blank" rel="noopener">@kafilat.finance ↗</a></div>
+<p class="bio">Helping millennial women build systems for money.</p>
+<p style="margin:0 0 10px"><span class="tag">Systems</span> <span class="tag">Women & money</span></p>
+<div class="figures">
+<div><strong>7.3K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/kafilatfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="ola allthingsmoney_" data-fol="6500" data-nw="0" data-topics="budgeting beginner" data-eng="0">
+<img class="avatar" src="avatars/allthingsmoney.jpg" alt="Ola" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">O</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/allthingsmoney.html" style="color:inherit;text-decoration:none">Ola</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@allthingsmoney_" target="_blank" rel="noopener">@allthingsmoney_ ↗</a></div>
+<p class="bio">All Things Money — levelling up personal finances step by step.</p>
+<p style="margin:0 0 10px"><span class="tag">Budgeting</span> <span class="tag">Beginner</span></p>
+<div class="figures">
+<div><strong>6.5K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/allthingsmoney.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="holly ann holl_005" data-fol="6500" data-nw="0" data-topics="gen z money learning" data-eng="0">
+<img class="avatar" src="avatars/holl_005.jpg" alt="Holly Ann" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">HA</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/holl005.html" style="color:inherit;text-decoration:none">Holly Ann</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@holl_005" target="_blank" rel="noopener">@holl_005 ↗</a></div>
+<p class="bio">20-year-old learning money, markets and life in public.</p>
+<p style="margin:0 0 10px"><span class="tag">Gen Z money</span> <span class="tag">Learning</span></p>
+<div class="figures">
+<div><strong>6.5K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/holl005.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="cam camrusselluk" data-fol="3700" data-nw="0" data-topics="investing basics stocks" data-eng="0">
+<img class="avatar" src="avatars/camrusselluk.jpg" alt="Cam" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">C</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/camrusselluk.html" style="color:inherit;text-decoration:none">Cam</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@camrusselluk" target="_blank" rel="noopener">@camrusselluk ↗</a></div>
+<p class="bio">Making money, investing and the stock market easy to grasp.</p>
+<p style="margin:0 0 10px"><span class="tag">Investing basics</span> <span class="tag">Stocks</span></p>
+<div class="figures">
+<div><strong>3.7K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/camrusselluk.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="amanda amandainvests" data-fol="3400" data-nw="0" data-topics="mum investors investing" data-eng="0">
+<img class="avatar" src="avatars/amandainvests.jpg" alt="Amanda" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">A</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/amandainvests.html" style="color:inherit;text-decoration:none">Amanda</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@amandainvests" target="_blank" rel="noopener">@amandainvests ↗</a></div>
+<p class="bio">Mum, investor and author on money and investing.</p>
+<p style="margin:0 0 10px"><span class="tag">Mum investors</span> <span class="tag">Investing</span></p>
+<div class="figures">
+<div><strong>3.4K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/amandainvests.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="intentional finance intentional.finance" data-fol="3300" data-nw="0" data-topics="homeownership budgeting" data-eng="0">
+<img class="avatar" src="avatars/intentionalfinance.jpg" alt="Intentional Finance" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">IF</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/intentionalfinance.html" style="color:inherit;text-decoration:none">Intentional Finance</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@intentional.finance" target="_blank" rel="noopener">@intentional.finance ↗</a></div>
+<p class="bio">22-year-old homeowner building wealth intentionally.</p>
+<p style="margin:0 0 10px"><span class="tag">Homeownership</span> <span class="tag">Budgeting</span></p>
+<div class="figures">
+<div><strong>3.3K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/intentionalfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="awright awright.s" data-fol="3300" data-nw="0" data-topics="intentional living saving" data-eng="0">
+<img class="avatar" src="avatars/awrights.jpg" alt="awright" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">A</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/awrights.html" style="color:inherit;text-decoration:none">awright</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@awright.s" target="_blank" rel="noopener">@awright.s ↗</a></div>
+<p class="bio">Building a life she loves — money as a tool, not a goal.</p>
+<p style="margin:0 0 10px"><span class="tag">Intentional living</span> <span class="tag">Saving</span></p>
+<div class="figures">
+<div><strong>3.3K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/awrights.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="ollie invests ollieinvests" data-fol="2200" data-nw="0" data-topics="isas beginner investing" data-eng="2.65">
+<img class="avatar" src="avatars/ollieinvests.jpg" alt="Ollie Invests" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">OI</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/ollieinvests.html" style="color:inherit;text-decoration:none">Ollie Invests</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@ollieinvests" target="_blank" rel="noopener">@ollieinvests ↗</a></div>
+<p class="bio">23-year-old engineering graduate sharing weekly portfolio updates.</p>
+<p style="margin:0 0 10px"><span class="tag">ISAs</span> <span class="tag">Beginner investing</span></p>
+<div class="figures">
+<div><strong>2.2K</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong>2.65%</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/ollieinvests.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-name="tommy everitt tommytalks.uk" data-fol="223" data-nw="0" data-topics="beginner investing saving" data-eng="0">
+<img class="avatar" src="avatars/tommytalksu.jpg" alt="Tommy Everitt" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class="fallback-avatar" aria-hidden="true">TE</div>'">
+<span class="tier">Nano</span>
+<h3><a href="p/tommytalksuk.html" style="color:inherit;text-decoration:none">Tommy Everitt</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@tommytalks.uk" target="_blank" rel="noopener">@tommytalks.uk ↗</a></div>
+<p class="bio">Ordinary guy talking investing and personal finance.</p>
+<p style="margin:0 0 10px"><span class="tag">Beginner investing</span> <span class="tag">Saving</span></p>
+<div class="figures">
+<div><strong>223</strong><span>Followers</span></div>
+<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>
+<div><strong class="pending">—</strong><span>Engagement</span></div>
+</div>
+
+<p style="margin:12px 0 0"><a href="p/tommytalksuk.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+</div>
     </div>
+    <div id="no-results">No creators match your search. Try clearing a filter.</div>
+    <p class="src" style="margin-top:24px">* Self-reported figure — stated by the creator in their own TikTok content, not independently verified. Source video (+ date) linked on each profile.</p>
   </div>
 </section>
 
@@ -597,7 +831,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
     <h2>For brands</h2>
     <p>Connect with authentic UK finance creators whose audiences trust them with real money conversations.</p>
     <ul>
-      <li>Verified reach &amp; demographics</li>
+      <li>Sourced reach &amp; topics</li>
       <li>Direct creator access</li>
       <li>Transparent, sourced figures</li>
     </ul>
@@ -611,11 +845,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
     <div class="section-head"><h2>FAQ</h2></div>
     <div style="display:grid;gap:20px">
       <div><h3 style="margin:0 0 6px;font-size:17px">Where do the net worth figures come from?</h3>
-      <p style="margin:0;color:var(--muted)">They're self-described — stated by each creator in their own TikTok videos. We extract them from transcripts and link back to the source so you can verify.</p></div>
+      <p style="margin:0;color:var(--muted)">They're self-reported — stated by each creator in their own TikTok videos. We extract them from transcripts and link back to the source so you can check.</p></div>
       <div><h3 style="margin:0 0 6px;font-size:17px">Are the figures verified?</h3>
       <p style="margin:0;color:var(--muted)">No independent verification. Figures may be outdated or aspirational. Treat them as what the creator claims, not audited fact.</p></div>
       <div><h3 style="margin:0 0 6px;font-size:17px">How often is data refreshed?</h3>
-      <p style="margin:0;color:var(--muted)">Stats and transcripts are re-polled every Monday. Last pull date is shown in the footer.</p></div>
+      <p style="margin:0;color:var(--muted)">Stats and transcripts are re-polled every Monday. Last pull: 5 Oct 2026 (shown above the directory too).</p></div>
       <div><h3 style="margin:0 0 6px;font-size:17px">Is this financial advice?</h3>
       <p style="margin:0;color:var(--muted)">No. Nothing on this site constitutes financial advice. Do your own research.</p></div>
     </div>
@@ -626,22 +860,57 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
   <div class="wrap">
     <div>
       <a class="logo" href="#" style="font-size:18px">SaveShare<span>.io</span></a>
-      <p style="margin:8px 0 0">Verified creator directory for UK personal finance.</p>
+      <p style="margin:8px 0 0">Sourced creator directory for UK personal finance.</p>
     </div>
     <div style="font-size:14px">
       <a href="#how" style="color:var(--muted);text-decoration:none;margin-right:18px">How it works</a>
-      <a href="#creators" style="color:var(--muted);text-decoration:none;margin-right:18px">Creators</a>
+      <a href="#creators" style="color:var(--muted);text-decoration:none;margin-right:18px">Directory</a>
       <a href="#brands" style="color:var(--muted);text-decoration:none;margin-right:18px">For brands</a>
       <a href="#faq" style="color:var(--muted);text-decoration:none">FAQ</a>
     </div>
   </div>
   <div class="wrap">
-    <p class="disclaimer">Disclaimer: Net worth figures shown are self-described by each creator in their own TikTok content and have not been independently verified. They may be outdated. Nothing on this site constitutes financial advice. Figures are shown with attribution and a link back to the creator's original account so you can check the source yourself. Stats (followers, likes) last pulled 5 Oct 2026.</p>
-    <p style="font-size:13px;color:#94A3B8">© 2026 SaveShare.io — All rights reserved.</p>
+    <p class="disclaimer">Disclaimer: Net worth figures shown are self-reported by each creator in their own TikTok content and have not been independently verified. They may be outdated. Nothing on this site constitutes financial advice. Figures are shown with attribution and a link back to the creator's original account so you can check the source yourself. Stats (followers, likes) last pulled 5 Oct 2026.</p>
+    <p style="font-size:13px;color:#4B5563">© 2026 SaveShare.io — All rights reserved.</p>
   </div>
 </footer>
 
+<script>
+(function(){
+var q=document.getElementById('q'),sort=document.getElementById('sort'),topic=document.getElementById('topic'),hasfig=document.getElementById('hasfig'),nores=document.getElementById('no-results');
+function num(s){s=(s||'').trim();if(/M$/i.test(s))return parseFloat(s)*1e6;if(/K$/i.test(s))return parseFloat(s)*1e3;return parseFloat(s)||0;}
+function apply(){
+var query=(q.value||'').toLowerCase(),t=topic.value,hf=hasfig.checked;
+var groups=[document.getElementById('fig-group'),document.getElementById('pend-group')];
+var vis=0;
+groups.forEach(function(g){
+if(!g)return;
+var list=Array.prototype.slice.call(g.querySelectorAll('.card'));
+list.forEach(function(c){
+var ok=c.getAttribute('data-name').indexOf(query)>-1;
+if(t&&c.getAttribute('data-topics').indexOf(t)<0)ok=false;
+if(hf&&c.getAttribute('data-nw')!=='1')ok=false;
+c.style.display=ok?'':'none';
+if(ok)vis++;
+});
+if(sort.value!=='default'){
+list.sort(function(a,b){
+var k=sort.value;
+var av=k==='eng'?parseFloat(a.getAttribute('data-eng')):num(a.querySelector('.figures strong').textContent);
+if(k==='nw')av=a.getAttribute('data-nw')==='1'?num(a.querySelectorAll('.figures strong')[1].textContent):-1;
+var bv=k==='eng'?parseFloat(b.getAttribute('data-eng')):num(b.querySelector('.figures strong').textContent);
+if(k==='nw')bv=b.getAttribute('data-nw')==='1'?num(b.querySelectorAll('.figures strong')[1].textContent):-1;
+return bv-av;});
+list.forEach(function(c){g.appendChild(c);});
+}});
+var searching=query!==''||t!==''||hf||sort.value!=='default';
+document.querySelector('.pending-head').style.display=searching?'none':'';
+document.querySelector('.pending-sub').style.display=searching?'none':'';
+nores.style.display=vis===0?'block':'none';
+}
+[q,sort,topic,hasfig].forEach(function(el){el.addEventListener('input',apply);el.addEventListener('change',apply);});
+})();
+</script>
+
 </body>
 </html>
-        <p style="margin:12px 0 0"><a href="p/nextgenngpf.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
-      
