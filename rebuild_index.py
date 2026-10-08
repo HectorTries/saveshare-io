@@ -28,7 +28,7 @@ def parse(p):
                 eng=eng.group(1) if eng else None)
 
 cards = [parse(p) for p in cards_raw]
-assert len(cards) == 39, len(cards)
+assert len(cards) == 40, len(cards)
 
 # ---------- 2. resolved net worths from p/ pages ----------
 NW, NWDATE = {}, {}
@@ -98,6 +98,7 @@ TOPICS = {
  'markonthemoney': (['Pensions','Retirement'],'Helping you retire comfortably — pensions and investing.'),
  'admjay': (['Accountant','Investing'],'London accountant breaking down investing for beginners.'),
  'nextgenngpf': (['Gen Z money','Budgeting'],'Next-gen personal finance for young earners.'),
+ 'weinvestandrest': (['Early retirement','Investing'],'Invest+Rest creator with £600K+ invested toward early retirement.'),
 }
 PKEY = {'seans.money':'seansmoney','dr.jubairsfinance':'drjubairsfinance','iainjgeddes':'iainmoneyinsights',
  'gabriel.nussbaum':'gabrielnussbaum','tommytalks.uk':'tommytalksuk','allthingsmoney_':'allthingsmoney',
