@@ -3,37 +3,37 @@
 import os
 
 CSS = """@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
-:root{--teal:#0F766E;--teal-dark:#115E59;--teal-soft:#E0F2F1;--ink:#0F172A;--muted:#475569;--line:#E2E8F0;--bg:#F8FAFC}
-*{box-sizing:border-box}
-body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
-h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;margin:0}
-.wrap{max-width:780px;margin:0 auto;padding:0 24px}
-nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
-nav .wrap{max-width:1100px;display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
-.logo{font-weight:800;font-size:20px;color:var(--teal);text-decoration:none}
-.logo span{color:var(--ink)}
-.nav-links{display:flex;gap:24px;align-items:center}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:500}
-.nav-links a:hover{color:var(--teal)}
-.hero{background:linear-gradient(135deg,#0F766E 0%,#134E4A 100%);color:#fff;padding:56px 0;text-align:center}
-.hero h1{font-size:clamp(30px,4vw,44px);margin-bottom:10px}
-.hero p{opacity:.9;font-size:17px;margin:0}
-main{padding:48px 0}
-.stat-row{display:flex;gap:16px;flex-wrap:wrap;margin:24px 0}
-.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;flex:1;min-width:140px}
-.stat strong{display:block;font-size:22px}
-.stat span{font-size:13px;color:var(--muted)}
-blockquote{border-left:4px solid var(--teal);margin:20px 0;padding:12px 20px;background:#fff;border-radius:0 12px 12px 0;font-style:italic}
-blockquote cite{display:block;font-style:normal;font-size:13px;color:var(--muted);margin-top:8px}
-blockquote cite a{color:var(--teal)}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;margin:20px 0}
-.card h2{font-size:22px;margin-bottom:10px}
-.tag{display:inline-block;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:600;padding:3px 12px;border-radius:9999px;margin:2px 6px 2px 0}
-a{color:var(--teal)}
-footer{background:#fff;border-top:1px solid var(--line);padding:32px 0;font-size:13px;color:var(--muted);margin-top:48px}
-.src{font-size:13px;color:var(--muted)}
-ul.tick{list-style:none;padding:0}
-ul.tick li::before{content:"✓ ";color:#0F766E;font-weight:700}"""
+:root{{--teal:#0F766E;--teal-dark:#115E59;--teal-soft:#E0F2F1;--ink:#0F172A;--muted:#475569;--line:#E2E8F0;--bg:#F8FAFC}}
+*{{box-sizing:border-box}}
+body{{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}}
+h1,h2,h3{{font-family:'Playfair Display',Georgia,serif;line-height:1.2;margin:0}}
+.wrap{{max-width:780px;margin:0 auto;padding:0 24px}}
+nav{{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}}
+nav .wrap{{max-width:1100px;display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}}
+.logo{{font-weight:800;font-size:20px;color:var(--teal);text-decoration:none}}
+.logo span{{color:var(--ink)}}
+.nav-links{{display:flex;gap:24px;align-items:center}}
+.nav-links a{{color:var(--muted);text-decoration:none;font-size:15px;font-weight:500}}
+.nav-links a:hover{{color:var(--teal)}}
+.hero{{background:linear-gradient(135deg,#0F766E 0%,#134E4A 100%);color:#fff;padding:56px 0;text-align:center}}
+.hero h1{{font-size:clamp(30px,4vw,44px);margin-bottom:10px}}
+.hero p{{opacity:.9;font-size:17px;margin:0}}
+main{{padding:48px 0}}
+.stat-row{{display:flex;gap:16px;flex-wrap:wrap;margin:24px 0}}
+.stat{{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;flex:1;min-width:140px}}
+.stat strong{{display:block;font-size:22px}}
+.stat span{{font-size:13px;color:var(--muted)}}
+blockquote{{border-left:4px solid var(--teal);margin:20px 0;padding:12px 20px;background:#fff;border-radius:0 12px 12px 0;font-style:italic}}
+blockquote cite{{display:block;font-style:normal;font-size:13px;color:var(--muted);margin-top:8px}}
+blockquote cite a{{color:var(--teal)}}
+.card{{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;margin:20px 0}}
+.card h2{{font-size:22px;margin-bottom:10px}}
+.tag{{display:inline-block;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:600;padding:3px 12px;border-radius:9999px;margin:2px 6px 2px 0}}
+a{{color:var(--teal)}}
+footer{{background:#fff;border-top:1px solid var(--line);padding:32px 0;font-size:13px;color:var(--muted);margin-top:48px}}
+.src{{font-size:13px;color:var(--muted)}}
+ul.tick{{list-style:none;padding:0}}
+ul.tick li::before{{content:"✓ ";color:#0F766E;font-weight:700}}"""
 
 NAV = """<nav><div class="wrap"><a class="logo" href="../index.html">SaveShare<span>.io</span></a>
 <div class="nav-links"><a href="../index.html#creators">Creators</a><a href="index.html">Money Advice</a></div></div></nav>"""
@@ -52,9 +52,8 @@ def page(title, desc, nav, hero_badge, hero_h1, hero_sub, body):
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T9QS61KD0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
-
   gtag('config', 'G-3T9QS61KD0');
 </script>
 <style>{CSS}</style>
@@ -70,7 +69,7 @@ def page(title, desc, nav, hero_badge, hero_h1, hero_sub, body):
 {body}
 </div></main>
 <footer><div class="wrap" style="max-width:1100px">
-<p>Net worth figures are self-described by each creator in their own TikTok content and have not been independently verified. Nothing on this site constitutes financial advice. © 2026 SaveShare.io</p>
+<p>Net worth figures are self-reported by each creator in their own TikTok content and have not been independently verified. Nothing on this site constitutes financial advice. © 2026 SaveShare.io</p>
 </div></footer>
 </body>
 </html>"""
@@ -81,6 +80,8 @@ NAV_BLOG = """<nav><div class="wrap"><a class="logo" href="../index.html">SaveSh
 <div class="nav-links"><a href="../index.html#creators">Creators</a><a href="index.html">Money Advice</a></div></div></nav>"""
 
 TT = "https://www.tiktok.com"
+TT_HANDLE_PY = {"seansmoney": "seans.money", "drjubairsfinance": "dr.jubairsfinance", "iainmoneyinsights": "iainjgeddes"}
+NW_DATE_PY = {"miarosemcgrath": "Oct 2026", "itssophieblank": "Sep 2026", "seansmoney": "Aug 2026", "neilinvests": "Sep 2026", "hannahbevington": "Sep 2026", "drjubairsfinance": "2025", "iainmoneyinsights": "late 2025", "ollieinvests": "2026"}
 
 CREATORS = [
  dict(handle="miarosemcgrath", name="Mia Rose", tagline="Frugal Chic® — build wealth, stylishly",
@@ -119,7 +120,7 @@ CREATORS = [
       ],
       stats=[("28.9K", "Followers"), ("£230K", "Net worth*"), ("4.88%", "Avg engagement"), ("20", "Videos archived")]),
  dict(handle="seansmoney", name="Sean", tagline="Documenting money at 30 — Edinburgh",
-      followers="4.1K", nw="~£165K invested", nw_note="£89K pensions + £72K ISAs + £3.5K LISA (self-described, Aug 2026)",
+      followers="20.6K", nw="~£165K invested", nw_note="£89K pensions + £72K ISAs + £3.5K LISA (self-described, Aug 2026)",
       nw_vid="7675840516411395330", eng="0.97%", n_tr=20,
       who=("Sean is an Edinburgh-based creator in his early 30s documenting what he does with his money while educating "
             "others about personal finance. His content mixes beginner investing explainers, ETF breakdowns and honest personal updates."),
@@ -133,7 +134,7 @@ CREATORS = [
         ("Overall, I have about £165,000 invested in the stock market.", "7675840516411395330"),
         ("If you're waiting until you have more money to invest, you're doing it wrong. I'm doing it with just £10 a week.", "7669798085471653142"),
       ],
-      stats=[("4.1K", "Followers"), ("~£165K", "Invested*"), ("0.97%", "Avg engagement"), ("20", "Videos archived")]),
+      stats=[("20.6K", "Followers"), ("~£165K", "Invested*"), ("0.97%", "Avg engagement"), ("20", "Videos archived")]),
  dict(handle="neilinvests", name="Neil Invests", tagline="Helping beginners start investing",
       followers="146.5K", nw="£350K", nw_note="investment portfolios (self-described, Sep 2026); ~£700K projected pension at 57",
       nw_vid="7690583705051614497", eng="2.47%", n_tr=11,
@@ -168,7 +169,7 @@ CREATORS = [
       ],
       stats=[("41.0K", "Followers"), ("£135K", "Net worth*"), ("4.68%", "Avg engagement"), ("20", "Videos archived")]),
  dict(handle="drjubairsfinance", name="Dr Jubair", tagline="Doctor-turned-investor documenting daily investing",
-      followers="670", nw="~£110K+", nw_note="11,000 shares worth £110,469 in one fund (self-described, 2025)",
+      followers="17.5K", nw="~£110K+", nw_note="11,000 shares worth £110,469 in one fund (self-described, 2025)",
       nw_vid="7478749549515902230", eng="2.14%", n_tr=19,
       who=("Dr Jubair holds a doctorate (UCL) and creates investing-education content alongside a successful YouTube channel "
             "(14,000+ subscribers). His signature series: investing £100 every single day into the stock market and reporting the results."),
@@ -182,9 +183,9 @@ CREATORS = [
         ("My 11,000 shares are now worth £110,469.", "7478749549515902230"),
         ("Being a doctor in your 20s is a life hack.", "7437270529976945953"),
       ],
-      stats=[("670", "Followers"), ("~£110K+", "Holdings*"), ("2.14%", "Avg engagement"), ("20", "Videos archived")]),
+      stats=[("17.5K", "Followers"), ("~£110K+", "Holdings*"), ("2.14%", "Avg engagement"), ("20", "Videos archived")]),
  dict(handle="iainmoneyinsights", name="Iain Geddes", tagline="Building wealth from £0 & showing it all — Scotland",
-      followers="~3", nw="£94K", nw_note="S&S ISA portfolio value (self-described, late 2025)",
+      followers="34.1K", nw="£94K", nw_note="S&S ISA portfolio value (self-described, late 2025)",
       nw_vid="7578188989362900255", eng="0.26%", n_tr=20,
       who=("Iain Geddes, 34, from Scotland, shares his real-time ISA portfolio journey under the banner 'building wealth from £0 "
             "and showing it all'. He started investing in April 2020 and posts transparent portfolio updates."),
@@ -198,7 +199,7 @@ CREATORS = [
         ("Saving money was keeping me broke. So I did this instead.", "7578182511159774494"),
         ("Do not panic sell… Remember why you invested in them in the first place. Think of that long-term picture.", "7578185208575315231"),
       ],
-      stats=[("~3", "Followers"), ("£94K", "Portfolio*"), ("0.26%", "Avg engagement"), ("20", "Videos archived")]),
+      stats=[("34.1K", "Followers"), ("£94K", "Portfolio*"), ("0.26%", "Avg engagement"), ("20", "Videos archived")]),
  dict(handle="ollieinvests", name="Ollie Invests", tagline="23, Engineering Graduate — engineering financial freedom",
       followers="2.2K", nw="Growing", nw_note="early-stage portfolio; shares weekly portfolio updates (2026)",
       nw_vid="7692499806496836886", eng="2.65%", n_tr=11,
@@ -217,37 +218,35 @@ CREATORS = [
 ]
 
 for c in CREATORS:
-    h = c["handle"]
-    quotes_html = "\n".join(
-        f'<blockquote>“{q}”<cite>— {c["name"]} (<a href="{TT}/@{h}/video/{v}" target="_blank" rel="noopener">watch on TikTok ↗</a>)</cite></blockquote>'
-        for q, v in c["quotes"])
-    stats_html = "\n".join(f'<div class="stat"><strong>{v}</strong><span>{l}</span></div>' for v, l in c["stats"])
-    body = f"""<div class="card">
-<p><span class="tag">{c["tagline"]}</span> <span class="tag">{c["n_tr"]} videos archived</span> <span class="tag">Avg engagement {c["eng"]}</span></p>
-<div class="stat-row">
-{stats_html}
-</div>
-<p class="src">* Self-described figure from the creator's own TikTok content — not independently verified. Source video linked below.</p>
-</div>
-
-<h2 style="margin:32px 0 12px">Who is {c["name"]}?</h2>
-<p>{c["who"]}</p>
-
-<h2 style="margin:32px 0 12px">How they got there</h2>
-<p>{c["journey"]}</p>
-
-<h2 style="margin:32px 0 12px">Net worth &amp; source</h2>
-<p><strong>{c["nw"]}</strong> — {c["nw_note"]}.<br>
-<a href="{TT}/@{h}/video/{c["nw_vid"]}" target="_blank" rel="noopener">Watch the source video on TikTok ↗</a> ·
-<a href="{TT}/@{h}" target="_blank" rel="noopener">@{h} on TikTok ↗</a></p>
-
-<h2 style="margin:32px 0 12px">Key quotes</h2>
-{quotes_html}
-
-<p style="margin-top:32px"><a href="../index.html#creators">← Back to all creators</a> · <a href="../blog/index.html">Money advice hub →</a></p>"""
-    html = page(f'{c["name"]} (@{h}) — Net Worth, Journey & Quotes | SaveShare.io',
-                f'{c["name"]} (@{h}): {c["tagline"]}. Self-described net worth {c["nw"]}, journey and key quotes with TikTok sources.',
-                NAV_P, "UK MONEY CREATOR PROFILE", f'{c["name"]} <span style="opacity:.8">(@{h})</span>', c["tagline"],
+    h = c['handle']
+    tt = TT_HANDLE_PY.get(h, h)
+    srdate = NW_DATE_PY.get(h, 'see source')
+    qhtml = ''
+    for q, v in c['quotes']:
+        qhtml += '<blockquote>' + chr(8220) + q + chr(8221) + '<cite>' + chr(8212) + ' ' + c['name'] + ' (<a href="' + TT + '/@' + tt + '/video/' + v + '" target="_blank" rel="noopener">watch on TikTok ' + chr(8599) + '</a>)</cite></blockquote>' + chr(10)
+    shtml = ''
+    for v, l in c['stats']:
+        shtml += '<div class="stat"><strong>' + v + '</strong><span>' + l + '</span></div>' + chr(10)
+    who_html = c['who'] if c['who'] else 'Profile in progress — bio coming soon.'
+    journey_html = c['journey'] if c['journey'] else 'Journey details coming soon — check their TikTok for the latest.'
+    quotes_section = qhtml if qhtml else '<p>No quotes archived yet.</p>'
+    nw_line = c['nw'] if c['nw'] not in ('TBC', 'Growing') else 'Not yet stated'
+    _card_open = '<div class="card">' + chr(10) + '<p><span class="tag">' + c['tagline'] + '</span> '
+    body = (
+        _card_open + '<span class="tag">Self-reported \u00b7 ' + srdate + '</span> ' +
+        '<span class="tag">' + str(c['n_tr']) + ' videos archived</span> ' +
+        '<span class="tag">Avg engagement ' + c['eng'] + '</span></p>' + chr(10) + '<div class="stat-row">' + chr(10) + shtml + '</div>' + chr(10) +
+        '<p class="src">* Self-reported figure — stated by the creator in their own TikTok content, not independently verified. Source video (+ date) linked below.</p></div>' + chr(10) + chr(10) + '<h2 style="margin:32px 0 12px">Who is ' + c['name'] + '?</h2><p>' + who_html + '</p>' +
+        '<h2 style="margin:32px 0 12px">How they got there</h2><p>' + journey_html + '</p>' +
+        '<h2 style="margin:32px 0 12px">Net worth &amp; source (self-reported)</h2>' +
+        '<p><strong>' + nw_line + '</strong> — ' + c['nw_note'] + '.<br>' +
+        '<a href="' + TT + '/@' + tt + '/video/' + c['nw_vid'] + '" target="_blank" rel="noopener">Watch the source video on TikTok ↗</a> · ' +
+        '<a href="' + TT + '/@' + tt + '" target="_blank" rel="noopener">@' + tt + ' on TikTok ↗</a></p>' +
+        '<h2 style="margin:32px 0 12px">Key quotes</h2>' + quotes_section
+    )
+    html = page(c['name'] + ' (@' + h + ') — Net Worth, Journey & Quotes | SaveShare.io',
+                c['name'] + ' (@' + h + '): ' + c['tagline'] + '. Self-reported net worth ' + c['nw'] + ', journey and key quotes with TikTok sources.',
+                NAV_P, 'UK MONEY CREATOR PROFILE', c['name'] + ' <span style="opacity:.8">(@' + h + ')</span>', c['tagline'],
                 body)
-    open(f'p/{h}.html', 'w').write(html)
-    print("wrote p/" + h + ".html")
+    open('p/' + h + '.html', 'w').write(html)
+    print('wrote p/' + h + '.html')
