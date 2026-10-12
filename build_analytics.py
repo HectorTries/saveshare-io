@@ -37,6 +37,9 @@ F = [
  # US
  ("Jeremy Schneider Personal Finance Club","personalfinanceclub","US","invested",3000000,"USD","2026-04-01","I have about 3 million dollars invested in the stock market.","https://www.tiktok.com/@personalfinanceclub/video/7499862112387206442","p/personalfinanceclub.html"),
  ("Tori Dunlap Her First 100K","herfirst100k","US","net_worth",2000000,"USD","2026-09-25","I am Tori Dunlap. I am a multi millionaire. (Self-described multi-millionaire; shown as 2M+ floor.)","https://www.tiktok.com/@herfirst100k/video/7690359849581858078","p/herfirst100k.html"),
+ ("Erin Confortini","itserinconfortini","US","other",400000,"USD","2026-10-11","I have never sold that template for more than 10 dollars, and it is made me close to 400,000 dollars in revenue. (Self-stated digital product revenue, not net worth.)","https://www.tiktok.com/@itserinconfortini/video/7695041953485933854","p/itserinconfortini.html"),
+ ("Erin Confortini","itserinconfortini","US","other",71000,"USD","2026-10-10","That 71K was from a mix of freelancing, content creation, and selling digital products. That left me with around 46,000 dollars. (Self-stated first-year side hustle income, gross 71K / net 46K.)","https://www.tiktok.com/@itserinconfortini/video/7693573810250943775","p/itserinconfortini.html"),
+ ("Danny The Maestro Real","themaestroreal","US","other",700000,"USD","2026-10-10","So I just sold 700,000 dollars this month. (Self-stated monthly business sales, not personal net worth.)","https://www.tiktok.com/@themaestroreal/video/7694838760575388958","p/themaestroreal.html"),
 ]
 
 KIND_LABEL = {"net_worth":"Net worth","portfolio":"Portfolio value","invested":"Amount invested","pension":"Pension value","savings":"Cash savings","income_flow":"Monthly investing flow","property":"Property value","other":"Savings milestone"}

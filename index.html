@@ -1148,6 +1148,15 @@ document.getElementById('reg-uk').addEventListener('click',function(){setRegion(
 document.getElementById('reg-us').addEventListener('click',function(){setRegion('us');});
 document.getElementById('reg-uk').classList.toggle('active',region==='uk');
 document.getElementById('reg-us').classList.toggle('active',region==='us');
+var region=localStorage.getItem('ss-region')||'uk';
+function setRegion(r){region=r;localStorage.setItem('ss-region',r);
+document.getElementById('reg-uk').classList.toggle('active',r==='uk');
+document.getElementById('reg-us').classList.toggle('active',r==='us');
+apply();}
+document.getElementById('reg-uk').addEventListener('click',function(){setRegion('uk');});
+document.getElementById('reg-us').addEventListener('click',function(){setRegion('us');});
+document.getElementById('reg-uk').classList.toggle('active',region==='uk');
+document.getElementById('reg-us').classList.toggle('active',region==='us');
 function apply(){
 var query=(q.value||'').toLowerCase(),t=topic.value,hf=hasfig.checked;
 var groups=[document.getElementById('fig-group'),document.getElementById('pend-group')];
@@ -1157,6 +1166,7 @@ if(!g)return;
 var list=Array.prototype.slice.call(g.querySelectorAll('.card'));
 list.forEach(function(c){
 var ok=c.getAttribute('data-name').indexOf(query)>-1;
+if((c.getAttribute('data-region')||'uk')!==region)ok=false;
 if((c.getAttribute('data-region')||'uk')!==region)ok=false;
 if(t&&c.getAttribute('data-topics').indexOf(t)<0)ok=false;
 if(hf&&c.getAttribute('data-nw')!=='1')ok=false;
