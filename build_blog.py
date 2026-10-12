@@ -91,6 +91,18 @@ ADVICE = [
 ]
 
 THEMES = ["Start investing", "Saving", "Investing", "ISAs", "Mindset"]
+
+# Pillar-cluster map (see SEO_CLUSTERS.md). Blog index renders pillar nav from this.
+PILLARS = [
+ ("ISA and Tax-Free Saving", "isa-beginners-guide.html"),
+ ("Start Investing", "gen-z-start-investing.html"),
+ ("Pensions and Retirement", "pension-basics-uk.html"),
+ ("Debt, Budgeting and Saving", "kill-debt-first.html"),
+ ("Property and First Homes", "lifetime-isa-first-home-bonus.html"),
+ ("Wealth Stories and Creators", "400k-net-worth-tatiana.html"),
+]
+PILLAR_NAV = ('<nav class="pillars"><h2>Start with a pillar guide</h2><ul>\n' + "\n".join(
+    f'<li><a href="{f}">{t}</a></li>' for t, f in PILLARS) + '\n</ul></nav>\n')
 sections = []
 for theme in THEMES:
     items = [(t, qs) for t, th, qs in ADVICE if th == theme]
