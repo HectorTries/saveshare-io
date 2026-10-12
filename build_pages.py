@@ -84,24 +84,24 @@ TT_HANDLE_PY = {"seansmoney": "seans.money", "drjubairsfinance": "dr.jubairsfina
 NW_DATE_PY = {"miarosemcgrath": "Oct 2026", "itssophieblank": "Sep 2026", "seansmoney": "Aug 2026", "neilinvests": "Sep 2026", "hannahbevington": "Sep 2026", "drjubairsfinance": "2025", "iainmoneyinsights": "late 2025", "ollieinvests": "2026"}
 
 CREATORS = [
- dict(handle="miarosemcgrath", name="Mia Rose", tagline="Frugal Chic® — build wealth, stylishly",
+ dict(handle="miarosemcgrath", name="Mia Rose", tagline="Frugal Chic®, build wealth, stylishly",
       followers="668.3K", nw="£200K+", nw_note="multiple six-figure net worth, £100K invested (self-described, Oct 2026)",
       nw_vid="7693085657937218838", eng="7.16%", n_tr=20,
-      who=("Mia Rose McGrath is the UK money creator behind <strong>Frugal Chic®</strong> — a brand built around "
+      who=("Mia Rose McGrath is the UK money creator behind <strong>Frugal Chic®</strong>, a brand built around "
             "building wealth stylishly, without jargon or deprivation. Featured in Vogue and The Times, she is also the "
             "author of the book <em>Frugal Chic</em> and, at 25, describes herself as having a multiple six-figure net worth."),
       journey=("Mia says she did not grow up financially literate, never worked in finance, and does not have financially "
             "literate parents. Everything she knows comes from seven years of self-directed research driven by genuine interest. "
             "She spent her early twenties increasing her income and reducing her expenses with the goal of financial freedom, "
             "and spent over seven years saving her first £100,000. She now has £100,000 invested and teaches investing "
-            "step-by-step for beginners — including a series where she and her 21-year-old sister each start investing with £100 to see who ends up with more."),
+            "step-by-step for beginners, including a series where she and her 21-year-old sister each start investing with £100 to see who ends up with more."),
       quotes=[
         ("I spent over seven years saving £100,000. And that's why people have a gravitation towards my content, because it comes from lived experience.", "7693085657937218838"),
         ("I built a multiple six figure net worth in my 20s. I have 100K invested and I didn't grow up financially literate.", "7684543907404958979"),
         ("Have 3 months worth of living expenses saved… when I left my 9 to 5 to pursue self employment, I had 12 months saved.", "7684166553079778582"),
       ],
       stats=[("668.3K", "Followers"), ("£200K+", "Net worth*"), ("7.16%", "Avg engagement"), ("20", "Videos archived")]),
- dict(handle="itssophieblank", name="Sophie Blank", tagline="Wealth, career, life in her 30s — London",
+ dict(handle="itssophieblank", name="Sophie Blank", tagline="Wealth, career, life in her 30s: London",
       followers="28.9K", nw="£230K", nw_note="self-described net worth, aiming for £250K by end of 2026 (Sep 2026)",
       nw_vid="7691210896189771030", eng="4.88%", n_tr=12,
       who=("Sophie Blank is a London-based creator in her 30s who documents her journey from zero financial literacy to a "
@@ -111,7 +111,7 @@ CREATORS = [
             "progression, shared year by year: −£28,000 in 2018, −£18,000 in 2019, £10,500 in 2020, £50,000 in 2021, £43,000 in 2022 "
             "(after a sabbatical), £105,000 in assets in 2023, £134,800 in 2024 after paying off her student loan in full, £175,000 in "
             "2025 when she started earning six figures, and £230,000 in 2026. She credits paying off her student loan as the moment her "
-            "net worth skyrocketed, invests monthly into 3 simple funds (2 ETFs + 1 ETC), and famously loves renting — her rent "
+            "net worth skyrocketed, invests monthly into 3 simple funds (2 ETFs + 1 ETC), and famously loves renting, her rent "
             "content was featured by the BBC and iPaper."),
       quotes=[
         ("I made my first investment of £100 in July 2018… fast forward 8 years and I have a net worth of £230,000 even though I was raised with zero financial literacy.", "7691210896189771030"),
@@ -119,15 +119,15 @@ CREATORS = [
         ("My sinking funds are the one reason I pay off my credit card every single month and I never go into debt.", "7675026659027815702"),
       ],
       stats=[("28.9K", "Followers"), ("£230K", "Net worth*"), ("4.88%", "Avg engagement"), ("20", "Videos archived")]),
- dict(handle="seansmoney", name="Sean", tagline="Documenting money at 30 — Edinburgh",
+ dict(handle="seansmoney", name="Sean", tagline="Documenting money at 30: Edinburgh",
       followers="20.6K", nw="~£165K invested", nw_note="£89K pensions + £72K ISAs + £3.5K LISA (self-described, Aug 2026)",
       nw_vid="7675840516411395330", eng="0.97%", n_tr=20,
       who=("Sean is an Edinburgh-based creator in his early 30s documenting what he does with his money while educating "
             "others about personal finance. His content mixes beginner investing explainers, ETF breakdowns and honest personal updates."),
       journey=("Sean started saving money in 2021 from a starting point of nothing saved. After anxiety left him signed off work and "
-            "dropping to statutory sick pay, the experience pushed him to take saving seriously — five years later he has around £75,000 "
+            "dropping to statutory sick pay, the experience pushed him to take saving seriously, five years later he has around £75,000 "
             "saved. He later detailed his full invested position: around £89,000 in pensions (mostly AJ Bell), about £72,000 in stocks "
-            "and shares ISAs (mostly Trading 212), plus a £3,500 lifetime ISA — roughly £165,000 invested in the stock market in total. "
+            "and shares ISAs (mostly Trading 212), plus a £3,500 lifetime ISA, roughly £165,000 invested in the stock market in total. "
             "He also runs a £10-a-week demo portfolio (£6 global ETF, £3 S&P 500, £1 semiconductor) to show beginners you can start small."),
       quotes=[
         ("I had nothing saved at that point and now five years later I have around £75,000 saved.", "7689003263584193814"),
@@ -143,7 +143,7 @@ CREATORS = [
             "monthly portfolio updates on Trading 212."),
       journey=("Neil keeps his approach deliberately simple: match the all-world market rather than picking individual businesses. "
             "He states he currently holds £350,000 across his investment portfolios, plus a private pension projected to be worth "
-            "around £700,000 kicking in at age 57. His core message is that contributions — not returns — drive portfolio growth for "
+            "around £700,000 kicking in at age 57. His core message is that contributions, not returns, drive portfolio growth for "
             "years: making 10% on £1,000 is just £100, so the priority is increasing income and contributions until compounding can "
             "take over. He was made redundant 18 months ago and calls it the best thing that ever happened to him."),
       quotes=[
@@ -159,8 +159,8 @@ CREATORS = [
             "She shares monthly portfolio breakdowns across four accounts and practical payday systems for beginners."),
       journey=("Hannah saved her first £4,000 between ages 17 and 21, then started investing five years ago and never looked back. "
             "Her Trading 212 stocks and shares ISA passed £27,000 after two years of investing. She runs four investment accounts, each "
-            "with its own purpose, and says 57% of her total portfolio comes from her own contributions while 43% — around £57,000 of "
-            "'free money' — comes from the government, her employer and market growth. Her only regret: not starting sooner, since her "
+            "with its own purpose, and says 57% of her total portfolio comes from her own contributions while 43%, around £57,000 of "
+            "'free money', comes from the government, her employer and market growth. Her only regret: not starting sooner, since her "
             "cash ISA days earned far less than investing."),
       quotes=[
         ("I did, in fact, go from having 0 financial awareness at 21 years old to now having £135K at 26 years old.", "7685007554212138262"),
@@ -174,7 +174,7 @@ CREATORS = [
       who=("Dr Jubair holds a doctorate (UCL) and creates investing-education content alongside a successful YouTube channel "
             "(14,000+ subscribers). His signature series: investing £100 every single day into the stock market and reporting the results."),
       journey=("Jubair got his doctorate in his 20s, which he calls a life hack that made his 30s easier. He documents long-form "
-            "investing experiments — including a £100-a-day daily investing challenge running 130+ days into an S&P 500 ETF (SPDR, "
+            "investing experiments, including a £100-a-day daily investing challenge running 130+ days into an S&P 500 ETF (SPDR, "
             "accumulating), passing his first £100 of profit around day 136. He has shown holdings of 11,000 shares worth £110,469 in "
             "one fund. He also transparently shares creator earnings: £9,248 in a year from YouTube AdSense, £14,853 total, and £10,016 "
             "from 900,000 views."),
@@ -184,12 +184,12 @@ CREATORS = [
         ("Being a doctor in your 20s is a life hack.", "7437270529976945953"),
       ],
       stats=[("17.5K", "Followers"), ("~£110K+", "Holdings*"), ("2.14%", "Avg engagement"), ("20", "Videos archived")]),
- dict(handle="iainmoneyinsights", name="Iain Geddes", tagline="Building wealth from £0 & showing it all — Scotland",
+ dict(handle="iainmoneyinsights", name="Iain Geddes", tagline="Building wealth from £0 & showing it all: Scotland",
       followers="34.1K", nw="£94K", nw_note="S&S ISA portfolio value (self-described, late 2025)",
       nw_vid="7578188989362900255", eng="0.26%", n_tr=20,
       who=("Iain Geddes, 34, from Scotland, shares his real-time ISA portfolio journey under the banner 'building wealth from £0 "
             "and showing it all'. He started investing in April 2020 and posts transparent portfolio updates."),
-      journey=("Iain spent his younger years only saving — putting leftover money into bank and savings accounts — and says it never "
+      journey=("Iain spent his younger years only saving, putting leftover money into bank and savings accounts, and says it never "
             "got him anywhere because inflation kept eating its purchasing power. Since taking investing seriously around 2020 with a "
             "Trading 212 stocks and shares ISA, compounding took over: his portfolio approached £82,000, then £94,102, with nearly "
             "£42,000 of total return (a 224.6% rate of return). His message: saving and investing are two completely different things, "
@@ -200,14 +200,14 @@ CREATORS = [
         ("Do not panic sell… Remember why you invested in them in the first place. Think of that long-term picture.", "7578185208575315231"),
       ],
       stats=[("34.1K", "Followers"), ("£94K", "Portfolio*"), ("0.26%", "Avg engagement"), ("20", "Videos archived")]),
- dict(handle="ollieinvests", name="Ollie Invests", tagline="23, Engineering Graduate — engineering financial freedom",
+ dict(handle="ollieinvests", name="Ollie Invests", tagline="23, Engineering Graduate, engineering financial freedom",
       followers="2.2K", nw="Growing", nw_note="early-stage portfolio; shares weekly portfolio updates (2026)",
       nw_vid="7692499806496836886", eng="2.65%", n_tr=11,
       who=("Ollie Invests is a 23-year-old engineering graduate sharing weekly portfolio updates, ISA guides and money-habit content. "
-            "His style is educational explainer videos — breaking down market news, ISAs and beginner investing steps."),
+            "His style is educational explainer videos, breaking down market news, ISAs and beginner investing steps."),
       journey=("Ollie is at the start of his wealth-building journey and documents it openly: weekly portfolio check-ins (five holdings, "
             "70% in a FTSE world fund), step-by-step Stocks & Shares ISA setup guides (£20,000 annual allowance), and honest money-habit "
-            "content — including how keeping savings in his current account led him to slowly spend £2–3,000 of it. His core investing "
+            "content, including how keeping savings in his current account led him to slowly spend £2–3,000 of it. His core investing "
             "advice for beginners: use diversified ETFs, think in decades, and let compounding do the work."),
       quotes=[
         ("70% of my money goes straight into a FTSE world fund… diversify your risk and think long term.", "7691726292114279702"),
@@ -227,8 +227,8 @@ for c in CREATORS:
     shtml = ''
     for v, l in c['stats']:
         shtml += '<div class="stat"><strong>' + v + '</strong><span>' + l + '</span></div>' + chr(10)
-    who_html = c['who'] if c['who'] else 'Profile in progress — bio coming soon.'
-    journey_html = c['journey'] if c['journey'] else 'Journey details coming soon — check their TikTok for the latest.'
+    who_html = c['who'] if c['who'] else 'Profile in progress, bio coming soon.'
+    journey_html = c['journey'] if c['journey'] else 'Journey details coming soon, check their TikTok for the latest.'
     quotes_section = qhtml if qhtml else '<p>No quotes archived yet.</p>'
     nw_line = c['nw'] if c['nw'] not in ('TBC', 'Growing') else 'Not yet stated'
     _card_open = '<div class="card">' + chr(10) + '<p><span class="tag">' + c['tagline'] + '</span> '
@@ -236,15 +236,15 @@ for c in CREATORS:
         _card_open + '<span class="tag">Self-reported \u00b7 ' + srdate + '</span> ' +
         '<span class="tag">' + str(c['n_tr']) + ' videos archived</span> ' +
         '<span class="tag">Avg engagement ' + c['eng'] + '</span></p>' + chr(10) + '<div class="stat-row">' + chr(10) + shtml + '</div>' + chr(10) +
-        '<p class="src">* Self-reported figure — stated by the creator in their own TikTok content, not independently verified. Source video (+ date) linked below.</p></div>' + chr(10) + chr(10) + '<h2 style="margin:32px 0 12px">Who is ' + c['name'] + '?</h2><p>' + who_html + '</p>' +
+        '<p class="src">* Self-reported figure, stated by the creator in their own TikTok content, not independently verified. Source video (+ date) linked below.</p></div>' + chr(10) + chr(10) + '<h2 style="margin:32px 0 12px">Who is ' + c['name'] + '?</h2><p>' + who_html + '</p>' +
         '<h2 style="margin:32px 0 12px">How they got there</h2><p>' + journey_html + '</p>' +
         '<h2 style="margin:32px 0 12px">Net worth &amp; source (self-reported)</h2>' +
-        '<p><strong>' + nw_line + '</strong> — ' + c['nw_note'] + '.<br>' +
+        '<p><strong>' + nw_line + '</strong>, ' + c['nw_note'] + '.<br>' +
         '<a href="' + TT + '/@' + tt + '/video/' + c['nw_vid'] + '" target="_blank" rel="noopener">Watch the source video on TikTok ↗</a> · ' +
         '<a href="' + TT + '/@' + tt + '" target="_blank" rel="noopener">@' + tt + ' on TikTok ↗</a></p>' +
         '<h2 style="margin:32px 0 12px">Key quotes</h2>' + quotes_section
     )
-    html = page(c['name'] + ' (@' + h + ') — Net Worth, Journey & Quotes | SaveShare.io',
+    html = page(c['name'] + ' (@' + h + '): Net Worth, Journey & Quotes | SaveShare.io',
                 c['name'] + ' (@' + h + '): ' + c['tagline'] + '. Self-reported net worth ' + c['nw'] + ', journey and key quotes with TikTok sources.',
                 NAV_P, 'UK MONEY CREATOR PROFILE', c['name'] + ' <span style="opacity:.8">(@' + h + ')</span>', c['tagline'],
                 body)

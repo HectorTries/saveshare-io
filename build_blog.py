@@ -3,7 +3,7 @@
 from build_pages import page, NAV_BLOG, CSS, TT
 
 ADVICE = [
- ("Start small — £10 a week still counts", "Start investing", [
+ ("Start small, £10 a week still counts", "Start investing", [
    ("If you're waiting until you have more money to invest, you're doing it wrong. I'm doing it with just £10 a week.",
     "seansmoney", "Sean", "7669798085471653142"),
    ("I made my first investment of £100 in the summer of 2018.",
@@ -16,7 +16,7 @@ ADVICE = [
     "hannahbevington", "Hannah Bevington", "7682883142197202198"),
    ("My sinking funds are the one reason I pay off my credit card every single month and I never go into debt.",
     "itssophieblank", "Sophie Blank", "7675026659027815702"),
-   ("There's these things in personal finance called sinking funds — pots of money so you can set aside money beforehand for an event.",
+   ("There's these things in personal finance called sinking funds, pots of money so you can set aside money beforehand for an event.",
     "miarosemcgrath", "Mia Rose", "7689476178129849622"),
  ]),
  ("Kill high-interest debt before anything else", "Saving", [
@@ -27,7 +27,7 @@ ADVICE = [
    ("The second thing I do [on payday] is I pay off any high interest debts.",
     "hannahbevington", "Hannah Bevington", "7682883142197202198"),
  ]),
- ("Keep an emergency fund — 3 months minimum", "Saving", [
+ ("Keep an emergency fund, 3 months minimum", "Saving", [
    ("Have 3 months worth of living expenses saved… when I left my 9 to 5, I had 12 months saved.",
     "miarosemcgrath", "Mia Rose", "7684166553079778582"),
    ("Put away [money] in your emergency fund in a high yield savings account.",
@@ -35,7 +35,7 @@ ADVICE = [
    ("I had no savings… despite being in the workforce for four years. [Now I have] around £75,000 saved.",
     "seansmoney", "Sean", "7689003263584193814"),
  ]),
- ("Buy the market — don't pick stocks", "Investing", [
+ ("Buy the market, don't pick stocks", "Investing", [
    ("Rich girls don't panic and pick stocks, they buy the market and move on. Every month, I buy exactly 3 funds.",
     "itssophieblank", "Sophie Blank", "7679903080535657750"),
    ("I just wanna match the all world. If I do that, I actually will beat most [stock pickers].",
@@ -59,7 +59,7 @@ ADVICE = [
    ("If you're wanting to build sustainable long term wealth… respectfully, your cash ISA isn't [enough].",
     "hannahbevington", "Hannah Bevington", "7692825250110737686"),
  ]),
- ("Saving alone keeps you broke — invest to beat inflation", "Mindset", [
+ ("Saving alone keeps you broke, invest to beat inflation", "Mindset", [
    ("Saving money was keeping me broke… inflation [is] constantly eating away at the purchasing power of your money.",
     "iainmoneyinsights", "Iain Geddes", "7578188154323127583"),
    ("Inflation erodes the buying power of our money. £10,000 today is not worth the same as £10,000 will be in the future.",
@@ -67,7 +67,7 @@ ADVICE = [
    ("I was putting the effort in, but I was getting nowhere fast… saving and investing are two completely different things.",
     "iainmoneyinsights", "Iain Geddes", "7578188154323127583"),
  ]),
- ("Don't panic-sell — think in decades", "Mindset", [
+ ("Don't panic-sell, think in decades", "Mindset", [
    ("Do not panic sell… Remember why you invested in them in the first place. Think of that long-term picture.",
     "iainmoneyinsights", "Iain Geddes", "7578185208575315231"),
    ("Keep that longterm mindset!",
@@ -92,20 +92,20 @@ for theme in THEMES:
     cards = []
     for title, qs in items:
         qs_html = "\n".join(
-            f'<blockquote>“{q}”<cite>— <a href="../p/{h}.html">{name}</a> (<a href="{TT}/@{h}/video/{v}" target="_blank" rel="noopener">TikTok ↗</a>)</cite></blockquote>'
+            f'<blockquote>“{q}”<cite><a href="../p/{h}.html">{name}</a> (<a href="{TT}/@{h}/video/{v}" target="_blank" rel="noopener">TikTok ↗</a>)</cite></blockquote>'
             for q, h, name, v in qs)
         cards.append(f'<div class="card"><h2>{title}</h2>\n{qs_html}</div>')
     sections.append(f'<h2 style="margin:36px 0 8px">{theme}</h2>\n' + "\n".join(cards))
 
-body = f"""<p>Actionable money advice quoted word-for-word from UK creators' own TikTok videos. Every quote links to the creator's profile and the original video — check the source yourself.</p>
+body = f"""<p>Actionable money advice quoted word-for-word from UK creators' own TikTok videos. Every quote links to the creator's profile and the original video, check the source yourself.</p>
 <p><span class="tag">{len(ADVICE)} advice entries</span> <span class="tag">8 creators</span> <span class="tag">Updated 5 Oct 2026</span></p>
 """ + "\n".join(sections) + """
 <p style="margin-top:32px"><a href="../index.html#creators">← Browse all creators</a></p>"""
 
-html = page("Money Advice from UK Creators — Quotes with Sources | SaveShare.io",
+html = page("Money Advice from UK Creators: Quotes with Sources | SaveShare.io",
             "Real money advice quoted from UK TikTok creators: saving, investing, ISAs and mindset. Every quote attributed with links to creator profiles and source videos.",
             NAV_BLOG, "MONEY ADVICE HUB", "Money advice, straight from creators",
-            "Quoted from their own videos — attributed, linked, verifiable.",
+            "Quoted from their own videos, attributed, linked, verifiable.",
             body)
 open("blog/index.html", "w").write(html)
 print(f"wrote blog/index.html ({len(ADVICE)} entries)")
