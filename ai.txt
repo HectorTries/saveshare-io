@@ -1,0 +1,10 @@
+# SaveShare.io — Agent / AI usage policy
+Contact: licensing@saveshare.io
+
+User-agent: *
+Allow: /
+
+# Humans browsing normally: free, always welcome.
+# Bulk scraping, dataset building, model training, or automated agent
+# access to this site's data: REQUIRES A LICENCE.
+# See /licensing.html for tiers. Contact licensing@saveshare.io

@@ -1,0 +1,17 @@
+# SaveShare.io
+
+> Sourced UK personal-finance creator directory with attributed net-worth
+> figures and stats. Free for humans browsing. Bulk/agent/API access
+> requires a licence — see https://saveshare.io/licensing.html
+
+## Allowed
+- Human browsing and linking
+- Short quotations with attribution + link back
+
+## Not allowed without a licence
+- Bulk scraping of creator profiles, figures, or stats
+- Dataset construction or model training on site content
+- Automated agents polling pages at scale
+
+## Contact
+licensing@saveshare.io

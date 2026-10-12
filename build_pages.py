@@ -82,7 +82,8 @@ def page(title, desc, nav, hero_badge, hero_h1, hero_sub, body):
 {body}
 </div></main>
 <footer><div class="wrap" style="max-width:1100px">
-<p>Net worth figures are self-reported by each creator in their own TikTok content and have not been independently verified. Nothing on this site constitutes financial advice. © 2026 SaveShare.io</p>
+<p>Net worth figures are self-reported by each creator in their own TikTok content and have not been independently verified. Nothing on this site constitutes financial advice. © 2026 SaveShare.io · <a href="../licensing.html">API &amp; Licensing</a> · <a href="../ai.txt">AI use</a></p>
+<script src="../guard.js"></script>
 </div></footer>
 </body>
 </html>"""
