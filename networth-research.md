@@ -1,6 +1,6 @@
 # Net-Worth Research — 32 "Not yet stated" creators (2026-10-08)
 
-Method: searched pre-existing cached transcripts under `transcripts/<handle>/` (archived Oct 2026 pulls; video counts noted per handle). Regex sweep for self-referential £ figures (my/I/I've + portfolio/ISA/pension/savings/salary/net worth). Captions included where creator-written. No new API calls needed — cache covered all 32 handles.
+Method: searched pre-existing cached videos under the internal video archive (`transcripts/<handle>/`) (archived Oct 2026 pulls; video counts noted per handle). Regex sweep for self-referential £ figures (my/I/I've + portfolio/ISA/pension/savings/salary/net worth). Captions included where creator-written. No new API calls needed — cache covered all 32 handles.
 
 ## FIGURES FOUND (17 handles)
 
@@ -43,7 +43,7 @@ Method: searched pre-existing cached transcripts under `transcripts/<handle>/` (
 - **~£30,000 in S&S ISA** — 'Since then, I've put about £30,000 in the stocks and shares ISA' — https://www.tiktok.com/@jno_pwnr/video/7685090389551844630 — 2026-09-13
 
 ### krish.kara (6 videos)
-- **£37,000 pension, targeting £100k by 30** — Caption + transcript: 'I'VE GOT £37,000 IN MY PENSION, and I'm getting it to £100,000 before I turn 30' — https://www.tiktok.com/@krish.kara/video/7665752264383974678 — 2026-07-23
+- **£37,000 pension, targeting £100k by 30** — Caption + video: 'I'VE GOT £37,000 IN MY PENSION, and I'm getting it to £100,000 before I turn 30' — https://www.tiktok.com/@krish.kara/video/7665752264383974678 — 2026-07-23
 
 ### markonthemoney (9 videos)
 - **Salary/pension flow**: £1,084/mo extra pay; £1,142/mo into pension; £300/mo S&S ISA; bills £2,500/mo — https://www.tiktok.com/@markonthemoney/video/7686804001609829654 — 2026-09-18. No portfolio total stated.
@@ -70,7 +70,7 @@ Method: searched pre-existing cached transcripts under `transcripts/<handle>/` (
 - **£7,005 side-hustle pie** ('£27 a day challenge pie currently sitting at £7,005.82') — https://www.tiktok.com/@wealthmadeaccessible/video/7688411582933568790 — 2026-09-22. No net-worth total.
 
 ## NOTHING FOUND (13 handles)
-No self-stated £ figures in cached transcripts (5–10 videos each). All scanned Oct-2026 pulls:
+No self-stated £ figures in cached videos (5–10 videos each). All scanned Oct-2026 pulls:
 - **allthingsmoney_** (7) · **amandainvests** (9) · **awright.s** (7) · **bretandevey** (8) · **didifinance** (8) · **gabriel.nussbaum** (9 — only generic 'first investment with just £1') · **getontopwithdahlia** (9 — only hypothetical projections) · **gray.area.finance** (9 — only salary-comparison stats + £390/mo content income) · **holl_005** (10 — only £595 notepad sale, £2k driving lessons) · **kafilat.finance** (6) · **lupeslively** (10 — only 'I don't invest £10,000 every single month') · **ollieinvests** (20 — only £50/wk projections, £5.37 dividend) · **tommytalks.uk** (8 — ETF explainer stats only)
 
-Note: fresh pulls (20 newest videos incl. captions) may surface figures for the 13 — especially portfolio-update formats. The `tokscript__get_tiktok_user_videos` MCP tool name failed (correct name is bare `get_tiktok_user_videos`); a background fetch was started but superseded by cache.
+Note: fresh pulls (20 newest videos incl. captions) may surface figures for the 13 — especially portfolio-update formats. The `get_tiktok_user_videos` MCP tool name failed (correct name is bare `get_tiktok_user_videos`); a background fetch was started but superseded by cache.

@@ -1,13 +1,13 @@
 # SaveShare.io Pillar-Cluster SEO Map (2026-10-12)
 
-Source data: `transcript_db.sqlite` theme counts + Ubersuggest CSVs in
+Source data: video-theme counts + Ubersuggest CSVs in
 `media/inbound/` (how-to-invest x2, stocks-and-shares-isa, uk-influencers x2)
 + existing keyword shortlist in `SEO_KEYWORDS.md`.
 
 Rule: every post targets ONE primary keyword. High volume + low SEO difficulty first.
 Difficulty <= 22 = easy win. 23-30 = medium. 31+ = long-term.
 
-Theme supply (transcript posts): investing 368, property 262, budgeting 140,
+Theme supply (video posts): investing 368, property 262, budgeting 140,
 isa 132, tax 100, pension 89, debt 66, side-hustle 44, net-worth 16, crypto 5.
 
 ## Pillar 1: ISAs and Tax-Free Saving
@@ -54,7 +54,7 @@ FLAGSHIP (pillar): `blog/lifetime-isa-first-home-bonus.html` — primary: lifeti
 - `blog/teacher-to-millionaire.html` — (cross-link) renting vs buying (Sophie rents, BBC-featured)
 - NEW `blog/rent-vs-buy-uk.html` — rent vs buy uk (strong creator supply: Sophie, Mia)
 - NEW `blog/how-much-house-deposit-uk.html` — how much deposit for house uk
-- NEW `blog/first-time-buyer-schemes-uk.html` — first time buyer schemes (adm.jay transcript supply)
+- NEW `blog/first-time-buyer-schemes-uk.html` — first time buyer schemes (strong adm.jay video supply)
 
 ## Pillar 6: Wealth Mindset, Creators and Net Worth
 FLAGSHIP (pillar): `blog/400k-net-worth-tatiana.html` — primary: uk personal finance creator stories

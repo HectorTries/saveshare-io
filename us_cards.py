@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build US creator cards + profile pages from intake data + transcripts.
+"""Build US creator cards + profile pages from intake data + creator videos.
 Appends US cards to index.html (data-region=us), writes p/<slug>.html with US flag.
 Idempotent: skips handles already present."""
 import json, os, re, glob
@@ -17,7 +17,7 @@ tr = {}
 try: tr = json.load(open("us_transcripts.json"))
 except Exception: pass
 
-# net-worth notes curated from transcript scan (self-described only)
+# net-worth notes curated from video scan (self-described only)
 NW = {
  "humphreytalks": ("Educator", "teaches 401k, Roth IRA, index investing; net-worth tracking advocate (self-described educator, Oct 2026)"),
  "grahamstephan": ("$10M+", "self-described multimillionaire investor,Saving 99% content (Oct 2026)"),

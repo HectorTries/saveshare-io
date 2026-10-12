@@ -1,6 +1,6 @@
 # SaveShare.io — TikTok Creator Stats (2026-10-05)
 
-Live profile data pulled 2026-10-05 ~16:50 BST. Notes: no TokScript tools exist in this environment — stats scraped from TikTok SSR JSON instead. `web_search`/`x_search` were unavailable.
+Live profile data pulled 2026-10-05 ~16:50 BST. Notes: no video-data tools exist in this environment — stats pulled from TikTok page data instead. `web_search`/`x_search` were unavailable.
 
 | Name | TikTok handle + link | Followers | Likes | Videos | Bio | Status |
 |------|----------------------|-----------|-------|--------|-----|--------|

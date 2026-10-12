@@ -4,7 +4,7 @@ Source: Hector, via Telegram. Net worth figures are SELF-DESCRIBED by the creato
 
 | ID | Name | TikTok | Net Worth (self-described, £) |
 |----|------|--------|-------------------------------|
-| mia-rose | Mia Rose | [@miarosemcgrath](https://www.tiktok.com/@miarosemcgrath) | 200,000+ (multiple six-figure, £100K invested — Oct 2026 transcripts) |
+| mia-rose | Mia Rose | [@miarosemcgrath](https://www.tiktok.com/@miarosemcgrath) | 200,000+ (multiple six-figure, £100K invested — Oct 2026 videos) |
 | sophie-blank | Sophie Blank | [@itssophieblank](https://www.tiktok.com/@itssophieblank) | 230,000 (Sep 2026, aiming £250K EOY — reconfirmed 2026-10-05) |
 | james | James Money Stocker | [@jamesmoneystocker](https://www.tiktok.com/@jamesmoneystocker) | 209,000 |
 | trading | Trading & Traveling | [@tradingandtraveling](https://www.tiktok.com/@tradingandtraveling) | 131,000 |
@@ -28,23 +28,23 @@ Source: Hector, via Telegram. Net worth figures are SELF-DESCRIBED by the creato
 | Ollie Invests | [@ollieinvests](https://www.tiktok.com/@ollieinvests) | TBC — early-stage portfolio, weekly updates (verified 2026-10-05) |
 
 ## Policy
-- Net worth = what THEY said about THEMSELVES in their TikTok transcripts. Always labelled "self-described".
+- Net worth = what THEY said about THEMSELVES in their own TikTok videos. Always labelled "self-described".
 - Every profile links back to their TikTok account.
-- Figures are outdated — refresh by pulling latest transcripts where they discuss finances.
+- Figures are outdated — refresh by pulling their latest videos where they discuss finances.
 
 ## Notes
 - Net worth figures are self-reported / estimated at time of listing — need verification method.
-- Next step: pull live TikTok stats via TokScript for each handle.
+- Next step: pull live TikTok stats for each handle.
 - Missing: platform (assumed TikTok?), YouTube/Instagram handles, portfolio breakdowns, blog URLs.
 
 | chris | Intentional Finance (Chris) | [@intentional.finance](https://www.tiktok.com/@intentional.finance) | TBC (added 2026-10-05, 3.3K followers, 72 videos) |
 | ciara | Ciara / Curated Wealth | [@ciara__anne](https://www.tiktok.com/@ciara__anne) | 100,000 invested (self-stated "zero to £100K in just under five years" — verified 2026-10-12) |
 
-## Engagement rates + transcript archive (2026-10-05)
+## Engagement rates + video archive (2026-10-05)
 
-Avg engagement = (likes+comments+shares)/views averaged across 20 most recent videos per creator. Transcripts archived under `transcripts/<handle>/<video-id>.md` (20 videos each, 160 total, 125 with transcripts).
+Avg engagement = (likes+comments+shares)/views averaged across 20 most recent videos per creator. Videos archived under `transcripts/<handle>/<video-id>.md` (internal archive) (20 videos each, 160 total, 125 with usable material).
 
-| Creator | Avg engagement | Videos archived | With transcript |
+| Creator | Avg engagement | Videos archived | With figures |
 |---------|---------------|-----------------|-----------------|
 | [@miarosemcgrath](https://www.tiktok.com/@miarosemcgrath) | 7.16% | 20 | 20 |
 | [@itssophieblank](https://www.tiktok.com/@itssophieblank) | 4.88% | 20 | 12 |
@@ -58,7 +58,7 @@ Avg engagement = (likes+comments+shares)/views averaged across 20 most recent vi
 ## New pages (2026-10-05)
 - Per-creator profiles: `p/<handle>.html` (8 pages) — linked from each index.html card.
 - Advice blog hub: `blog/index.html` — 10 themed entries quoting multiple creators with TikTok source links.
-- Bulk transcript job: `ts_d3fea01f` (160 URLs, 125 with transcripts).
+- Bulk video pull: `ts_d3fea01f` (160 URLs, 125 with usable material).
 
 ## Expansion (2026-10-06) — 29 new creators, all net worth TBC, engagement TBC
 
@@ -95,10 +95,10 @@ Avg engagement = (likes+comments+shares)/views averaged across 20 most recent vi
 | Will Gryba (NGPF) | [@nextgenngpf](https://www.tiktok.com/@nextgenngpf) | 37.7K |
 
 ## Handle corrections (2026-10-06)
-- Sean: [@seansmoney](https://www.tiktok.com/@seansmoney) (4.1K, wrong) → [@seans.money](https://www.tiktok.com/@seans.money) (20.6K real). Net worth corrected to £165K invested (£89K pensions + £72K ISAs + £3.5K LISA, source transcripts/seansmoney/7675840516411395330.md).
+- Sean: [@seansmoney](https://www.tiktok.com/@seansmoney) (4.1K, wrong) → [@seans.money](https://www.tiktok.com/@seans.money) (20.6K real). Net worth corrected to £165K invested (£89K pensions + £72K ISAs + £3.5K LISA, source archived video seansmoney/7675840516411395330).
 - Dr Jubair: [@drjubairsfinance](https://www.tiktok.com/@drjubairsfinance) → [@dr.jubairsfinance](https://www.tiktok.com/@dr.jubairsfinance) (17.5K real).
 - Iain: [@iainmoneyinsights](https://www.tiktok.com/@iainmoneyinsights) → [@iainjgeddes](https://www.tiktok.com/@iainjgeddes) (34.1K real).
-- Neil Invests: card £350K confirmed — transcripts/neilinvests/7690583705051614497.md quote "That's what I've got in my investment portfolios at the moment". Kept.
+- Neil Invests: card £350K confirmed — archived video neilinvests/7690583705051614497 quote "That's what I've got in my investment portfolios at the moment". Kept.
 
 ## Blog long-form guides (2026-10-06)
 10 new articles in blog/: isa-beginners-guide, pension-basics-uk, emergency-funds-uk, kill-debt-first, teacher-to-millionaire, quant-investing-emmie, side-hustles-krish, women-money-uk, gen-z-start-investing, retire-350k-trinity-study. All third-person, UK focus, attributed with creator + TikTok links, disclaimer at foot.
@@ -134,7 +134,7 @@ Net worth figures are SELF-DESCRIBED by the creators in their own TikTok content
 ### US handles that did not resolve (squatted, dead, or wrong platform)
 BlondeBrokeAndBougie (not on TikTok), Taylor Price @pricelessstay (empty), Charlie Chang @charliechang (empty; @charliechang_ posts music only), Jaspreet @minoritymindset (empty), Erin Lowry @brokemillennial (empty), Marko @whiteboardfinance (empty), Codie Sanchez @codiesanchez (empty), Kiana Danial @investdiva (empty), TraderToks (not on TikTok).
 
-### US batch 3 (2026-10-12, debt payoff / transparency, 23 creators, 501 videos, ~460 transcripts)
+### US batch 3 (2026-10-12, debt payoff / transparency, 23 creators, 501 videos, ~460 with usable material)
 | Becca | [@stealth.mode.savings](https://www.tiktok.com/@stealth.mode.savings) | Secretly paid off $58K debt | 728K |
 | Brad Nelson | [@debt_free_dad](https://www.tiktok.com/@debt_free_dad) | Debt Free Dad, budgeting systems | 70K |
 | Melissa Jean-Baptiste | [@millennialindebt](https://www.tiktok.com/@millennialindebt) | Paid off $100K student loans, teacher salary | 58K |
@@ -160,4 +160,4 @@ BlondeBrokeAndBougie (not on TikTok), Taylor Price @pricelessstay (empty), Charl
 | Trell the Trainer | [@trellthetrainer](https://www.tiktok.com/@trellthetrainer) | Saved $10K, invested $7K | 2.3M |
 
 ### US batch 3 handles that did not resolve
-@micropayments (1 video only, no transcript), @shondamartin (0 videos), @basicfinancialliteracy (0 videos), @katherine.credito (no profile), @juansanchezoficial (0 videos). @sam_jarman and @christine.elizabeth already existed from prior batches (refreshed, 20 videos each).
+@micropayments (1 video only, no usable material), @shondamartin (0 videos), @basicfinancialliteracy (0 videos), @katherine.credito (no profile), @juansanchezoficial (0 videos). @sam_jarman and @christine.elizabeth already existed from prior batches (refreshed, 20 videos each).

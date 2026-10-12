@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build saveshare-io/analytics.html from research files + transcript cache.
+"""Build saveshare-io/analytics.html from research files + video archive.
 All figures are self-described by creators. No fabrication: gaps read 'not disclosed'.
 No em dashes anywhere in output."""
 import os, re, json, statistics, html
@@ -18,7 +18,7 @@ F = [
  ("Ben","bensfinance","UK","portfolio",230000,"GBP","2026-10-05","Caption: My portfolio now sitting at 230k in my Stocks and Shares ISA.","https://www.tiktok.com/@bensfinance/video/7693210866501700886","p/bensfinance.html"),
  ("Sophie Blank","itssophieblank","UK","net_worth",230000,"GBP","2026-09-30","I made my first investment of 100 pounds in July 2018. Fast forward 8 years and I have a net worth of 230,000 pounds.","https://www.tiktok.com/@itssophieblank/video/7691210896189771030","p/itssophieblank.html"),
  ("Amy Financially Her","financiallyher_","UK","invested",200000,"GBP","2026-10-02","Caption: How I built 200k+ invested by 26. Started a corporate career on around 30,000 pounds.","https://www.tiktok.com/@financiallyher_/video/7691861996341431585","p/financiallyher.html"),
- ("Mia Rose McGrath","miarosemcgrath","UK","other",100000,"GBP","2026-10-05","I spent over seven years saving 100,000 pounds. (A 200k figure seen in older material is unconfirmed in recent transcripts.)","https://www.tiktok.com/@miarosemcgrath/video/7693085657937218838","p/miarosemcgrath.html"),
+ ("Mia Rose McGrath","miarosemcgrath","UK","other",100000,"GBP","2026-10-05","I spent over seven years saving 100,000 pounds. (A 200k figure seen in older material is unconfirmed in recent videos.)","https://www.tiktok.com/@miarosemcgrath/video/7693085657937218838","p/miarosemcgrath.html"),
  ("Neil Invests","neilinvests","UK","portfolio",194086,"GBP","2026-10-05","On-screen Trading 212 screenshot: account value 194,086.19 pounds, total return 62,185.32 pounds, net deposits 131,900.87 pounds. Caption: New all time high reached in my portfolio.","https://www.tiktok.com/@neilinvests/video/7693266687533092129","p/neilinvests.html"),
  ("Hannah Bevington","hannahbevington","UK","net_worth",135000,"GBP","2026-09-13","I went from having 0 financial awareness at 21 years old to now having 135K at 26 years old. Final breakdown total: 134,706 pounds.","https://www.tiktok.com/@hannahbevington/video/7685007554212138262","p/hannahbevington.html"),
  ("Ciara Curated Wealth","ciara__anne","UK","invested",100000,"GBP","2026-09-17","I went from zero to 100,000 pounds invested in just under five years.","https://www.tiktok.com/@ciara__anne/video/7686551034176589089","p/ciara__anne.html"),
@@ -227,7 +227,7 @@ tr[data-region]{{display:none}}
 </div></div></nav>
 <header class="hero"><div class="wrap">
 <h1>Creator money, in their own words</h1>
-<p>Aggregated self-reported figures from {len(ukh)} UK and {len(ush)} US money creators, drawn from {nuk_tx + nus_tx} archived TikTok transcripts. Every number links to the video where the creator said it.</p>
+<p>Aggregated self-reported figures from {len(ukh)} UK and {len(ush)} US money creators, drawn from {nuk_tx + nus_tx} archived TikTok videos. Every number links to the video where the creator said it.</p>
 </div></header>
 <div class="wrap">
 
@@ -238,7 +238,7 @@ tr[data-region]{{display:none}}
 <div class="stat"><strong>{fmt(round(uk_nw['med']), 'GBP') if uk_nw.get('n') else 'not disclosed'}</strong><span>Median self-stated net worth</span></div>
 <div class="stat"><strong>{fmt(uk_inv.get('total',0), 'GBP')}</strong><span>Combined stated portfolios + invested ({uk_inv.get('n',0)} figures)</span></div>
 </div></section>
-<section><div class="panel"><h2>What UK creators talk about</h2><p class="sub">Videos mentioning each asset class across {nuk_tx} archived UK transcripts ({len(ukh)} creators).</p>{uk_svg}</div></section>
+<section><div class="panel"><h2>What UK creators talk about</h2><p class="sub">Videos mentioning each asset class across {nuk_tx} archived UK videos ({len(ukh)} creators).</p>{uk_svg}</div></section>
 <section><div class="panel"><h2>UK asset mix by creator count</h2><p class="sub">Creators with at least one video mentioning each class.</p><div class="donut-wrap">{uk_donut_svg}<div>{uk_leg}</div></div></div></section>
 </div>
 
@@ -249,7 +249,7 @@ tr[data-region]{{display:none}}
 <div class="stat"><strong>{fmt(round(us_nw['med']), 'USD') if us_nw.get('n') else 'not disclosed'}</strong><span>Median self-stated net worth</span></div>
 <div class="stat"><strong>{fmt(us_inv.get('total',0), 'USD')}</strong><span>Combined stated portfolios + invested ({us_inv.get('n',0)} figures)</span></div>
 </div></section>
-<section><div class="panel"><h2>What US creators talk about</h2><p class="sub">Videos mentioning each asset class across {nus_tx} archived US transcripts ({len(ush)} creators).</p>{us_svg}</div></section>
+<section><div class="panel"><h2>What US creators talk about</h2><p class="sub">Videos mentioning each asset class across {nus_tx} archived US videos ({len(ush)} creators).</p>{us_svg}</div></section>
 <section><div class="panel"><h2>US asset mix by creator count</h2><p class="sub">Creators with at least one video mentioning each class.</p><div class="donut-wrap">{us_donut_svg}<div>{us_leg}</div></div></div></section>
 </div>
 
@@ -259,7 +259,7 @@ tr[data-region]{{display:none}}
 <tbody>{table(F, 'GBP')}{table(F, 'USD')}</tbody></table></div></section>
 
 <section><div class="method"><h2>Methodology</h2>
-<p><b>Source.</b> Figures come from archived TikTok transcripts ({nuk_tx} UK videos, {nus_tx} US videos) plus on-screen portfolio screenshots verified by OCR, and creator-written captions. Research notes: networth-research.md, networth-verification-2026-10-05.md, networth-deep-2026-10-05.md, networth-ocr-2026-10-05.md.</p>
+<p><b>Source.</b> Figures are self-described by each creator in their own videos, linked so you can check the source yourself. On-screen portfolio screenshots are verified by OCR, and creator-written captions are included where relevant.</p>
 <p><b>Self-described only.</b> Net worth means the creator said the words about themselves. Hypothetical projections, other people's money, and generic examples are excluded. Property purchase prices are labelled property value, not net worth. Monthly flows are labelled as flows, not totals.</p>
 <p><b>No fabrication.</b> Where no figure was stated, the value is not disclosed. Averages and medians use only creators with a stated net worth figure. Combined invested totals sum stated portfolio and invested amounts only, in original currency.</p>
 <p><b>Currency.</b> UK figures in pounds, US figures in dollars. No conversion applied in the tables. Reference rate used only for narrative comparison: about {FX} USD per GBP (Oct 2026).</p>

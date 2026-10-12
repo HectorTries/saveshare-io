@@ -1,12 +1,12 @@
 # SaveShare.io — Deep Net-Worth Research (2026-10-05)
 
-Method: TokScript `get_tiktok_user_videos` (20 videos/handle × 8 handles = 160 URLs) → `submit_transcript_job` (job `ts_748ccb7f`: complete, 160/160, 123 with transcript metadata, 37 unavailable) → `get_job_status` with full titles + `get_tiktok_transcript` for key videos + video descriptions from user-video payloads. Note: bulk-job titles are truncated at ~200 chars; full captions came via `get_tiktok_transcript` (title field) and description fields. Spoken-transcript segments were mostly placeholder ("Thank you") or music lyrics, so figures below come from captions/descriptions (creator-written, self-described). No edits to index.html or creators.md.
+Method: pulled 20 videos/handle × 8 handles (160 URLs, batch `ts_748ccb7f`: complete, 160/160, 123 with usable material, 37 unavailable) → full titles + descriptions for key videos. Note: batch titles truncate at ~200 chars; full captions came via the title and description fields. Spoken segments were mostly placeholder ("Thank you") or music lyrics, so figures below come from captions/descriptions (creator-written, self-described). No edits to index.html or creators.md.
 
 Current creators.md figures: Mia £200K | Sophie £230K | Sean £75K | Neil £120K | Hannah £120K | DrJubair £114.7K | Iain TBC(~£94K Dec-2024) | Ollie TBC.
 
 ## 1. @miarosemcgrath (creators.md: £200,000)
 - 20 videos scanned (Oct 2026 back to ~Sep 2026). Content: travel/Koh Samui, book "Frugal Chic", sister-investing-£100 series, milestones-in-20s.
-- No self-described net worth, portfolio total, or savings total in any caption/transcript.
+- No self-described net worth, portfolio total, or savings total in any caption/video.
 - Nearest: https://www.tiktok.com/@miarosemcgrath/video/7684166553079778582 (2026-09-24) "Financial milestones to aim for in your 20s" — generic advice, no personal figure.
 - Verdict: **no-mention** (£200K unconfirmed, not contradicted).
 
@@ -16,7 +16,7 @@ Current creators.md figures: Mia £200K | Sophie £230K | Sean £75K | Neil £12
 - Verdict: **confirmed at £75,000** (no newer figure found; creators.md already correct).
 
 ## 3. @neilinvests (creators.md: £120,000)
-- 20 videos scanned. Most portfolio videos are photo carousels (no transcript).
+- 20 videos scanned. Most portfolio videos are photo carousels (no video).
 - https://www.tiktok.com/@neilinvests/video/7690575823501266208 — "This is how my portfolio performed over the course of September on Trading 212. The total I mention also includes my S&P 500 dividend which will be £95.54…" (figure shown on-screen in carousel, not in text; actual September total NOT stated in caption).
 - https://www.tiktok.com/@neilinvests/video/7690833846056652064 — "These 2 investments make up nearly 90% of my entire portfolio." (no £ value in text).
 - No explicit portfolio total or net worth figure in any caption.

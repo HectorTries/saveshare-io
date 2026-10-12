@@ -5,6 +5,7 @@ Usage:
     python3 check_post.py blog/<file>.html
 
 Checks:
+    0. No transcript/tokscript/scraping mentions
     1. Body word count 1500-2000 (visible text inside <main>...</main>)
     2. Distinct q-mention creators >= 4
     3. No <ul> / <ol> lists
@@ -70,6 +71,16 @@ def main():
         if has_ol:
             found.append("<ol>")
         print(f"FAIL: lists: found {' '.join(found)} (need none)")
+        ok = False
+
+    # 5. No transcript mentions (standing rule: never reveal transcripts as source)
+    import re as _re2
+    bad = _re2.findall(r"(?i)transcript|tokscript|scrap(?:ed|ing)", html)
+    if not bad:
+        print("PASS: sourcing: no transcript/tokscript/scraping mentions")
+    else:
+        from collections import Counter
+        print(f"FAIL: sourcing: found {dict(Counter(x.lower() for x in bad))} (rewrite as 'own videos'/'own words')")
         ok = False
 
     # 4. No em/en dashes

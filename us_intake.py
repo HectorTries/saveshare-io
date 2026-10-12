@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""US intake: profiles + top 20 videos + transcript jobs. Region=US.
+"""US intake: profiles + top 20 videos + video-data jobs. Region=US.
 Logs to us_intake_results.json. Run in background."""
 import json, os, sys, time, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

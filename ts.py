@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""TokScript MCP client (stateless per-request), tolerant SSE parser."""
+"""TikTok video-data client (stateless per-request), tolerant SSE parser."""
 import json, sys, urllib.request, urllib.error
 BASE = "https://api.tokscript.com/mcp"
 KEY = "sk_b69e77d686313f2ea9dab69401ee8fcd817e480a7b9a292417e5294ce8ddaf12"

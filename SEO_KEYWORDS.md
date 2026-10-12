@@ -74,8 +74,8 @@ isa millionaires, dividend tax uk.
 
 ## Standing rule (Hector 2026-10-12): quality over quantity
 Fewer, longer, excellent posts. If a topic cannot hit 1500+ words from
-transcripts, do NOT publish thin: roll it into a bigger pillar post or bank
-it for later when more transcripts exist. No filler, ever.
+creator videos, do NOT publish thin: roll it into a bigger pillar post or bank
+it for later when more creator material exists. No filler, ever.
 
 ## UK influencers batch (361 keywords)
 - r uk personal finance (3600, 7) — easy win
@@ -88,7 +88,7 @@ it for later when more transcripts exist. No filler, ever.
 - CSVs: media/inbound/openclaw-staged-fce3b1c9.../ folder
 
 ## CRITICAL standing rule (Hector 2026-10-12): NEVER fabricate
-If transcripts do not support a claim, stat, quote, or figure, leave it out
+If creator videos do not support a claim, stat, quote, or figure, leave it out
 or mark as unknown. No invented numbers, no paraphrased quotes presented as
 direct quotes, no filling gaps to make an article work. Thin but true beats
 rich but false, every time. Bank thin topics for later.
