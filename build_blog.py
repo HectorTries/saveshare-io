@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Build blog/index.html + patch index.html cards."""
+"""Build blog/index.html + patch index.html cards.
+
+RECIPE: future daily-post agents must read ../saveshare_blog/BLOG_RECIPE.md
+before writing any new blog/*.html post. That file is the mandatory recipe.
+Validate new posts with: python3 check_post.py blog/<file>.html
+"""
 from build_pages import page, NAV_BLOG, CSS, TT
 
 ADVICE = [
