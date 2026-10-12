@@ -14,71 +14,69 @@
 </script>
 <title>SaveShare.io: Sourced UK Money Creator Directory</title>
 <meta name="description" content="A sourced directory of UK personal finance creators. Self-reported figures, linked back to their TikTok.">
-<style>body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-h1,h2{font-family:'Playfair Display',Georgia,serif;line-height:1.15;margin:0}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-.btn{display:inline-block;background:var(--teal);color:#fff;border:none;padding:12px 28px;font-size:15px;font-weight:600;border-radius:9999px;cursor:pointer;text-decoration:none;transition:all .2s ease;min-height:44px}
-.btn:hover{background:var(--teal-dark);transform:translateY(-1px)}
-.btn-outline{background:#fff;color:var(--teal);border:2px solid var(--teal)}
-.btn-outline:hover{background:var(--teal-soft)}
-@media(max-width:640px){.nav-links a:not(.btn){display:none}}
-.hero{background:linear-gradient(135deg,#0F766E 0%,#134E4A 100%);color:#fff;padding:64px 0 72px;text-align:center}
-.hero .badge{display:inline-block;background:rgba(255,255,255,.15);color:#fff;font-size:13px;font-weight:600;padding:6px 18px;border-radius:9999px;letter-spacing:.5px;margin-bottom:20px}
-.hero h1{font-size:clamp(34px,5vw,56px);max-width:760px;margin:0 auto 18px}
-.hero p{font-size:19px;opacity:.9;max-width:620px;margin:0 auto 28px}
-.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.hero-ctas .btn-outline{border-color:#fff;color:#fff;background:transparent}
-.hero-ctas .btn-outline:hover{background:rgba(255,255,255,.12)}
-.hero .btn-light{background:#fff;color:var(--teal)}
-.hero-stats{display:flex;gap:40px;justify-content:center;margin-top:36px;flex-wrap:wrap}
-.hero-stats div{text-align:center}
-.hero-stats strong{display:block;font-size:28px;font-weight:800}
-.hero-stats span{font-size:14px;opacity:.8}
-.feat-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
-.feat-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;text-decoration:none;border-radius:12px;padding:10px 18px;text-align:left;min-height:44px}
-.feat-card:hover{background:rgba(255,255,255,.2)}
-.feat-card strong{display:block;font-size:15px}
-.feat-card span{font-size:12px;opacity:.85}
-section{padding:72px 0}
-.section-head{text-align:center;max-width:640px;margin:0 auto 32px}
-.section-head h2{font-size:32px;margin-bottom:12px}
-.section-head p{color:var(--muted);font-size:17px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 28px;box-shadow:0 10px 15px -3px rgb(15 23 42/.05)}
-.step .num{width:40px;height:40px;background:var(--teal-soft);color:var(--teal);border-radius:9999px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:16px}
-.step h3{margin:0 0 8px;font-size:18px}
+<style>
+:root{--forest:#0B3D2E;--pine:#082A20;--paper:#F5F4EF;--card:#FFFDF8;--ink:#17201B;--muted:#5A665E;--line:#D9D5C7;--amber:#C07A12}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+h1,h2{font-family:'Playfair Display',Georgia,serif;line-height:1.08;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;background:#EFC65C;color:#17201B;border:1.5px solid #EFC65C;padding:13px 26px;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-radius:4px;cursor:pointer;text-decoration:none;min-height:48px}
+.btn:hover{background:#fff;border-color:#fff}
+.btn-outline{background:transparent;color:#fff;border-color:#fff}
+.btn-outline:hover{background:rgba(255,255,255,.14)}
+.hero{background:#0B3D2E;color:#F5F1E6;padding:54px 0 0;text-align:left}
+.hero::after{content:"";display:block;height:6px;background:#C07A12;margin-top:48px}
+.hero .badge{display:inline-block;border:1px solid #EFC65C;color:#EFC65C;background:transparent;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;padding:7px 12px;border-radius:2px;margin-bottom:22px}
+.hero h1{font-size:clamp(40px,6.4vw,76px);max-width:15ch;font-weight:900}
+.hero h1 em{font-style:italic;color:#EFC65C}
+.hero p{font-size:clamp(16px,2vw,19px);color:#DCE8DE;max-width:56ch;margin:20px 0 0;line-height:1.65}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;margin-top:40px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.05)}
+.hero-stats div{padding:18px 20px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-stats div:last-child{border-right:none}
+.hero-stats strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:900;line-height:1}
+.hero-stats span{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#BFD2C2}
+.feat-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.feat-card{border:1px solid rgba(255,255,255,.35);color:#fff;text-decoration:none;border-radius:4px;padding:12px 16px;min-height:44px;background:rgba(255,255,255,.06)}
+.feat-card:hover{border-color:#EFC65C}
+.feat-card strong{display:block;font-size:14px}
+.feat-card span{font-size:12px;color:#BFD2C2}
+section{padding:56px 0}
+.section-head{max-width:720px;margin:0 0 28px;border-top:3px solid #17201B;padding-top:18px}
+.section-head h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:10px}
+.section-head p{color:var(--muted);font-size:16px;margin:0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.step{background:var(--card);border:1px solid #D9D5C7;border-top:3px solid #17201B;border-radius:4px;padding:26px}
+.step .num{font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:900;color:var(--amber);line-height:1;margin-bottom:12px}
+.step h3{margin:0 0 8px;font-size:18px;font-family:'Inter',sans-serif}
 .step p{margin:0;color:var(--muted);font-size:15px}
-.controls{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
-.controls input[type=search]{padding:12px 18px;font-size:15px;border:1px solid var(--line);border-radius:9999px;min-width:220px;min-height:44px;font-family:inherit}
-.controls select{padding:12px 16px;font-size:15px;border:1px solid var(--line);border-radius:9999px;background:#fff;font-family:inherit;min-height:44px}
-.controls label{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--muted);min-height:44px}
-.controls input[type=checkbox]{width:20px;height:20px;accent-color:var(--teal)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;background:var(--card);border:1px solid #D9D5C7;padding:14px;border-radius:4px}
+.controls input[type=search],.controls select{padding:12px 14px;font-size:15px;border:1.5px solid #17201B;border-radius:4px;background:#fff;font-family:inherit;min-height:48px}
+.controls input[type=search]{flex:1;min-width:200px}
+.controls label{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--ink);min-height:48px}
+.controls input[type=checkbox]{width:20px;height:20px;accent-color:#0B3D2E}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:14px}
 #fig-group,#pend-group{display:contents}
 .pending-head,.pending-sub{grid-column:1/-1}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 10px 15px -3px rgb(15 23 42/.05);transition:transform .2s ease,box-shadow .2s ease;display:flex;flex-direction:column;position:relative}
-.card:hover{transform:translateY(-4px);box-shadow:0 20px 25px -5px rgb(15 23 42/.1)}
-.card .avatar{width:56px;height:56px;border-radius:9999px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin-bottom:14px;object-fit:cover}
-.card .fallback-avatar{width:56px;height:56px;border-radius:9999px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin-bottom:14px}
-.tier{position:absolute;top:20px;right:20px;font-size:11px;font-weight:700;color:var(--teal-dark);background:var(--teal-soft);padding:3px 10px;border-radius:9999px}
-.card h3{margin:0;font-size:19px;font-family:'Inter',sans-serif;font-weight:700}
+.card{background:var(--card);border:1px solid #D9D5C7;border-top:3px solid #17201B;border-radius:4px;padding:22px;display:flex;flex-direction:column;position:relative}
+.card:hover{border-top-color:#C07A12}
+.card .avatar,.card .fallback-avatar{width:52px;height:52px;border-radius:50%;background:#0B3D2E;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:21px;margin-bottom:12px;object-fit:cover;font-family:'Playfair Display',Georgia,serif}
+.tier{position:absolute;top:18px;right:18px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A44A12;background:#F7E8C8;padding:4px 8px;border-radius:2px}
+.card h3{margin:0;font-size:19px;font-family:'Inter',sans-serif;font-weight:800;line-height:1.25}
 .card h3 a{color:inherit;text-decoration:none;display:block;padding:6px 0}
-.card .handle{margin:2px 0 12px}
-.card .handle a{color:var(--teal);font-weight:600;font-size:15px;text-decoration:none;display:inline-block;padding:6px 0;min-height:44px}
-.card .handle a:hover{text-decoration:underline}
-.card .bio{font-size:14px;color:var(--muted);margin:0 0 14px;flex:1}
-.card .figures{border-top:1px solid var(--line);padding-top:14px;display:flex;gap:24px;flex-wrap:wrap}
-.card .figures>div{display:flex;flex-direction:column;gap:4px}
-.card .figures div strong{display:block;font-size:17px;line-height:1.3}
-.card .figures div span{font-size:12px;color:var(--muted);line-height:1.4}
-.pending{color:var(--muted);font-weight:500;font-size:14px}
-.sr-tag{display:inline-block;font-size:12px;color:var(--muted);margin-top:10px}
-.pending-head{margin:40px 0 8px;font-size:22px;font-family:'Inter',sans-serif}
-.pending-sub{color:var(--muted);margin:0 0 24px}
-.networth-tag{display:inline-block;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:600;padding:3px 10px;border-radius:9999px;margin-top:8px}
-.disclaimer{max-width:640px;font-size:13px;color:#4B5563;margin-top:16px;line-height:1.5}
-.region-flag{display:inline-block;font-size:12px;font-weight:700;margin-left:8px}
-#no-results{display:none;text-align:center;color:var(--muted);padding:32px}</style><link rel="stylesheet" href="styles.css"><link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+.card .handle{margin:2px 0 10px}
+.card .handle a{color:#0E4D3A;font-weight:700;font-size:14px;text-decoration:none;display:inline-block;padding:6px 0;min-height:44px}
+.card .bio{font-size:14px;color:var(--muted);margin:0 0 14px;flex:1;line-height:1.6}
+.card .figures{border-top:2px solid #17201B;padding-top:14px;display:flex;gap:22px;flex-wrap:wrap}
+.card .figures div strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:21px;line-height:1.15}
+.card .figures div span{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pending{color:var(--muted);font-weight:600;font-size:14px}
+.sr-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.pending-head{margin:36px 0 6px;font-size:26px}
+.pending-sub{color:var(--muted);margin:0 0 20px}
+.networth-tag{display:inline-block;background:#E3EDE6;color:#0B3D2E;font-size:12px;font-weight:700;padding:3px 9px;border-radius:2px;margin-top:8px}
+#no-results{display:none;text-align:center;color:var(--muted);padding:36px;border:1px dashed #B9B3A0;border-radius:4px}
+@media(max-width:640px){.hero-stats div{border-bottom:1px solid rgba(255,255,255,.2)}section{padding:40px 0}}
+</style><link rel="stylesheet" href="styles.css"><link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
 
@@ -86,8 +84,8 @@ section{padding:72px 0}
 
 <header class="hero">
   <div class="wrap">
-    <div class="badge">SOURCED UK CREATOR DIRECTORY</div>
-    <h1>Discover UK money creators</h1>
+    <div class="badge">The sourced creator directory · UK and US</div>
+    <h1>Discover UK money <em>creators</em></h1>
     <p>Real people sharing real numbers. Every net-worth figure is self-reported in the creator's own TikTok content, linked back so you can check the source.</p>
     <div class="hero-ctas">
       <a href="#creators" class="btn btn-light">Explore the directory</a>
