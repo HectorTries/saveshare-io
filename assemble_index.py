@@ -68,6 +68,8 @@ section{padding:72px 0}
 .controls label{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--muted);min-height:44px}
 .controls input[type=checkbox]{width:20px;height:20px;accent-color:var(--teal)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+#fig-group,#pend-group{display:contents}
+.pending-head,.pending-sub{grid-column:1/-1}
 .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 10px 15px -3px rgb(15 23 42/.05);transition:transform .2s ease,box-shadow .2s ease;display:flex;flex-direction:column;position:relative}
 .card:hover{transform:translateY(-4px);box-shadow:0 20px 25px -5px rgb(15 23 42/.1)}
 .card .avatar{width:56px;height:56px;border-radius:9999px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin-bottom:14px;object-fit:cover}
@@ -79,9 +81,10 @@ section{padding:72px 0}
 .card .handle a{color:var(--teal);font-weight:600;font-size:15px;text-decoration:none;display:inline-block;padding:6px 0;min-height:44px}
 .card .handle a:hover{text-decoration:underline}
 .card .bio{font-size:14px;color:var(--muted);margin:0 0 14px;flex:1}
-.card .figures{border-top:1px solid var(--line);padding-top:14px;display:flex;gap:20px}
-.card .figures div strong{display:block;font-size:17px}
-.card .figures div span{font-size:12px;color:var(--muted)}
+.card .figures{border-top:1px solid var(--line);padding-top:14px;display:flex;gap:24px;flex-wrap:wrap}
+.card .figures>div{display:flex;flex-direction:column;gap:4px}
+.card .figures div strong{display:block;font-size:17px;line-height:1.3}
+.card .figures div span{font-size:12px;color:var(--muted);line-height:1.4}
 .pending{color:var(--muted);font-weight:500;font-size:14px}
 .sr-tag{display:inline-block;font-size:12px;color:var(--muted);margin-top:10px}
 .tag{display:inline-block;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:600;padding:3px 12px;border-radius:9999px;margin:2px 6px 2px 0}
@@ -153,7 +156,7 @@ page = ("<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n<meta charset=\"UTF-8\"
 "    <a class=\"logo\" href=\"#\">SaveShare<span>.io</span></a>\n"
 "    <div class=\"nav-links\">\n"
 "      <a href=\"#creators\">Directory</a>\n"
-"      <a href=\"blog/index.html\">Money Advice</a>\n"
+"      <a href=\"blog/index.html\">Blog</a>\n"
 "      <a href=\"#brands\">For brands</a>\n"
 "      <a href=\"#creators\" class=\"btn\">Browse directory</a>\n"
 "    </div>\n  </div>\n</nav>\n\n"
@@ -176,7 +179,7 @@ page = ("<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n<meta charset=\"UTF-8\"
 "  <div class=\"wrap\">\n"
 "    <div class=\"section-head\">\n"
 "      <h2>Creator directory</h2>\n"
-"      <p>UK personal finance creators sharing their money journeys openly. Figures last pulled 5 Oct 2026. Click any creator for their full profile, net-worth sources and key quotes \u2014 plus our <a href=\"blog/index.html\">money advice hub</a>.</p>\n"
+"      <p>UK personal finance creators sharing their money journeys openly. Figures last pulled 5 Oct 2026. Click any creator for their full profile, net-worth sources and key quotes \u2014 plus our <a href=\"blog/index.html\">Blog</a>.</p>\n"
 "    </div>\n"
 "    <div class=\"controls\">\n"
 "      <input type=\"search\" id=\"q\" placeholder=\"Search creators\u2026\" aria-label=\"Search creators\">\n"

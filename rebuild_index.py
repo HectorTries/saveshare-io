@@ -8,10 +8,14 @@ src = sys.argv[1] if len(sys.argv) > 1 else 'index.html'
 index = open(src).read()
 
 # ---------- 1. parse existing cards ----------
-parts = index.split('<div class="card">')
-head, cards_raw = parts[0], parts[1:]
+parts = index.split('<div class="card"')
+head = parts[0]
+# re-add the split prefix stripped by splitting mid-tag
+cards_raw = ['<div class="card"' + p for p in parts[1:]]
 last = cards_raw[-1]
-m = re.search(r'(p/nextgenngpf\.html"[^>]*>View full profile.*?</p>)', last)
+m = re.search(r'(p/nextgenngpf\.html"[^>]*>View full profile.*?</p>)', last, re.S)
+if not m:
+    m = re.search(r'(View full profile.*?</p>)', last, re.S)
 assert m, "tail anchor not found"
 tail = last[m.end():]
 cards_raw[-1] = last[:m.end()]
@@ -147,10 +151,10 @@ def card(c):
         nw_cell = '<div><strong class="pending">Not yet stated</strong><span>Net worth</span></div>'
         sr = ''
     eng_cell = ('<div><strong>' + c['eng'] + '</strong><span>Engagement</span></div>' if c['eng']
-                else '<div><strong class="pending">\u2014</strong><span>Engagement</span></div>')
+                else '')
     tags = ' '.join('<span class="tag">' + t + '</span>' for t in c['topics'])
     engv = c['eng'].rstrip('%') if c['eng'] else '0'
-    fb = ('<div class="fallback-avatar" aria-hidden="true">' + ini + '</div>')
+    fb = ('<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>' + ini + '</div>')
     return ('<div class="card" data-name="' + (c['name'] + ' ' + c['handle']).lower()
         + '" data-fol="' + str(int(c['folnum'])) + '" data-nw="' + ('1' if c['hasfig'] else '0')
         + '" data-topics="' + ' '.join(c['topics']).lower() + '" data-eng="' + engv + '">\n'
