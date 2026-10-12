@@ -1,0 +1,24 @@
+// Facilitator config for SaveShare x402 paywall.
+// Default: use the public Coinbase x402 facilitator (no self-hosting needed).
+// Only self-host if you want custody/control of settlement signing.
+//
+// Option A (recommended): public facilitator — nothing to run.
+//   FACILITATOR_URL=https://x402.org/facilitator
+//
+// Option B: self-hosted facilitator (from https://github.com/coinbase/x402):
+//   git clone https://github.com/coinbase/x402 && cd x402/examples/typescript
+//   export FACILITATOR_PRIVATE_KEY=0x<base-settler-key>
+//   export NETWORK=base
+//   npm install && npm run facilitator
+//   Then set FACILITATOR_URL to your host, e.g. https://facilitator.saveshare.io
+//
+// Required env for this Worker (wrangler secret put ...):
+//   PAY_TO_ADDRESS  0x... (your Base USDC wallet)
+//   FACILITATOR_URL https://x402.org/facilitator
+//   ORIGIN_BASE     https://<your-pages-host>/saveshare-io
+{
+  "facilitator": "https://x402.org/facilitator",
+  "network": "base",
+  "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA4b1e",
+  "assetName": "USDC"
+}

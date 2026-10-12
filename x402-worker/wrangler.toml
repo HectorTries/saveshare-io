@@ -1,0 +1,17 @@
+name = "saveshare-x402-paywall"
+main = "src/index.ts"
+compatibility_date = "2025-09-01"
+
+# Route JSON/API traffic on saveshare.io through this Worker.
+# HTML pages are served direct (unaffected); only data endpoints hit the paywall.
+# Add routes after first deploy, or manage in Cloudflare dashboard:
+#   saveshare.io/api/*            -> this worker
+#   saveshare.io/p/*.json         -> this worker
+#   saveshare.io/blog/*.json      -> this worker
+#   saveshare.io/llms.txt         -> this worker (agent feed)
+#   saveshare.io/ai.txt           -> this worker (agent feed)
+
+[vars]
+PAY_TO_ADDRESS = "0x0000000000000000000000000000000000000000" # <-- SET: your Base USDC wallet
+FACILITATOR_URL = "https://x402.org/facilitator"
+NETWORK = "base"
