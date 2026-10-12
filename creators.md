@@ -93,6 +93,7 @@ Avg engagement = (likes+comments+shares)/views averaged across 20 most recent vi
 | Janice | [@janiice.myla](https://www.tiktok.com/@janiice.myla) | 1.7K |
 | Mark (pensions) | [@markonthemoney](https://www.tiktok.com/@markonthemoney) | 52.4K |
 | Adam Jay (accountant) | [@adm.jay](https://www.tiktok.com/@adm.jay) | 7K |
+| Structured Life Co (debt payoff) | [@structured.life.c](https://www.tiktok.com/@structured.life.c) | 170 |
 | Will Gryba (NGPF) | [@nextgenngpf](https://www.tiktok.com/@nextgenngpf) | 37.7K |
 
 ## Handle corrections (2026-10-06)
