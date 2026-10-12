@@ -36,7 +36,7 @@ ul.tick{{list-style:none;padding:0}}
 ul.tick li::before{{content:"✓ ";color:#0F766E;font-weight:700}}"""
 
 NAV = """<nav><div class="wrap"><a class="logo" href="../index.html">SaveShare<span>.io</span></a>
-<div class="nav-links"><a href="../index.html#creators">Creators</a><a href="index.html">Money Advice</a></div></div></nav>"""
+<div class="nav-links"><a href="../index.html#creators">Creators</a><a href="index.html">Blog</a></div></div></nav>"""
 NAV_HOME = NAV.replace("../", "").replace('href="index.html#creators"', 'href="../index.html#creators"').replace('href="index.html">Money', 'href="blog/index.html">Money')
 # simpler: build nav per location explicitly below
 
@@ -75,9 +75,9 @@ def page(title, desc, nav, hero_badge, hero_h1, hero_sub, body):
 </html>"""
 
 NAV_P = """<nav><div class="wrap"><a class="logo" href="../index.html">SaveShare<span>.io</span></a>
-<div class="nav-links"><a href="../index.html#creators">Creators</a><a href="../blog/index.html">Money Advice</a></div></div></nav>"""
+<div class="nav-links"><a href="../index.html#creators">Creators</a><a href="../blog/index.html">Blog</a></div></div></nav>"""
 NAV_BLOG = """<nav><div class="wrap"><a class="logo" href="../index.html">SaveShare<span>.io</span></a>
-<div class="nav-links"><a href="../index.html#creators">Creators</a><a href="index.html">Money Advice</a></div></div></nav>"""
+<div class="nav-links"><a href="../index.html#creators">Creators</a><a href="index.html">Blog</a></div></div></nav>"""
 
 TT = "https://www.tiktok.com"
 TT_HANDLE_PY = {"seansmoney": "seans.money", "drjubairsfinance": "dr.jubairsfinance", "iainmoneyinsights": "iainjgeddes"}
