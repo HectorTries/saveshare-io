@@ -13,55 +13,10 @@
   gtag('js', new Date());
   gtag('config', 'G-3T9QS61KD0');
 </script>
-<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
-:root{{--teal:#0F766E;--teal-dark:#115E59;--teal-soft:#E0F2F1;--ink:#0F172A;--muted:#475569;--line:#E2E8F0;--bg:#F8FAFC}}
-*{{box-sizing:border-box}}
-body{{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}}
-h1,h2,h3{{font-family:'Playfair Display',Georgia,serif;line-height:1.2;margin:0}}
-.wrap{{max-width:780px;margin:0 auto;padding:0 24px}}
-nav{{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}}
-nav .wrap{{max-width:1100px;display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}}
-.logo{{font-weight:800;font-size:20px;color:var(--teal);text-decoration:none}}
-.logo span{{color:var(--ink)}}
-.nav-links{{display:flex;gap:24px;align-items:center}}
-.nav-links a{{color:var(--muted);text-decoration:none;font-size:15px;font-weight:500}}
-.nav-links a:hover{{color:var(--teal)}}
-.hero{{background:linear-gradient(135deg,#0F766E 0%,#134E4A 100%);color:#fff;padding:56px 0;text-align:center}}
-.hero h1{{font-size:clamp(30px,4vw,44px);margin-bottom:10px}}
-.hero p{{opacity:.9;font-size:17px;margin:0}}
-main{{padding:48px 0}}
-.stat-row{{display:flex;gap:16px;flex-wrap:wrap;margin:24px 0}}
-.stat{{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;flex:1;min-width:140px}}
-.stat strong{{display:block;font-size:22px}}
-.stat span{{font-size:13px;color:var(--muted)}}
-blockquote{{border-left:4px solid var(--teal);margin:20px 0;padding:12px 20px;background:#fff;border-radius:0 12px 12px 0;font-style:italic}}
-blockquote cite{{display:block;font-style:normal;font-size:13px;color:var(--muted);margin-top:8px}}
-blockquote cite a{{color:var(--teal)}}
-.card{{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;margin:20px 0}}
-.card h2{{font-size:22px;margin-bottom:10px}}
-.tag{{display:inline-block;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:600;padding:3px 12px;border-radius:9999px;margin:2px 6px 2px 0}}
-a{{color:var(--teal)}}
-footer{{background:#fff;border-top:1px solid var(--line);padding:32px 0;font-size:13px;color:var(--muted);margin-top:48px}}
-.region-flag{display:inline-block;background:rgba(255,255,255,.2);font-size:12px;font-weight:700;padding:2px 10px;border-radius:9999px;margin-left:8px}.src{{font-size:13px;color:var(--muted)}}
-ul.tick{{list-style:none;padding:0}}
-ul.tick li::before{{content:"✓ ";color:#0F766E;font-weight:700}}
-.pullquote{{font-family:'Playfair Display',Georgia,serif;font-size:clamp(22px,3vw,30px);line-height:1.35;border-left:5px solid var(--teal);background:#fff;border-radius:0 16px 16px 0;padding:24px 28px;margin:28px 0;font-style:italic}}
-.pullquote .pq-who{{display:block;font-family:'Inter',system-ui,sans-serif;font-style:normal;font-size:14px;color:var(--muted);margin-top:12px}}
-.quote-unit{{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:20px 0}}
-.q-head{{display:flex;align-items:center;gap:12px;margin-bottom:10px}}
-.q-head img{{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0}}
-.q-avatar-fallback{{width:48px;height:48px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0}}
-.q-head strong a{{color:var(--ink);text-decoration:none}}
-.q-head strong a:hover{{color:var(--teal)}}
-.q-head .q-fol{{display:block;font-size:12px;color:var(--muted);font-weight:400}}
-.quote-unit .q-text{{font-family:'Playfair Display',Georgia,serif;font-size:19px;line-height:1.5;margin:6px 0 10px}}
-.quote-unit .q-src{{font-size:13px;color:var(--muted)}}
-.quote-unit .q-src a{{color:var(--teal)}}.q-mention{{display:inline-flex;align-items:center;gap:6px;font-weight:600;white-space:nowrap}}.q-mention img{{width:24px;height:24px;border-radius:50%;object-fit:cover}}
-/* BLOG LAYOUT RULES: hero pull-quote (.pullquote) at top; quote units (.quote-unit) with avatar+name+followers, quote, single TikTok link; merge duplicate Via blocks; back link reads Blog; zero em/en dashes. */</style>
+<link rel="stylesheet" href="../styles.css"><link rel="preload" href="../fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
-<nav><div class="wrap"><a class="logo" href="../index.html">SaveShare<span>.io</span></a>
-<div class="nav-links"><a href="../index.html#creators">Creators</a><a href="../blog/index.html">Blog</a></div></div></nav>
+<nav><div class="wrap"><a class="logo" href="../index.html">SaveShare<span>.io</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">&#9776;</button><div class="nav-links" id="site-nav"><a href="../index.html">Home</a><a href="../blog/index.html">Blog</a><a href="../analytics.html">Analytics</a></div></div></nav>
 <header class="hero"><div class="wrap">
 <div style="display:inline-block;background:rgba(255,255,255,.15);font-size:13px;font-weight:600;padding:6px 18px;border-radius:9999px;margin-bottom:16px">US MONEY CREATOR PROFILE <span class="region-flag">🇬🇧 US</span></div>
 <h1>Alisa Glutz <span style="opacity:.8">(@colormycredit)</span></h1>
@@ -83,9 +38,6 @@ ul.tick li::before{{content:"✓ ";color:#0F766E;font-weight:700}}
 <blockquote>“Have 3 months worth of living expenses saved… when I left my 9 to 5 to pursue self employment, I had 12 months saved.”<cite>,  Mia Rose (<a href="https://www.tiktok.com/@miarosemcgrath/video/7684166553079778582" target="_blank" rel="noopener">watch on TikTok ↗</a>)</cite></blockquote>
 
 </div></main>
-<footer><div class="wrap" style="max-width:1100px">
-<p>Net worth figures are self-reported by each creator in their own TikTok content and have not been independently verified. Nothing on this site constitutes financial advice. © 2026 SaveShare.io · <a href="../ai.txt">AI use</a></p>
-<script src="../guard.js"></script>
-</div></footer>
-</body>
+<footer><div class="wrap"><div><a class="logo" href="../index.html">SaveShare<span>.io</span></a><p>Sourced creator directory for UK and US personal finance.</p></div><div class="foot-links"><a href="../index.html">Home</a><a href="../blog/index.html">Blog</a><a href="../analytics.html">Analytics</a></div></div><div class="wrap"><p class="disclaimer">Disclaimer: Net worth figures shown are self-reported by each creator in their own TikTok content and have not been independently verified. They may be outdated. Nothing on this site constitutes financial advice. Figures are shown with attribution and a link back to the creator original account so you can check the source yourself.</p><p>© 2026 SaveShare.io. All rights reserved.</p></div></footer>
+<script data-site-menu>(function(){var b=document.querySelector(".nav-toggle"),n=document.getElementById("site-nav");if(!b||!n)return;b.addEventListener("click",function(){var open=n.classList.toggle("open");b.setAttribute("aria-expanded",open?"true":"false");b.setAttribute("aria-label",open?"Close menu":"Open menu");});})();</script></body>
 </html>
