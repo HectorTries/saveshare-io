@@ -72,7 +72,8 @@ for fp in files:
         m_via = re.match(r'\s*Via <a href="\.\./p/(\w+)\.html">([^<]+)</a> \(<a href="([^"]+)"[^>]*>TikTok source[^<]*</a>\)\s*$', par)
         if m_via:
             h, name, url = m_via.groups()
-            quotes = re.findall(r'"([^"]{15,400})"', pending_narr or "")
+            _clean = re.sub(r'<[^>]+>', '', pending_narr or "")
+            quotes = [q for q in re.findall(r'"([^"]{15,400})"', _clean) if '../p/' not in q and 'http' not in q and 'tiktok.com' not in q.lower()]
             entries.append({"h": h, "name": name, "url": url, "quotes": quotes, "narr": pending_narr or ""})
             pending_narr = None
         else:
@@ -90,7 +91,8 @@ for fp in files:
         m_via = re.match(r'\s*Via <a href="\.\./p/(\w+)\.html">([^<]+)</a> \(<a href="([^"]+)"[^>]*>TikTok source[^<]*</a>\)\s*$', par)
         if m_via:
             h, name, url = m_via.groups()
-            quotes = re.findall(r'"([^"]{15,400})"', pend or "")
+            _clean2 = re.sub(r'<[^>]+>', '', pend or "")
+            quotes = [q for q in re.findall(r'"([^"]{15,400})"', _clean2) if '../p/' not in q and 'http' not in q and 'tiktok.com' not in q.lower()]
             seq.append({"type": "entry", "h": h, "name": name, "url": url, "quotes": quotes, "narr": pend or ""})
             pend = None
         else:
