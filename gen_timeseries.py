@@ -20,7 +20,8 @@ def spark(pts, w=220, h=56):
         y = h-10 - (h-24) * ((v-lo)/rng)
         coords.append(f"{x:.0f},{y:.0f}")
     first, last = pts[0], pts[-1]
-    pct = round((last["net_worth"]-first["net_worth"])/max(1,first["net_worth"])*100)
+    base = first["net_worth"]
+    pct = round((last["net_worth"]-base)/max(1,abs(base))*100) if base != 0 else (0 if last["net_worth"] == 0 else 100)
     arrow = "up" if pct >= 0 else "down"
     return (f'<svg class="spark" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="trend {arrow} {pct}%">'
             f'<polyline points="{" ".join(coords)}" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>'
@@ -29,16 +30,17 @@ def spark(pts, w=220, h=56):
 
 by_creator = {}
 for s in snaps:
-    by_creator.setdefault(s["creator"], []).append(s)
+    by_creator.setdefault((s["creator"], s.get("kind") or "net_worth"), []).append(s)
 multi = {k: v for k, v in by_creator.items() if len(v) >= 2}
-
+KIND_LABEL = {"net_worth": "net worth", "debt_balance": "debt balance", "portfolio": "portfolio"}
 cards = []
-for handle, pts in sorted(multi.items()):
+for (handle, kind), pts in sorted(multi.items()):
     svg, pct = spark(pts)
+    kind_label = KIND_LABEL.get(kind, kind)
     rows = "".join(
         f'<li><a href="{esc(p["video_url"])}" target="_blank" rel="noopener">{esc(p["snap_date"])}: <b>{sym(p["currency"])}{p["net_worth"]:,}</b></a>'
         f'<span class="q">&ldquo;{esc(p["quote"][:140])}&rdquo;</span></li>' for p in pts)
-    cards.append(f'<div class="ts-card"><h3>@{esc(handle)}</h3><div class="ts-trend">{"+" if pct>=0 else ""}{pct}% stated change</div>{svg}<ul class="ts-points">{rows}</ul></div>')
+    cards.append(f'<div class="ts-card"><h3>@{esc(handle)} <span class="ts-kind">({esc(kind_label)})</span></h3><div class="ts-trend">{"+" if pct>=0 else ""}{pct}% stated change</div>{svg}<ul class="ts-points">{rows}</ul></div>')
 spark_section = ('<section id="overtime"><div class="panel reveal"><div class="eyebrow">Over time</div>'
     '<h2>Net worth over time, per creator</h2>'
     '<p class="sub">Only creators with 2 or more stated points. Every point links to the video where it was said.</p>'
