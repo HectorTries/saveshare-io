@@ -72,6 +72,18 @@ ul.tick li::before{content:"✓ ";color:#0F766E;font-weight:700}</style>
 
 </div></header>
 <main><div class="wrap">
+<div class="region-toggle" role="group" aria-label="Region" style="display:flex;gap:0;border:1px solid var(--line);border-radius:9999px;overflow:hidden;width:fit-content;margin:0 auto 24px">
+<button type="button" id="reg-uk" style="border:none;background:#fff;color:var(--muted);font-weight:700;font-size:15px;padding:12px 22px;cursor:pointer;font-family:inherit">🇬🇧 UK</button>
+<button type="button" id="reg-us" style="border:none;background:#fff;color:var(--muted);font-weight:700;font-size:15px;padding:12px 22px;cursor:pointer;font-family:inherit">🇺🇸 US</button>
+</div>
+<script>
+(function(){var region=localStorage.getItem('ss-region')||'uk';
+function paint(){document.getElementById('reg-uk').style.background=region==='uk'?'#0F766E':'#fff';document.getElementById('reg-uk').style.color=region==='uk'?'#fff':'#475569';document.getElementById('reg-us').style.background=region==='us'?'#0F766E':'#fff';document.getElementById('reg-us').style.color=region==='us'?'#fff':'#475569';
+document.querySelectorAll('.card[data-region]').forEach(function(c){var r=c.getAttribute('data-region');c.style.display=(r==='general'||r===region)?'':'none';});}
+document.getElementById('reg-uk').addEventListener('click',function(){region='uk';localStorage.setItem('ss-region','uk');paint();});
+document.getElementById('reg-us').addEventListener('click',function(){region='us';localStorage.setItem('ss-region','us');paint();});
+paint();})();
+</script>
 <p>Actionable money advice quoted word-for-word from UK creators' own TikTok videos. Every quote links to the creator's profile and the original video, check the source yourself.</p>
 <p><span class="tag">20 advice entries</span> <span class="tag">8 creators</span> <span class="tag">13 long-form guides</span> <span class="tag">Updated 10 Oct 2026</span></p>
 <h2 style="margin:36px 0 8px">Start investing</h2>
@@ -120,38 +132,38 @@ ul.tick li::before{content:"✓ ";color:#0F766E;font-weight:700}</style>
 <blockquote>“Check for cashback before you buy anything, and check for a referral or welcome offer before you sign up for anything.”<cite><a href="../p/seansmoney.html">Sean</a> (<a href="https://www.tiktok.com/@seans.money/video/7680952036262792470" target="_blank" rel="noopener">TikTok ↗</a>)</cite></blockquote>
 <blockquote>“I treat myself to a £100 gift every month… I want to enjoy my income. I'm not sorry about that.”<cite><a href="../p/hannahbevington.html">Hannah Bevington</a> (<a href="https://www.tiktok.com/@hannahbevington/video/7681347693221793046" target="_blank" rel="noopener">TikTok ↗</a>)</cite></blockquote></div>
 <h2 style="margin:36px 0 8px">Long-form guides</h2>
-<div class="card"><h2><a href="five-monthly-habits-dahlia.html">5 Monthly Money Habits That Keep Dahlia Five Steps Ahead</a></h2>
+<div class="card" data-region="uk"><h2><a href="five-monthly-habits-dahlia.html">5 Monthly Money Habits That Keep Dahlia Five Steps Ahead</a></h2>
 <p>Know your numbers, automate bills and investments: Dahlia's five-habit system, Tatiana's budget-with-me transparency and Janice's £10K uni portfolio.</p></div>
 
-<div class="card"><h2><a href="lifetime-isa-first-home-bonus.html">Lifetime ISA Explained: The 25% Bonus UK Creators Use for First Homes</a></h2>
+<div class="card" data-region="uk"><h2><a href="lifetime-isa-first-home-bonus.html">Lifetime ISA Explained: The 25% Bonus UK Creators Use for First Homes</a></h2>
 <p>How the Lifetime ISA's free government bonus fast-tracks a house deposit: James's wrapper strategy, Sean's £3.5K LISA and Gabriel on shifting first-home schemes.</p></div>
-<div class="card"><h2><a href="isa-beginners-guide.html">ISA Beginner's Guide: How UK Creators Actually Use Their £20,000 Allowance</a></h2>
+<div class="card" data-region="uk"><h2><a href="isa-beginners-guide.html">ISA Beginner's Guide: How UK Creators Actually Use Their £20,000 Allowance</a></h2>
 <p>The Stocks &amp; Shares ISA explained through real creator words: Mia, Ollie, Hannah, Sean's £72K ISA and Neil's bridge to early retirement.</p></div>
-<div class="card"><h2><a href="pension-basics-uk.html">Pension Basics: Free Employer Money, Salary Sacrifice and a £700K Projection</a></h2>
+<div class="card" data-region="uk"><h2><a href="pension-basics-uk.html">Pension Basics: Free Employer Money, Salary Sacrifice and a £700K Projection</a></h2>
 <p>How UK creators think about pensions, from auto-enrolment to early retirement, featuring Neil's £700K projection and Sean's £89K pot.</p></div>
-<div class="card"><h2><a href="emergency-funds-uk.html">Emergency Funds: How Much, Where to Keep It, and Sean's £75,000 Lesson</a></h2>
+<div class="card" data-region="general"><h2><a href="emergency-funds-uk.html">Emergency Funds: How Much, Where to Keep It, and Sean's £75,000 Lesson</a></h2>
 <p>The safety net every creator mentions before investing a penny, 3 to 6 months, high-yield savings, and a real story of going from zero to £75K.</p></div>
-<div class="card"><h2><a href="kill-debt-first.html">Kill High-Interest Debt Before You Invest: The Creators' Consensus</a></h2>
+<div class="card" data-region="general"><h2><a href="kill-debt-first.html">Kill High-Interest Debt Before You Invest: The Creators' Consensus</a></h2>
 <p>Credit cards, Klarna and student loans, what to clear first and why, with Mia, Hannah and Sophie's £230K inflection point.</p></div>
-<div class="card"><h2><a href="teacher-to-millionaire.html">Teacher to Millionaire: The Slow Path Elly and Mia Walk</a></h2>
+<div class="card" data-region="uk"><h2><a href="teacher-to-millionaire.html">Teacher to Millionaire: The Slow Path Elly and Mia Walk</a></h2>
 <p>How educators build serious wealth on ordinary salaries: Elly's millionaire track and Mia's journey from fashion 9-to-5 to £200K+.</p></div>
-<div class="card"><h2><a href="quant-investing-emmie.html">Quant Investing for Beginners: Lessons from 11 Years in Quantitative Finance</a></h2>
+<div class="card" data-region="general"><h2><a href="quant-investing-emmie.html">Quant Investing for Beginners: Lessons from 11 Years in Quantitative Finance</a></h2>
 <p>What Emmie's quant background teaches everyday index investors, match the market, automate, diversify.</p></div>
-<div class="card"><h2><a href="side-hustles-krish.html">Side Hustles That Actually Build Wealth: Krish Kara's Playbook and Friends</a></h2>
+<div class="card" data-region="general"><h2><a href="side-hustles-krish.html">Side Hustles That Actually Build Wealth: Krish Kara's Playbook and Friends</a></h2>
 <p>From content creation to second incomes, what creators do beyond the 9-to-5, and why 100% of hustle income should be invested.</p></div>
-<div class="card"><h2><a href="women-money-uk.html">Women and Money: Amy, Kafilat, DiDi and the Creators Closing the Gap</a></h2>
+<div class="card" data-region="uk"><h2><a href="women-money-uk.html">Women and Money: Amy, Kafilat, DiDi and the Creators Closing the Gap</a></h2>
 <p>Systems, investing and confidence, advice from the women of UK money TikTok.</p></div>
-<div class="card"><h2><a href="gen-z-start-investing.html">Gen-Z Starting Out: Holly, Janice and the £10-a-Week Beginning</a></h2>
+<div class="card" data-region="general"><h2><a href="gen-z-start-investing.html">Gen-Z Starting Out: Holly, Janice and the £10-a-Week Beginning</a></h2>
 <p>What the youngest UK money creators teach about starting from zero, habits before money.</p></div>
-<div class="card"><h2><a href="retire-350k-trinity-study.html">Can You Retire on £350K? Neil's 4% Rule Walkthrough</a></h2>
+<div class="card" data-region="general"><h2><a href="retire-350k-trinity-study.html">Can You Retire on £350K? Neil's 4% Rule Walkthrough</a></h2>
 <p>The Trinity-study maths behind living off your investments, £14K a year, Neil's 5% plan and the £700K pension backstop.</p></div>
-<div class="card"><h2><a href="market-dips-etf-lupes.html">Don't Fear Market Dips: Lupes on ETFs and Buying the Fall</a></h2>
+<div class="card" data-region="general"><h2><a href="market-dips-etf-lupes.html">Don't Fear Market Dips: Lupes on ETFs and Buying the Fall</a></h2>
 <p>Why falling markets are a gift to monthly investors: Lupes' ETF rule, DiDi's S&amp;P 500 alternatives and starting with £50.</p></div>
-<div class="card"><h2><a href="400k-net-worth-tatiana.html">£400K Net Worth at 33: How Tatiana Added £118K in Nine Months</a></h2>
+<div class="card" data-region="uk"><h2><a href="400k-net-worth-tatiana.html">£400K Net Worth at 33: How Tatiana Added £118K in Nine Months</a></h2>
 <p>High salary, low housing costs and a £140K pension engine, the maths behind a £118K nine-month sprint.</p></div>
-<div class="card"><h2><a href="crypto-without-getting-drained.html">Crypto Without Getting Drained: Lupes' $90M Heist Lesson</a></h2>
+<div class="card" data-region="general"><h2><a href="crypto-without-getting-drained.html">Crypto Without Getting Drained: Lupes' $90M Heist Lesson</a></h2>
 <p>A $90M cold-wallet hack, boring regulated ETNs, and the 5% rule, what UK money creators teach about crypto.</p></div>
-<div class="card"><h2><a href="money-moves-18-adamjay.html">5 Money Moves at 18: Adam Jay's Goals Before 30</a></h2>
+<div class="card" data-region="uk"><h2><a href="money-moves-18-adamjay.html">5 Money Moves at 18: Adam Jay's Goals Before 30</a></h2>
 <p>What a 24-year-old accountant wishes he'd started at 18: ISAs, first £100, compounding and the £54K house target.</p></div>
 <p style="margin-top:32px"><a href="../index.html#creators">← Browse all creators</a></p>
 </div></main>

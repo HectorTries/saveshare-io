@@ -102,3 +102,34 @@ Avg engagement = (likes+comments+shares)/views averaged across 20 most recent vi
 
 ## Blog long-form guides (2026-10-06)
 10 new articles in blog/: isa-beginners-guide, pension-basics-uk, emergency-funds-uk, kill-debt-first, teacher-to-millionaire, quant-investing-emmie, side-hustles-krish, women-money-uk, gen-z-start-investing, retire-350k-trinity-study. All third-person, UK focus, attributed with creator + TikTok links, disclaimer at foot.
+
+## US EXPANSION (2026-10-12)
+
+Net worth figures are SELF-DESCRIBED by the creators in their own TikTok content, shown with attribution + linkback. Same policy as UK.
+
+| Name | TikTok | Net Worth (self-described, $) | Followers |
+|------|--------|-------------------------------|-----------|
+| Humphrey Yang | [@humphreytalks](https://www.tiktok.com/@humphreytalks) | Educator, 401k/Roth IRA content | 3.4M |
+| Graham Stephan | [@grahamstephan](https://www.tiktok.com/@grahamstephan) | $10M+ multimillionaire investor | 931K |
+| Andrei Jikh | [@andreijikh](https://www.tiktok.com/@andreijikh) | $4M+ portfolio | — |
+| Jeremy Schneider | [@personalfinanceclub](https://www.tiktok.com/@personalfinanceclub) | Educator, index investing | — |
+| Money with Katie | [@moneywithkatie](https://www.tiktok.com/@moneywithkatie) | Author, wealth diarist | — |
+| Erika Kullberg | [@erikakullberg](https://www.tiktok.com/@erikakullberg) | Lawyer-explainer | 8.7M |
+| Vivian Tu | [@yourrichbff](https://www.tiktok.com/@yourrichbff) | $100K+ saver story | 2.8M |
+| Tori Dunlap | [@herfirst100k](https://www.tiktok.com/@herfirst100k) | $7-8M/yr business | 2.4M |
+| Steve Chen | [@calltoleap](https://www.tiktok.com/@calltoleap) | $1.5M+ portfolio, millionaire ex-teacher | 1.7M |
+| Tiffany Aliche | [@thebudgetnista](https://www.tiktok.com/@thebudgetnista) | Bestselling author | — |
+| Kumiko Love | [@thebudgetmom](https://www.tiktok.com/@thebudgetmom) | Paid off ~$77K debt | — |
+| Mark Tilbury | [@marktilbury](https://www.tiktok.com/@marktilbury) | Self-described self-made millionaire | 8M |
+| Nicole Lapin | [@nicolelapin](https://www.tiktok.com/@nicolelapin) | Author, ex-CNBC | — |
+| Erin Confortini | [@itserinconfortini](https://www.tiktok.com/@itserinconfortini) | Money explainers | — |
+| Jessica Spangler | [@ecommjess](https://www.tiktok.com/@ecommjess) | E-commerce educator | — |
+| Christine Elizabeth | [@christine.elizabeth](https://www.tiktok.com/@christine.elizabeth) | Money content | — |
+| Sam Jarman | [@sam_jarman](https://www.tiktok.com/@sam_jarman) | Money content | — |
+| Hercules | [@rhercules_](https://www.tiktok.com/@rhercules_) | Travel-hacking, credit cards | — |
+| Danny | [@themaestroreal](https://www.tiktok.com/@themaestroreal) | Money content | — |
+| Keifer Kelson | [@klkbuilds](https://www.tiktok.com/@klkbuilds) | Builds/business | — |
+| Robert Riordan | [@ribbs188](https://www.tiktok.com/@ribbs188) | Money content | — |
+
+### US handles that did not resolve (squatted, dead, or wrong platform)
+BlondeBrokeAndBougie (not on TikTok), Taylor Price @pricelessstay (empty), Charlie Chang @charliechang (empty; @charliechang_ posts music only), Jaspreet @minoritymindset (empty), Erin Lowry @brokemillennial (empty), Marko @whiteboardfinance (empty), Codie Sanchez @codiesanchez (empty), Kiana Danial @investdiva (empty), TraderToks (not on TikTok).

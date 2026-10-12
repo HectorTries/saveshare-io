@@ -90,7 +90,7 @@ section{padding:72px 0}
 footer{background:#fff;border-top:1px solid var(--line);padding:40px 0;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .disclaimer{max-width:640px;font-size:13px;color:#4B5563;margin-top:16px;line-height:1.5}
-#no-results{display:none;text-align:center;color:var(--muted);padding:32px}</style>
+.region-toggle{display:flex;gap:0;border:1px solid var(--line);border-radius:9999px;overflow:hidden}.reg-btn{border:none;background:#fff;color:var(--muted);font-weight:700;font-size:15px;padding:12px 22px;cursor:pointer;font-family:inherit;min-height:44px}.reg-btn.active{background:var(--teal);color:#fff}.region-flag{display:inline-block;font-size:12px;font-weight:700;margin-left:8px}#no-results{display:none;text-align:center;color:var(--muted);padding:32px}</style>
 </head>
 <body>
 
@@ -135,6 +135,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
       <p>UK personal finance creators sharing their money journeys openly. Figures last pulled 5 Oct 2026. Click any creator for their full profile, net-worth sources and key quotes — plus our <a href="blog/index.html">Blog</a>.</p>
     </div>
     <div class="controls">
+      <div class="region-toggle" role="group" aria-label="Region">
+        <button type="button" id="reg-uk" class="reg-btn">🇬🇧 UK</button>
+        <button type="button" id="reg-us" class="reg-btn">🇺🇸 US</button>
+      </div>
       <input type="search" id="q" placeholder="Search creators…" aria-label="Search creators">
       <select id="sort" aria-label="Sort creators">
         <option value="default">Sort: featured</option>
@@ -201,7 +205,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
     </div>
     <div class="grid">
 <div id="fig-group">
-<div class="card" data-name="tatiana tatianamamixo" data-fol="14900" data-nw="1" data-topics="financial freedom pensions" data-eng="0">
+<div class="card" data-region="uk" data-name="tatiana tatianamamixo" data-fol="14900" data-nw="1" data-topics="financial freedom pensions" data-eng="0">
 <img class="avatar" src="avatars/tatianamamixo.jpg" alt="Tatiana" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>T</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/tatianamamixo.html" style="color:inherit;text-decoration:none">Tatiana</a></h3>
@@ -216,7 +220,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · linked to source</span>
 <p style="margin:12px 0 0"><a href="p/tatianamamixo.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="james moneystocker" data-fol="60800" data-nw="1" data-topics="pensions index funds" data-eng="0">
+<div class="card" data-region="uk" data-name="james moneystocker" data-fol="60800" data-nw="1" data-topics="pensions index funds" data-eng="0">
 <img class="avatar" src="avatars/moneystocker.jpg" alt="James" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>J</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/moneystocker.html" style="color:inherit;text-decoration:none">James</a></h3>
@@ -231,7 +235,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · linked to source</span>
 <p style="margin:12px 0 0"><a href="p/moneystocker.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="emmie emmieedit" data-fol="108100" data-nw="1" data-topics="quant finance financial literacy" data-eng="0">
+<div class="card" data-region="uk" data-name="emmie emmieedit" data-fol="108100" data-nw="1" data-topics="quant finance financial literacy" data-eng="0">
 <img class="avatar" src="avatars/emmieedit.jpg" alt="Emmie" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>E</div>'">
 <span class="tier">Mid-tier</span>
 <h3><a href="p/emmieedit.html" style="color:inherit;text-decoration:none">Emmie</a></h3>
@@ -246,7 +250,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · Oct 2026</span>
 <p style="margin:12px 0 0"><a href="p/emmieedit.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="adam jay adm.jay" data-fol="7000" data-nw="1" data-topics="accountant investing" data-eng="0">
+<div class="card" data-region="uk" data-name="adam jay adm.jay" data-fol="7000" data-nw="1" data-topics="accountant investing" data-eng="0">
 <img class="avatar" src="avatars/admjay.jpg" alt="Adam Jay" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>AJ</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/admjay.html" style="color:inherit;text-decoration:none">Adam Jay</a></h3>
@@ -261,7 +265,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · linked to source</span>
 <p style="margin:12px 0 0"><a href="p/admjay.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="sophie blank itssophieblank" data-fol="28900" data-nw="1" data-topics="coast fi etfs" data-eng="4.88">
+<div class="card" data-region="uk" data-name="sophie blank itssophieblank" data-fol="28900" data-nw="1" data-topics="coast fi etfs" data-eng="4.88">
 <img class="avatar" src="avatars/itssophieblank.jpg" alt="Sophie Blank" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>SB</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/itssophieblank.html" style="color:inherit;text-decoration:none">Sophie Blank</a></h3>
@@ -276,7 +280,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · Sep 2026</span>
 <p style="margin:12px 0 0"><a href="p/itssophieblank.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="ben bensfinance" data-fol="26900" data-nw="1" data-topics="portfolio updates index funds" data-eng="0">
+<div class="card" data-region="uk" data-name="ben bensfinance" data-fol="26900" data-nw="1" data-topics="portfolio updates index funds" data-eng="0">
 <img class="avatar" src="avatars/bensfinance.jpg" alt="Ben" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>B</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/bensfinance.html" style="color:inherit;text-decoration:none">Ben</a></h3>
@@ -291,7 +295,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · Oct 2026</span>
 <p style="margin:12px 0 0"><a href="p/bensfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="mia rose miarosemcgrath" data-fol="668300" data-nw="1" data-topics="frugal living investing" data-eng="7.16">
+<div class="card" data-region="uk" data-name="mia rose miarosemcgrath" data-fol="668300" data-nw="1" data-topics="frugal living investing" data-eng="7.16">
 <img class="avatar" src="avatars/miarosemcgrath.jpg" alt="Mia Rose" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>MR</div>'">
 <span class="tier">Mid-tier</span>
 <h3><a href="p/miarosemcgrath.html" style="color:inherit;text-decoration:none">Mia Rose</a></h3>
@@ -306,7 +310,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · Oct 2026</span>
 <p style="margin:12px 0 0"><a href="p/miarosemcgrath.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="amy financiallyher_" data-fol="45600" data-nw="1" data-topics="women & money career" data-eng="0">
+<div class="card" data-region="uk" data-name="amy financiallyher_" data-fol="45600" data-nw="1" data-topics="women & money career" data-eng="0">
 <img class="avatar" src="avatars/financiallyher.jpg" alt="Amy" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>A</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/financiallyher.html" style="color:inherit;text-decoration:none">Amy</a></h3>
@@ -321,7 +325,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · linked to source</span>
 <p style="margin:12px 0 0"><a href="p/financiallyher.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="fellas finance fellasfinance" data-fol="85300" data-nw="1" data-topics="long-term wealth index funds" data-eng="0">
+<div class="card" data-region="uk" data-name="fellas finance fellasfinance" data-fol="85300" data-nw="1" data-topics="long-term wealth index funds" data-eng="0">
 <img class="avatar" src="avatars/fellasfinance.jpg" alt="Fellas Finance" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>FF</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/fellasfinance.html" style="color:inherit;text-decoration:none">Fellas Finance</a></h3>
@@ -336,7 +340,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · Oct 2026</span>
 <p style="margin:12px 0 0"><a href="p/fellasfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="hannah bevington hannahbevington" data-fol="41000" data-nw="1" data-topics="investing payday systems" data-eng="4.68">
+<div class="card" data-region="uk" data-name="hannah bevington hannahbevington" data-fol="41000" data-nw="1" data-topics="investing payday systems" data-eng="4.68">
 <img class="avatar" src="avatars/hannahbevington.jpg" alt="Hannah Bevington" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>HB</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/hannahbevington.html" style="color:inherit;text-decoration:none">Hannah Bevington</a></h3>
@@ -351,7 +355,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · Sep 2026</span>
 <p style="margin:12px 0 0"><a href="p/hannahbevington.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="mark markonthemoney" data-fol="52400" data-nw="1" data-topics="pensions retirement" data-eng="0">
+<div class="card" data-region="uk" data-name="mark markonthemoney" data-fol="52400" data-nw="1" data-topics="pensions retirement" data-eng="0">
 <img class="avatar" src="avatars/markonthemoney.jpg" alt="Mark" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>M</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/markonthemoney.html" style="color:inherit;text-decoration:none">Mark</a></h3>
@@ -366,7 +370,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · linked to source</span>
 <p style="margin:12px 0 0"><a href="p/markonthemoney.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="ciara | curated wealth ciara__anne" data-fol="59700" data-nw="1" data-topics="intentional spending investing" data-eng="0">
+<div class="card" data-region="uk" data-name="ciara | curated wealth ciara__anne" data-fol="59700" data-nw="1" data-topics="intentional spending investing" data-eng="0">
 <img class="avatar" src="avatars/ciaraanne.jpg" alt="Ciara | Curated Wealth" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>C|</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/ciaraanne.html" style="color:inherit;text-decoration:none">Ciara | Curated Wealth</a></h3>
@@ -381,7 +385,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · Sep 2026</span>
 <p style="margin:12px 0 0"><a href="p/ciaraanne.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="krish kara krish.kara" data-fol="104000" data-nw="1" data-topics="side hustles investing" data-eng="0">
+<div class="card" data-region="uk" data-name="krish kara krish.kara" data-fol="104000" data-nw="1" data-topics="side hustles investing" data-eng="0">
 <img class="avatar" src="avatars/krishkara.jpg" alt="Krish Kara" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>KK</div>'">
 <span class="tier">Mid-tier</span>
 <h3><a href="p/krishkara.html" style="color:inherit;text-decoration:none">Krish Kara</a></h3>
@@ -396,7 +400,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · linked to source</span>
 <p style="margin:12px 0 0"><a href="p/krishkara.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="george tuttle george_tuttle" data-fol="1200" data-nw="1" data-topics="accounting investing" data-eng="0">
+<div class="card" data-region="uk" data-name="george tuttle george_tuttle" data-fol="1200" data-nw="1" data-topics="accounting investing" data-eng="0">
 <img class="avatar" src="avatars/george_tuttle.jpg" alt="George Tuttle" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>GT</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/georgetuttle.html" style="color:inherit;text-decoration:none">George Tuttle</a></h3>
@@ -411,7 +415,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · Mar 2026</span>
 <p style="margin:12px 0 0"><a href="p/georgetuttle.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="jno jno_pwnr" data-fol="47500" data-nw="1" data-topics="emergency funds growth" data-eng="0">
+<div class="card" data-region="uk" data-name="jno jno_pwnr" data-fol="47500" data-nw="1" data-topics="emergency funds growth" data-eng="0">
 <img class="avatar" src="avatars/jno_pwnr.jpg" alt="JNO" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>J</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/jnopwnr.html" style="color:inherit;text-decoration:none">JNO</a></h3>
@@ -426,7 +430,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · linked to source</span>
 <p style="margin:12px 0 0"><a href="p/jnopwnr.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="janice janiice.myla" data-fol="1700" data-nw="1" data-topics="student investing starting out" data-eng="0">
+<div class="card" data-region="uk" data-name="janice janiice.myla" data-fol="1700" data-nw="1" data-topics="student investing starting out" data-eng="0">
 <img class="avatar" src="avatars/janiicemyla.jpg" alt="Janice" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>J</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/janiicemyla.html" style="color:inherit;text-decoration:none">Janice</a></h3>
@@ -441,7 +445,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 <span class="sr-tag">Self-reported · linked to source</span>
 <p style="margin:12px 0 0"><a href="p/janiicemyla.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="rex theeverydaymillionaire" data-fol="39000" data-nw="1" data-topics="millionaire journey investing" data-eng="0">
+<div class="card" data-region="uk" data-name="rex theeverydaymillionaire" data-fol="39000" data-nw="1" data-topics="millionaire journey investing" data-eng="0">
 <img class="avatar" src="avatars/theeverydaymillionaire.jpg" alt="Rex" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>R</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/theeverydaymillionaire.html" style="color:inherit;text-decoration:none">Rex</a></h3>
@@ -459,8 +463,290 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 </div>
 <h3 class="pending-head">Figures pending — educators worth following</h3>
 <p class="pending-sub">These creators share money education but haven’t stated a personal net worth in archived videos yet.</p>
+<div class="card" data-region="us" data-name="humphrey yang humphreytalks" data-fol="3400000" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/humphreytalks.html" style="color:inherit;text-decoration:none">Humphrey Yang</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@humphreytalks" target="_blank" rel="noopener">@humphreytalks ↗</a></div>
+<p class="bio">US money creator. teaches 401k, Roth IRA, index investing; net-worth tracking advocate.</p>
+<div class="figures">
+<div><strong>3.4M</strong><span>Followers</span></div>
+<div><strong>Educator</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/humphreytalks.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="graham stephan grahamstephan" data-fol="930900" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/grahamstephan.html" style="color:inherit;text-decoration:none">Graham Stephan</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@grahamstephan" target="_blank" rel="noopener">@grahamstephan ↗</a></div>
+<p class="bio">US money creator. self-described multimillionaire investor,Saving 99% content.</p>
+<div class="figures">
+<div><strong>930.9K</strong><span>Followers</span></div>
+<div><strong>$10M+</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/grahamstephan.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="andrei jikh andreijikh" data-fol="665" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/andreijikh.html" style="color:inherit;text-decoration:none">Andrei Jikh</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@andreijikh" target="_blank" rel="noopener">@andreijikh ↗</a></div>
+<p class="bio">US money creator. self-described ~$4M portfolio, ex-magic YouTuber turned investor.</p>
+<div class="figures">
+<div><strong>665</strong><span>Followers</span></div>
+<div><strong>$4M+</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/andreijikh.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="jeremy schneider personalfinanceclub" data-fol="156200" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/personalfinanceclub.html" style="color:inherit;text-decoration:none">Jeremy Schneider</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@personalfinanceclub" target="_blank" rel="noopener">@personalfinanceclub ↗</a></div>
+<p class="bio">US money creator. Jeremy Schneider, sold business, teaches index investing.</p>
+<div class="figures">
+<div><strong>156.2K</strong><span>Followers</span></div>
+<div><strong>Educator</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/personalfinanceclub.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="money with katie moneywithkatie" data-fol="33" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/moneywithkatie.html" style="color:inherit;text-decoration:none">Money with Katie</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@moneywithkatie" target="_blank" rel="noopener">@moneywithkatie ↗</a></div>
+<p class="bio">US money creator. Money with Katie show, Morning Brew; wealth diarist.</p>
+<div class="figures">
+<div><strong>33</strong><span>Followers</span></div>
+<div><strong>Author</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/moneywithkatie.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="erika kullberg erikakullberg" data-fol="8700000" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/erikakullberg.html" style="color:inherit;text-decoration:none">Erika Kullberg</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@erikakullberg" target="_blank" rel="noopener">@erikakullberg ↗</a></div>
+<p class="bio">US money creator. ex-corporate lawyer, money explainers, 8.7M followers.</p>
+<div class="figures">
+<div><strong>8.7M</strong><span>Followers</span></div>
+<div><strong>Lawyer-explainer</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/erikakullberg.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="tori dunlap herfirst100k" data-fol="2400000" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/herfirst100k.html" style="color:inherit;text-decoration:none">Tori Dunlap</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@herfirst100k" target="_blank" rel="noopener">@herfirst100k ↗</a></div>
+<p class="bio">US money creator. Tori Dunlap, multi-seven-figure business, 2.4M followers.</p>
+<div class="figures">
+<div><strong>2.4M</strong><span>Followers</span></div>
+<div><strong>$7-8M/yr biz</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/herfirst100k.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="steve chen calltoleap" data-fol="1700000" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/calltoleap.html" style="color:inherit;text-decoration:none">Steve Chen</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@calltoleap" target="_blank" rel="noopener">@calltoleap ↗</a></div>
+<p class="bio">US money creator. Steve Chen, millionaire ex-teacher, $1.5M portfolio.</p>
+<div class="figures">
+<div><strong>1.7M</strong><span>Followers</span></div>
+<div><strong>$1.5M+</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/calltoleap.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="mark tilbury marktilbury" data-fol="8000000" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/marktilbury.html" style="color:inherit;text-decoration:none">Mark Tilbury</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@marktilbury" target="_blank" rel="noopener">@marktilbury ↗</a></div>
+<p class="bio">US money creator. Mark Tilbury, self-described self-made millionaire, 8M followers.</p>
+<div class="figures">
+<div><strong>8.0M</strong><span>Followers</span></div>
+<div><strong>$10M+</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/marktilbury.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="nicole lapin nicolelapin" data-fol="69400" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/nicolelapin.html" style="color:inherit;text-decoration:none">Nicole Lapin</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@nicolelapin" target="_blank" rel="noopener">@nicolelapin ↗</a></div>
+<p class="bio">US money creator. Nicole Lapin, bestselling author, ex-CNBC anchor.</p>
+<div class="figures">
+<div><strong>69.4K</strong><span>Followers</span></div>
+<div><strong>Author</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/nicolelapin.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="tiffany aliche thebudgetnista" data-fol="32300" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/thebudgetnista.html" style="color:inherit;text-decoration:none">Tiffany Aliche</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@thebudgetnista" target="_blank" rel="noopener">@thebudgetnista ↗</a></div>
+<p class="bio">US money creator. Tiffany Aliche, bestselling author, financial educator.</p>
+<div class="figures">
+<div><strong>32.3K</strong><span>Followers</span></div>
+<div><strong>$10M+</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/thebudgetnista.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="kumiko love thebudgetmom" data-fol="128800" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/thebudgetmom.html" style="color:inherit;text-decoration:none">Kumiko Love</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@thebudgetmom" target="_blank" rel="noopener">@thebudgetmom ↗</a></div>
+<p class="bio">US money creator. Kumiko Love, paid off ~$77K debt, budgeting systems.</p>
+<div class="figures">
+<div><strong>128.8K</strong><span>Followers</span></div>
+<div><strong>Debt-free</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/thebudgetmom.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="vivian tu yourrichbff" data-fol="0" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/yourrichbff.html" style="color:inherit;text-decoration:none">Vivian Tu</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@yourrichbff" target="_blank" rel="noopener">@yourrichbff ↗</a></div>
+<p class="bio">US money creator. Vivian Tu, ex-Wall Street, 2.8M followers; six-figure saver story.</p>
+<div class="figures">
+<div><strong>?</strong><span>Followers</span></div>
+<div><strong>$100K+</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/yourrichbff.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<p class="bio">US money creator. Charlie Chang, real-estate + investing explainers.</p>
+<div class="figures">
+<div><strong>?</strong><span>Followers</span></div>
+<div><strong>Educator</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/charliechang_.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="erin confortini itserinconfortini" data-fol="429800" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/itserinconfortini.html" style="color:inherit;text-decoration:none">Erin Confortini</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@itserinconfortini" target="_blank" rel="noopener">@itserinconfortini ↗</a></div>
+<p class="bio">US money creator. Erin Confortini, money explainers.</p>
+<div class="figures">
+<div><strong>429.8K</strong><span>Followers</span></div>
+<div><strong>Educator</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/itserinconfortini.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="jessica spangler ecommjess" data-fol="723800" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/ecommjess.html" style="color:inherit;text-decoration:none">Jessica Spangler</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@ecommjess" target="_blank" rel="noopener">@ecommjess ↗</a></div>
+<p class="bio">US money creator. Jessica Spangler, e-commerce educator.</p>
+<div class="figures">
+<div><strong>723.8K</strong><span>Followers</span></div>
+<div><strong>Founder</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/ecommjess.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="christine elizabeth christine.elizabeth" data-fol="679400" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/christine.elizabeth.html" style="color:inherit;text-decoration:none">Christine Elizabeth</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@christine.elizabeth" target="_blank" rel="noopener">@christine.elizabeth ↗</a></div>
+<p class="bio">US money creator. Christine Elizabeth, money content.</p>
+<div class="figures">
+<div><strong>679.4K</strong><span>Followers</span></div>
+<div><strong>Educator</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/christine.elizabeth.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="sam jarman sam_jarman" data-fol="4000000" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/sam_jarman.html" style="color:inherit;text-decoration:none">Sam Jarman</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@sam_jarman" target="_blank" rel="noopener">@sam_jarman ↗</a></div>
+<p class="bio">US money creator. Sam Jarman, money content.</p>
+<div class="figures">
+<div><strong>4.0M</strong><span>Followers</span></div>
+<div><strong>Educator</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/sam_jarman.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="hercules rhercules_" data-fol="131100" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/rhercules_.html" style="color:inherit;text-decoration:none">Hercules</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@rhercules_" target="_blank" rel="noopener">@rhercules_ ↗</a></div>
+<p class="bio">US money creator. Hercules, money content.</p>
+<div class="figures">
+<div><strong>131.1K</strong><span>Followers</span></div>
+<div><strong>Educator</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/rhercules_.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="danny themaestroreal" data-fol="190100" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/themaestroreal.html" style="color:inherit;text-decoration:none">Danny</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@themaestroreal" target="_blank" rel="noopener">@themaestroreal ↗</a></div>
+<p class="bio">US money creator. Danny, money content.</p>
+<div class="figures">
+<div><strong>190.1K</strong><span>Followers</span></div>
+<div><strong>Educator</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/themaestroreal.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="keifer kelson klkbuilds" data-fol="219400" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/klkbuilds.html" style="color:inherit;text-decoration:none">Keifer Kelson</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@klkbuilds" target="_blank" rel="noopener">@klkbuilds ↗</a></div>
+<p class="bio">US money creator. Keifer Kelson, builds/business content.</p>
+<div class="figures">
+<div><strong>219.4K</strong><span>Followers</span></div>
+<div><strong>Builder</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/klkbuilds.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
+<div class="card" data-region="us" data-name="robert riordan ribbs188" data-fol="144600" data-nw="1" data-topics="investing money" data-eng="0">
+<span class="tier">🇺🇸 US</span>
+<h3><a href="p/ribbs188.html" style="color:inherit;text-decoration:none">Robert Riordan</a></h3>
+<div class="handle"><a href="https://www.tiktok.com/@ribbs188" target="_blank" rel="noopener">@ribbs188 ↗</a></div>
+<p class="bio">US money creator. Robert Riordan, money content.</p>
+<div class="figures">
+<div><strong>144.6K</strong><span>Followers</span></div>
+<div><strong>Educator</strong><span>Net worth*</span></div>
+
+</div>
+<span class="sr-tag">Self-reported · linked to source</span>
+<p style="margin:12px 0 0"><a href="p/ribbs188.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
+</div>
 <div id="pend-group">
-<div class="card" data-name="gabriel nussbaum gabriel.nussbaum" data-fol="1400000" data-nw="0" data-topics="money news tax" data-eng="0">
+<div class="card" data-region="uk" data-name="gabriel nussbaum gabriel.nussbaum" data-fol="1400000" data-nw="0" data-topics="money news tax" data-eng="0">
 <img class="avatar" src="avatars/gabriel.nussbaum.jpg" alt="Gabriel Nussbaum" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>GN</div>'">
 <span class="tier">Mid-tier</span>
 <h3><a href="p/gabrielnussbaum.html" style="color:inherit;text-decoration:none">Gabriel Nussbaum</a></h3>
@@ -475,7 +761,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/gabrielnussbaum.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="bret and evey bretandevey" data-fol="294600" data-nw="0" data-topics="simple investing couples money" data-eng="0">
+<div class="card" data-region="uk" data-name="bret and evey bretandevey" data-fol="294600" data-nw="0" data-topics="simple investing couples money" data-eng="0">
 <img class="avatar" src="avatars/bretandevey.jpg" alt="Bret and Evey" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>BA</div>'">
 <span class="tier">Mid-tier</span>
 <h3><a href="p/bretandevey.html" style="color:inherit;text-decoration:none">Bret and Evey</a></h3>
@@ -490,7 +776,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/bretandevey.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="neil invests neilinvests" data-fol="146500" data-nw="0" data-topics="index investing retirement" data-eng="2.47">
+<div class="card" data-region="uk" data-name="neil invests neilinvests" data-fol="146500" data-nw="0" data-topics="index investing retirement" data-eng="2.47">
 <img class="avatar" src="avatars/neilinvests.jpg" alt="Neil Invests" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>NI</div>'">
 <span class="tier">Mid-tier</span>
 <h3><a href="p/neilinvests.html" style="color:inherit;text-decoration:none">Neil Invests</a></h3>
@@ -505,7 +791,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/neilinvests.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="lupes lupeslively" data-fol="64000" data-nw="0" data-topics="money & life investing" data-eng="0">
+<div class="card" data-region="uk" data-name="lupes lupeslively" data-fol="64000" data-nw="0" data-topics="money & life investing" data-eng="0">
 <img class="avatar" src="avatars/lupeslively.jpg" alt="Lupes" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>L</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/lupeslively.html" style="color:inherit;text-decoration:none">Lupes</a></h3>
@@ -520,7 +806,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/lupeslively.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="charlie wealthmadeaccessible" data-fol="43900" data-nw="0" data-topics="budgeting saving" data-eng="0">
+<div class="card" data-region="uk" data-name="charlie wealthmadeaccessible" data-fol="43900" data-nw="0" data-topics="budgeting saving" data-eng="0">
 <img class="avatar" src="avatars/wealthmadeaccessible.jpg" alt="Charlie" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>C</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/wealthmadeaccessible.html" style="color:inherit;text-decoration:none">Charlie</a></h3>
@@ -535,7 +821,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/wealthmadeaccessible.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="will gryba nextgenngpf" data-fol="37700" data-nw="0" data-topics="gen z money budgeting" data-eng="0">
+<div class="card" data-region="uk" data-name="will gryba nextgenngpf" data-fol="37700" data-nw="0" data-topics="gen z money budgeting" data-eng="0">
 <img class="avatar" src="avatars/nextgenngpf.jpg" alt="Will Gryba" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>WG</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/nextgenngpf.html" style="color:inherit;text-decoration:none">Will Gryba</a></h3>
@@ -550,7 +836,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/nextgenngpf.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="elly msellyphant" data-fol="36500" data-nw="0" data-topics="teacher fi millionaire track" data-eng="0">
+<div class="card" data-region="uk" data-name="elly msellyphant" data-fol="36500" data-nw="0" data-topics="teacher fi millionaire track" data-eng="0">
 <img class="avatar" src="avatars/msellyphant.jpg" alt="Elly" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>E</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/msellyphant.html" style="color:inherit;text-decoration:none">Elly</a></h3>
@@ -565,7 +851,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/msellyphant.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="iain's money insights iainjgeddes" data-fol="34100" data-nw="0" data-topics="isa journey long-term investing" data-eng="0.26">
+<div class="card" data-region="uk" data-name="iain's money insights iainjgeddes" data-fol="34100" data-nw="0" data-topics="isa journey long-term investing" data-eng="0.26">
 <img class="avatar" src="avatars/iainjgeddes2.jpg" alt="Iain's Money Insights" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>IM</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/iainmoneyinsights.html" style="color:inherit;text-decoration:none">Iain's Money Insights</a></h3>
@@ -580,7 +866,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/iainmoneyinsights.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="sean seans.money" data-fol="20600" data-nw="0" data-topics="beginner investing isas" data-eng="0.97">
+<div class="card" data-region="uk" data-name="sean seans.money" data-fol="20600" data-nw="0" data-topics="beginner investing isas" data-eng="0.97">
 <img class="avatar" src="avatars/seansmoney2.jpg" alt="Sean" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>S</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/seansmoney.html" style="color:inherit;text-decoration:none">Sean</a></h3>
@@ -595,7 +881,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/seansmoney.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="daniel gray.area.finance" data-fol="18400" data-nw="0" data-topics="better decisions investing" data-eng="0">
+<div class="card" data-region="uk" data-name="daniel gray.area.finance" data-fol="18400" data-nw="0" data-topics="better decisions investing" data-eng="0">
 <img class="avatar" src="avatars/grayareafinance.jpg" alt="Daniel" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>D</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/grayareafinance.html" style="color:inherit;text-decoration:none">Daniel</a></h3>
@@ -610,7 +896,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/grayareafinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="didi didifinance" data-fol="18200" data-nw="0" data-topics="financial freedom community" data-eng="0">
+<div class="card" data-region="uk" data-name="didi didifinance" data-fol="18200" data-nw="0" data-topics="financial freedom community" data-eng="0">
 <img class="avatar" src="avatars/didifinance.jpg" alt="DiDi" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>D</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/didifinance.html" style="color:inherit;text-decoration:none">DiDi</a></h3>
@@ -625,7 +911,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/didifinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="dr jubair dr.jubairsfinance" data-fol="17500" data-nw="0" data-topics="daily investing etfs" data-eng="2.14">
+<div class="card" data-region="uk" data-name="dr jubair dr.jubairsfinance" data-fol="17500" data-nw="0" data-topics="daily investing etfs" data-eng="2.14">
 <img class="avatar" src="avatars/drjubairsfinance2.jpg" alt="Dr Jubair" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>DJ</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/drjubairsfinance.html" style="color:inherit;text-decoration:none">Dr Jubair</a></h3>
@@ -640,7 +926,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/drjubairsfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="rebecca weinvestandrest" data-fol="14200" data-nw="0" data-topics="early retirement investing" data-eng="0">
+<div class="card" data-region="uk" data-name="rebecca weinvestandrest" data-fol="14200" data-nw="0" data-topics="early retirement investing" data-eng="0">
 <img class="avatar" src="avatars/weinvestandrest.jpg" alt="Rebecca" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>R</div>'">
 <span class="tier">Micro</span>
 <h3><a href="p/weinvestandrest.html" style="color:inherit;text-decoration:none">Rebecca</a></h3>
@@ -655,7 +941,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/weinvestandrest.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="dahlia getontopwithdahlia" data-fol="8200" data-nw="0" data-topics="budgeting ex-blackrock" data-eng="0">
+<div class="card" data-region="uk" data-name="dahlia getontopwithdahlia" data-fol="8200" data-nw="0" data-topics="budgeting ex-blackrock" data-eng="0">
 <img class="avatar" src="avatars/getontopwithdahlia.jpg" alt="Dahlia" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>D</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/getontopwithdahlia.html" style="color:inherit;text-decoration:none">Dahlia</a></h3>
@@ -670,7 +956,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/getontopwithdahlia.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="kafilat kafilat.finance" data-fol="7300" data-nw="0" data-topics="systems women & money" data-eng="0">
+<div class="card" data-region="uk" data-name="kafilat kafilat.finance" data-fol="7300" data-nw="0" data-topics="systems women & money" data-eng="0">
 <img class="avatar" src="avatars/kafilatfinance.jpg" alt="Kafilat" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>K</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/kafilatfinance.html" style="color:inherit;text-decoration:none">Kafilat</a></h3>
@@ -685,7 +971,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/kafilatfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="ola allthingsmoney_" data-fol="6500" data-nw="0" data-topics="budgeting beginner" data-eng="0">
+<div class="card" data-region="uk" data-name="ola allthingsmoney_" data-fol="6500" data-nw="0" data-topics="budgeting beginner" data-eng="0">
 <img class="avatar" src="avatars/allthingsmoney.jpg" alt="Ola" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>O</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/allthingsmoney.html" style="color:inherit;text-decoration:none">Ola</a></h3>
@@ -700,7 +986,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/allthingsmoney.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="holly ann holl_005" data-fol="6500" data-nw="0" data-topics="gen z money learning" data-eng="0">
+<div class="card" data-region="uk" data-name="holly ann holl_005" data-fol="6500" data-nw="0" data-topics="gen z money learning" data-eng="0">
 <img class="avatar" src="avatars/holl_005.jpg" alt="Holly Ann" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>HA</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/holl005.html" style="color:inherit;text-decoration:none">Holly Ann</a></h3>
@@ -715,7 +1001,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/holl005.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="cam camrusselluk" data-fol="3700" data-nw="0" data-topics="investing basics stocks" data-eng="0">
+<div class="card" data-region="uk" data-name="cam camrusselluk" data-fol="3700" data-nw="0" data-topics="investing basics stocks" data-eng="0">
 <img class="avatar" src="avatars/camrusselluk.jpg" alt="Cam" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>C</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/camrusselluk.html" style="color:inherit;text-decoration:none">Cam</a></h3>
@@ -730,7 +1016,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/camrusselluk.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="amanda amandainvests" data-fol="3400" data-nw="0" data-topics="mum investors investing" data-eng="0">
+<div class="card" data-region="uk" data-name="amanda amandainvests" data-fol="3400" data-nw="0" data-topics="mum investors investing" data-eng="0">
 <img class="avatar" src="avatars/amandainvests.jpg" alt="Amanda" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>A</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/amandainvests.html" style="color:inherit;text-decoration:none">Amanda</a></h3>
@@ -745,7 +1031,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/amandainvests.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="intentional finance intentional.finance" data-fol="3300" data-nw="0" data-topics="homeownership budgeting" data-eng="0">
+<div class="card" data-region="uk" data-name="intentional finance intentional.finance" data-fol="3300" data-nw="0" data-topics="homeownership budgeting" data-eng="0">
 <img class="avatar" src="avatars/intentionalfinance.jpg" alt="Intentional Finance" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>IF</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/intentionalfinance.html" style="color:inherit;text-decoration:none">Intentional Finance</a></h3>
@@ -760,7 +1046,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/intentionalfinance.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="awright awright.s" data-fol="3300" data-nw="0" data-topics="intentional living saving" data-eng="0">
+<div class="card" data-region="uk" data-name="awright awright.s" data-fol="3300" data-nw="0" data-topics="intentional living saving" data-eng="0">
 <img class="avatar" src="avatars/awrights.jpg" alt="awright" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>A</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/awrights.html" style="color:inherit;text-decoration:none">awright</a></h3>
@@ -775,7 +1061,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/awrights.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="ollie invests ollieinvests" data-fol="2200" data-nw="0" data-topics="isas beginner investing" data-eng="2.65">
+<div class="card" data-region="uk" data-name="ollie invests ollieinvests" data-fol="2200" data-nw="0" data-topics="isas beginner investing" data-eng="2.65">
 <img class="avatar" src="avatars/ollieinvests.jpg" alt="Ollie Invests" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>OI</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/ollieinvests.html" style="color:inherit;text-decoration:none">Ollie Invests</a></h3>
@@ -790,7 +1076,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 <p style="margin:12px 0 0"><a href="p/ollieinvests.html" style="font-size:14px;font-weight:600">View full profile →</a></p>
 </div>
-<div class="card" data-name="tommy everitt tommytalks.uk" data-fol="223" data-nw="0" data-topics="beginner investing saving" data-eng="0">
+<div class="card" data-region="uk" data-name="tommy everitt tommytalks.uk" data-fol="223" data-nw="0" data-topics="beginner investing saving" data-eng="0">
 <img class="avatar" src="avatars/tommytalksu.jpg" alt="Tommy Everitt" width="56" height="56" loading="lazy" onerror="this.outerHTML='<div class=&quot;fallback-avatar&quot; aria-hidden=&quot;true&quot;>TE</div>'">
 <span class="tier">Nano</span>
 <h3><a href="p/tommytalksuk.html" style="color:inherit;text-decoration:none">Tommy Everitt</a></h3>
@@ -850,6 +1136,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 (function(){
 var q=document.getElementById('q'),sort=document.getElementById('sort'),topic=document.getElementById('topic'),hasfig=document.getElementById('hasfig'),nores=document.getElementById('no-results');
 function num(s){s=(s||'').trim();if(/M$/i.test(s))return parseFloat(s)*1e6;if(/K$/i.test(s))return parseFloat(s)*1e3;return parseFloat(s)||0;}
+var region=localStorage.getItem('ss-region')||'uk';
+function setRegion(r){region=r;localStorage.setItem('ss-region',r);
+document.getElementById('reg-uk').classList.toggle('active',r==='uk');
+document.getElementById('reg-us').classList.toggle('active',r==='us');
+apply();}
+document.getElementById('reg-uk').addEventListener('click',function(){setRegion('uk');});
+document.getElementById('reg-us').addEventListener('click',function(){setRegion('us');});
+document.getElementById('reg-uk').classList.toggle('active',region==='uk');
+document.getElementById('reg-us').classList.toggle('active',region==='us');
 function apply(){
 var query=(q.value||'').toLowerCase(),t=topic.value,hf=hasfig.checked;
 var groups=[document.getElementById('fig-group'),document.getElementById('pend-group')];
@@ -859,6 +1154,7 @@ if(!g)return;
 var list=Array.prototype.slice.call(g.querySelectorAll('.card'));
 list.forEach(function(c){
 var ok=c.getAttribute('data-name').indexOf(query)>-1;
+if((c.getAttribute('data-region')||'uk')!==region)ok=false;
 if(t&&c.getAttribute('data-topics').indexOf(t)<0)ok=false;
 if(hf&&c.getAttribute('data-nw')!=='1')ok=false;
 c.style.display=ok?'':'none';
