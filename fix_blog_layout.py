@@ -102,6 +102,18 @@ for fp in files:
     if pend is not None:
         seq.append({"type": "narr", "html": pend})
 
+    # strip caption junk from quotes
+    def clean_q(q):
+        import re as _re
+        q = _re.sub(r'^\s*WEBVTT[\s.:-]*', '', q, flags=_re.I)
+        q = _re.sub(r'^\s*\d{2}:\d{2}(:\d{2})?(\.\d+)?\s*-->\s*\d{2}:\d{2}(:\d{2})?(\.\d+)?\s*', '', q)
+        q = _re.sub(r'^\s*\d{1,2}:\d{2}(:\d{2})?\s*', '', q)
+        q = _re.sub(r'<[^>]+>', '', q)
+        return q.strip()
+    for s in seq:
+        if s.get("quotes"):
+            s["quotes"] = [clean_q(q) for q in s["quotes"] if clean_q(q)]
+
     # merge consecutive entries same handle+url
     merged = []
     for s in seq:
