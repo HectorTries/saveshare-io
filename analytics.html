@@ -96,9 +96,8 @@ tbody tr:nth-child(even) td{background:#F5F4EF}
 <header class="hero"><div class="wrap">
 <div class="kicker">Analytics</div>
 <h1>Creator money, in their <em>own words</em></h1>
-<p>Self-reported figures from <b>46 UK</b> and <b>46 US</b> money creators (92 profiles in total), drawn from <b>1,658 archived TikTok videos</b>. Every number links to the video where the creator said it.</p>
+<p>Self-reported figures from <b>46 UK</b> and <b>46 US</b> money creators (92 profiles in total). Every number links to the video where the creator said it.</p>
 <div class="hero-stats">
-<div class="hstat"><strong class="count" data-to="1658">0</strong><span>videos archived</span></div>
 <div class="hstat"><strong class="count" data-to="92">0</strong><span>creators tracked</span></div>
 <div class="hstat"><strong><em class="count" data-to="115" data-pre="">0</em></strong><span>sourced figures</span></div>
 <div class="hstat"><strong class="count" data-to="100" data-suf="%">0%</strong><span>source linked</span></div>
@@ -126,15 +125,13 @@ tbody tr:nth-child(even) td{background:#F5F4EF}
 <div class="cmp">
 <div class="cmp-card"><h3>UK</h3><ul>
 <li><span>Creators tracked</span><b>46</b></li>
-<li><span>Videos archived</span><b>753</b></li>
 <li><span>Sourced figures</span><b>82</b></li>
 <li><span>Avg stated net worth</span><b>£210,000</b></li>
 <li><span>Top topic</span><b>ETF / index funds</b></li>
-<li><span>Quietest topic</span><b>Crypto (5 videos)</b></li>
+<li><span>Quietest topic</span><b>Crypto (5 mentions)</b></li>
 </ul></div>
 <div class="cmp-card us"><h3>US</h3><ul>
 <li><span>Creators tracked</span><b>46</b></li>
-<li><span>Videos archived</span><b>905</b></li>
 <li><span>Sourced figures</span><b>33</b></li>
 <li><span>Top stated net worth</span><b>$2,000,000</b></li>
 <li><span>Top topic</span><b>Cash / savings</b></li>
@@ -291,7 +288,7 @@ s.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.prev
 document.querySelectorAll("#donut-legend .leg").forEach(function(l){l.addEventListener("click",function(){donutHot(+l.getAttribute("data-i"));});
 l.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();donutHot(+l.getAttribute("data-i"));}});});
 var bars=sumBy("bars",view),bmax=Math.max.apply(null,bars.map(function(d){return d.videos;}).concat([1]));
-document.getElementById("mix-bars").innerHTML=bars.map(function(d){return '<div class="brow"><span>'+d.label+'</span><div class="btrack"><div class="bfill" style="--w:'+Math.round(d.videos/bmax*100)+'%">'+d.videos+' videos</div></div><span class="num">'+d.videos+"</span></div>";}).join("");
+document.getElementById("mix-bars").innerHTML=bars.map(function(d){return '<div class="brow"><span>'+d.label+'</span><div class="btrack"><div class="bfill" style="--w:'+Math.round(d.videos/bmax*100)+'%">'+d.videos+' mentions</div></div><span class="num">'+d.videos+"</span></div>";}).join("");
 }
 var view="uk";try{view=localStorage.getItem("ss-region")||"uk";}catch(e){}
 if(view!=="uk"&&view!=="us"&&view!=="all")view="uk";
