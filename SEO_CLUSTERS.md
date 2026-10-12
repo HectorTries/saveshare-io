@@ -73,6 +73,35 @@ FLAGSHIP (pillar): `blog/400k-net-worth-tatiana.html` — primary: uk personal f
 5. Blog index (`blog/index.html`) renders a pillar nav section (built by build_blog.py from PILLARS map).
 6. Related block markup: `<aside class="related"><h2>Keep reading</h2><ul>...` injected before closing disclaimers.
 
+## Pillar 7: US Personal Finance (from ubersuggest_personal_finance CSV, 788 rows, 2026-10-12)
+FLAGSHIP (pillar): NEW `blog/us-personal-finance-guide.html` — primary: **personal finance** (22.2k, 70, hard, must-have) — overview hub linking all US clusters below
+
+### 7A. Free apps & tools (map to existing / NEW)
+- `blog/single-income-budgeting-us.html` (EXISTS) — retarget add: **personal finance apps free** (720, 7) + worksheet angle (inspiredbudget/singlemombudgeting supply)
+- NEW `blog/personal-finance-worksheet.html` — **personal finance worksheet** (260, 19) — transcript support: singlemombudgeting, beccanomics101, gray.area.finance
+- SKIP `personal finance software free` (720, 39) — medium difficulty, no transcript support
+- SKIP `personal finance spreadsheet` (480, 66) / budget template (3600, 43) —too hard, thin transcript support
+
+### 7B. Budgeting systems for women (map to existing / NEW)
+- `blog/women-money-uk.html` (EXISTS, UK) — cross-link only
+- NEW `blog/personal-finance-for-women-us.html` — **personal finance for women** (210, 9) — creators: herfirst100k, itserinconfortini, christine.elizabeth, investdiva (38 women-theme transcripts)
+- NEW `blog/personal-finance-expense-categories.html` — **personal finance expense categories** (170, 10) — budgeting theme 230 transcripts; pair with 50/30/20
+- NEW `blog/50-30-20-budget-rule.html` — **personal finance 50 30 20** (20, 6) — zero-competition capture; budgeting supply abundant
+
+### 7C. US finfluencers / influencers (map to existing / NEW)
+- NEW `blog/us-finance-influencers.html` — **us finance influencers** (0, 12) + **top finance influencers in us** (0, 4) — exact-match zero-competition; creators: andreijikh, grahamstephan, herfirst100k, erikakullberg, calltoleap
+- NEW `blog/what-are-finfluencers.html` — **finfluencers** (260, 44, core term, hard but must-own) + finfluencers meaning (10, 18) — transcript support: iainmoneyinsights x2; US angle via SEC/FINRA creator-compliance theme
+- NEW `blog/personal-finance-influencers.html` — **personal finance influencers** (90, 23) — medium; creators: christine.elizabeth, mohaewithjennypark, miarosemcgrath (11 influencer transcripts)
+- SKIP `influencers discount codes` (2900, 19) — volume is generic-influencer intent, not finance; thin finance support (1 yourrichbff coupon mention)
+- SKIP `influencers nyc` (1600, 20) / miami / events — generic local-influencer intent, no finance-transcript support
+- SKIP `influencers linkedin/colombianos/en mexico/etc` — non-finance or non-US/UK intent
+
+### 7D. Banked keywords with NO transcript support (never fabricate)
+- SKIP `personal finance management navy federal` (210, 11) / navy federal (40, 33) — zero transcript mentions
+- SKIP city keywords (hattiesburg ms, nashville ga, etc.) — no local-finance transcript support
+- SKIP `personal finance lab/statement/fbla/merit badge` — school-curriculum intent, no creator support
+
 ## Status
 - [x] 2026-10-12: map written, related blocks injected into 17 existing posts, pillar nav added to blog index
-- [ ] Next: daily-post agents pick NEW keywords top-down (easy wins first: dividend uk tax rate, isa withdrawal rules, junior isa, recession)
+- [x] 2026-10-12: US Pillar 7 added from personal-finance CSV (788 rows); 8 NEW posts planned, 1 retarget, rest skipped with reasons
+- [ ] Next: daily-post agents pick NEW keywords top-down (easy wins first: personal finance apps free retarget, for-women-us, expense-categories, 50-30-20, us-finance-influencers)
