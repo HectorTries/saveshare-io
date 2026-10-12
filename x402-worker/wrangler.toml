@@ -12,6 +12,6 @@ compatibility_date = "2025-09-01"
 #   saveshare.io/ai.txt           -> this worker (agent feed)
 
 [vars]
-PAY_TO_ADDRESS = "0x0000000000000000000000000000000000000000" # <-- SET: your Base USDC wallet
+PAY_TO_ADDRESS = "0xc47b6d6a4137373ab169aeeedb95971d4939ef0b" # <-- SET: your Base USDC wallet
 FACILITATOR_URL = "https://x402.org/facilitator"
 NETWORK = "base"
