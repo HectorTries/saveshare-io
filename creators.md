@@ -133,3 +133,31 @@ Net worth figures are SELF-DESCRIBED by the creators in their own TikTok content
 
 ### US handles that did not resolve (squatted, dead, or wrong platform)
 BlondeBrokeAndBougie (not on TikTok), Taylor Price @pricelessstay (empty), Charlie Chang @charliechang (empty; @charliechang_ posts music only), Jaspreet @minoritymindset (empty), Erin Lowry @brokemillennial (empty), Marko @whiteboardfinance (empty), Codie Sanchez @codiesanchez (empty), Kiana Danial @investdiva (empty), TraderToks (not on TikTok).
+
+### US batch 3 (2026-10-12, debt payoff / transparency, 23 creators, 501 videos, ~460 transcripts)
+| Becca | [@stealth.mode.savings](https://www.tiktok.com/@stealth.mode.savings) | Secretly paid off $58K debt | 728K |
+| Brad Nelson | [@debt_free_dad](https://www.tiktok.com/@debt_free_dad) | Debt Free Dad, budgeting systems | 70K |
+| Melissa Jean-Baptiste | [@millennialindebt](https://www.tiktok.com/@millennialindebt) | Paid off $100K student loans, teacher salary | 58K |
+| Allison Baggerly | [@inspiredbudget](https://www.tiktok.com/@inspiredbudget) | Budgeting coach, author | 151K |
+| Becca Bergmann | [@beccanomics101](https://www.tiktok.com/@beccanomics101) | Paid off $320K in 2 years | 111K |
+| Cheryl Vallejo | [@debtfreelivinny](https://www.tiktok.com/@debtfreelivinny) | Debt free living | 233K |
+| Alisa Glutz | [@colormycredit](https://www.tiktok.com/@colormycredit) | Credit educator | 432K |
+| Josh+Chris Steil | [@thecreditbrothers](https://www.tiktok.com/@thecreditbrothers) | Credit and points | 756K |
+| Danny Penev | [@dimeswithdanny](https://www.tiktok.com/@dimeswithdanny) | 6-figure net worth at 22 | 92K |
+| Jenny Park | [@mohaewithjennypark](https://www.tiktok.com/@mohaewithjennypark) | Paid off $120K debt | 205K |
+| Neelima | [@learnwithneelima](https://www.tiktok.com/@learnwithneelima) | Tech and finance | 26K |
+| Ash | [@ashallaboutmoney](https://www.tiktok.com/@ashallaboutmoney) | Credit card payoff educator | 646K |
+| John Liang | [@johnsfinancetips](https://www.tiktok.com/@johnsfinancetips) | Finance explainers | 2.3M |
+| Kassandra Brambila | [@kassandrabrambila](https://www.tiktok.com/@kassandrabrambila) | Money creator | 1.5M |
+| Garner Ted | [@iamgarnerted](https://www.tiktok.com/@iamgarnerted) | Money educator | 893K |
+| Noah Kettle | [@businesswithnoah](https://www.tiktok.com/@businesswithnoah) | Business educator | 661K |
+| Daliz Hernandez | [@nuestras_finanzas](https://www.tiktok.com/@nuestras_finanzas) | Finanzas en espanol | 182K |
+| Miranda | [@miranda_andrews](https://www.tiktok.com/@miranda_andrews) | Paid off $45K debt | 276K |
+| Hector Mayorga | [@hector_mayorga](https://www.tiktok.com/@hector_mayorga) | Money educator | 826K |
+| Josue | [@josuesegoviano2](https://www.tiktok.com/@josuesegoviano2) | Money and life | 11K |
+| Mark Cassara | [@markcassara](https://www.tiktok.com/@markcassara) | Money educator | 684K |
+| Drewkey | [@drewkey5000](https://www.tiktok.com/@drewkey5000) | Money creator | 2.2M |
+| Trell the Trainer | [@trellthetrainer](https://www.tiktok.com/@trellthetrainer) | Saved $10K, invested $7K | 2.3M |
+
+### US batch 3 handles that did not resolve
+@micropayments (1 video only, no transcript), @shondamartin (0 videos), @basicfinancialliteracy (0 videos), @katherine.credito (no profile), @juansanchezoficial (0 videos). @sam_jarman and @christine.elizabeth already existed from prior batches (refreshed, 20 videos each).
