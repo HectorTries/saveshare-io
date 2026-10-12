@@ -332,6 +332,12 @@ var links=document.querySelectorAll(".subnav a"),secs=[].map.call(links,function
 var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
 links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});
 secs.forEach(function(s){if(s)so.observe(s)});
+.ts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.ts-card{border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#fff}
+.ts-trend{font-size:13px;font-weight:700;color:#0f766e;margin:2px 0 6px}
+.ts-points{list-style:none;margin:10px 0 0;padding:0;font-size:13px}
+.ts-points li{margin:6px 0}.ts-points .q{display:block;color:#6b7280;font-size:12px}
+.spark{color:#0f766e}.agg{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:8px}
 /* table filter + sort */
 var q=document.getElementById("fq"),kt=document.getElementById("fk"),st=document.getElementById("fs"),rc=document.getElementById("rowcount");
 function applyFilters(){var term=q.value.trim().toLowerCase(),kind=kt.value,view=document.body.dataset.view,shown=0,total=0;
@@ -370,7 +376,7 @@ page = f"""<!DOCTYPE html>
 <div class="region-toggle" role="group" aria-label="Region"><button class="reg-btn active" data-reg="uk" type="button">UK</button><button class="reg-btn" data-reg="us" type="button">US</button><button class="reg-btn" data-reg="all" type="button">All</button></div>
 </div></div></nav>
 <nav class="subnav" aria-label="Sections"><div class="wrap">
-<a href="#overview">Overview</a><a href="#networth">Net worth</a><a href="#allocation">Allocation</a><a href="#debt">Debt payoff</a><a href="#regions">UK vs US</a><a href="#figures">Figures</a><a href="#method">Method</a>
+<a href="#overview">Overview</a><a href="#networth">Net worth</a><a href="#allocation">Allocation</a><a href="#debt">Debt payoff</a><a href="#regions">UK vs US</a><a href="#overtime">Over time</a><a href="#aggregate">Aggregate</a><a href="#figures">Figures</a><a href="#method">Method</a>
 </div></nav>
 <header class="hero"><div class="wrap">
 <div class="kicker">Analytics</div>
@@ -453,6 +459,8 @@ page = f"""<!DOCTYPE html>
 </ul></div>
 </div></div></section>
 
+__TS_SECTIONS__
+
 <section id="figures"><div class="panel"><div class="eyebrow">Database</div><h2>Every figure, with its source</h2>
 <p class="sub">Self-described amounts only. Use search, the type filter, or the column buttons to sort. Switch UK / US / All above to change region.</p>
 <div class="controls">
@@ -489,8 +497,15 @@ page = f"""<!DOCTYPE html>
 </script>
 </body></html>"""
 
+import subprocess as _sp
+try:
+    TS_SECTIONS = _sp.run(["python3", os.path.join(BASE, "gen_timeseries.py")], capture_output=True, text=True, check=True).stdout
+    assert "—" not in TS_SECTIONS
+except Exception as _e:
+    TS_SECTIONS = ""
+    print("timeseries gen failed:", _e)
 out = os.path.join(BASE, "analytics.html")
-open(out, "w").write(page)
+open(out, "w").write(page.replace("__TS_SECTIONS__", TS_SECTIONS))
 print("wrote", out, len(page), "bytes;", len(rows), "rows")
 assert "\u2014" not in page, "em dash found"
 print("no em dashes: OK")
