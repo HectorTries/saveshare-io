@@ -21,8 +21,8 @@ const USDC_BASE = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA4b1e"; // native USDC on
 const PRICE_TABLE: { match: RegExp; priceUsd: number; resource: string }[] = [
   { match: /^\/api\/bulk(\/|$)/, priceUsd: 5.0, resource: "bulk dataset" },
   { match: /^\/api\/profiles(\/|$)/, priceUsd: 0.05, resource: "bulk profiles" },
-  { match: /^\/api\//, priceUsd: 0.01, resource: "single api call" },
-  { match: /\.json(\?|$)/, priceUsd: 0.01, resource: "profile json" },
+  { match: /^\/api\//, priceUsd: 0.05, resource: "single api call" },
+  { match: /\.json(\?|$)/, priceUsd: 0.05, resource: "profile json" },
   { match: /^\/(llms\.txt|ai\.txt)$/, priceUsd: 0.05, resource: "agent feed" },
 ];
 
