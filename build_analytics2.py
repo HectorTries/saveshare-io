@@ -1,27 +1,49 @@
 #!/usr/bin/env python3
 """Redesigned analytics.html: interactive data experience.
-Reads figure rows from the current analytics.html (source of truth), emits new page.
-No em dashes in output. No external JS/CSS libs."""
-import os, re, html, math
+Reads figure rows from the figures table in transcript_db.sqlite (single source
+of truth), emits new page. No em dashes in output. No external JS/CSS libs."""
+import os, re, html, math, sqlite3
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-SRC = open(os.environ.get("SS_SRC", os.path.join(BASE, "analytics.html"))).read()
+DB = os.environ.get("SS_DB", os.path.join(BASE, "transcript_db.sqlite"))
 
-ROW = re.compile(
-    r'<tr data-region="(uk|us)"><td><a href="([^"]+)">([^<]+)</a><br>'
-    r'<a class="h" href="https://www\.tiktok\.com/@([^"]+)"[^>]*>@[^<]*</a></td>'
-    r'<td><span class="flag">(\w+)</span></td><td>([^<]+)</td>'
-    r'<td class="num">([^<]+)</td><td>([^<]+)</td>'
-    r'<td class="q">(.*?) <a href="([^"]+)"[^>]*>source</a></td></tr>', re.S)
+DISPLAY = {"net_worth": "Net worth", "invested": "Amount invested",
+           "debt_paid": "Debt payoff", "income": "Income flow",
+           "savings": "Savings total", "cash": "Cash savings",
+           "pension": "Pension value", "portfolio": "Portfolio value",
+           "property": "Property value", "crypto": "Crypto value"}
+
+def slug(h):
+    return "p/" + re.sub(r"[^a-z0-9]+", "", h.lower()) + ".html"
+
+con = sqlite3.connect(DB)
+con.row_factory = sqlite3.Row
+nick = {r["handle"]: (r["nickname"] or r["handle"])
+        for r in con.execute("SELECT handle, nickname FROM creators")}
+prof_cache = {}
+for _f in os.listdir(os.path.join(BASE, "p")):
+    prof_cache[_f] = True
 
 rows = []
-for m in ROW.finditer(SRC):
-    region, prof, name, handle, flag, kind, amt_s, date, quote, url = m.groups()
-    num = int(re.sub(r"[^\d]", "", amt_s)) if re.search(r"\d", amt_s) else 0
-    rows.append(dict(region=region, prof=prof, name=name.strip(), handle=handle,
-                     kind=kind.strip(), amt_s=amt_s.strip(), amt=num, date=date.strip(),
-                     quote=quote.strip(), url=url))
-assert len(rows) >= 40, f"only {len(rows)} rows parsed"
+for f in con.execute("SELECT * FROM figures WHERE verified=1 ORDER BY region, creator"):
+    handle = f["creator"]
+    name = nick.get(handle, handle)
+    pf = slug(handle)
+    prof = pf if pf in prof_cache else "index.html#creators"
+    sym = "\u00a3" if f["currency"] == "GBP" else "$"
+    amt_s = f"{sym}{f['amount']:,}"
+    region = f["region"].lower()
+    kind = DISPLAY.get(f["figure_type"], f["figure_type"])
+    date = f"{f['as_of_year']}-01-01" if f["as_of_year"] else ""
+    pub = con.execute("SELECT published_at FROM transcripts WHERE url=?",
+                      (f["video_url"],)).fetchone()
+    if pub and pub[0]:
+        date = pub[0][:10]
+    rows.append(dict(region=region, prof=prof, name=name, handle=handle,
+                     kind=kind, amt_s=amt_s, amt=f["amount"], date=date,
+                     quote=f["quote"].strip(), url=f["video_url"]))
+con.close()
+assert len(rows) >= 40, f"only {len(rows)} rows in figures table"
 uk_rows = [r for r in rows if r["region"] == "uk"]
 us_rows = [r for r in rows if r["region"] == "us"]
 
@@ -41,6 +63,10 @@ def hist(rs, sym):
     return counts, nw
 
 uk_hist, uk_nw = hist(uk_rows, "GBP")
+UK_NW = sorted(r["amt"] for r in uk_rows if r["kind"] == "Net worth")
+UK_NW_N = len(UK_NW)
+UK_AVG_NW = round(sum(UK_NW) / UK_NW_N) if UK_NW_N else 0
+UK_MED_NW = UK_NW[UK_NW_N // 2] if UK_NW_N else 0
 us_hist, us_nw = hist(us_rows, "USD")
 
 # Allocation: creator counts parsed from existing legends (5-class set)
@@ -353,30 +379,30 @@ page = f"""<!DOCTYPE html>
 <div class="hero-stats">
 <div class="hstat"><strong class="count" data-to="1658">0</strong><span>videos archived</span></div>
 <div class="hstat"><strong class="count" data-to="87">0</strong><span>creators tracked</span></div>
-<div class="hstat"><strong><em class="count" data-to="42" data-pre="">0</em></strong><span>sourced figures</span></div>
+<div class="hstat"><strong><em class="count" data-to="{len(rows)}" data-pre="">0</em></strong><span>sourced figures</span></div>
 <div class="hstat"><strong class="count" data-to="100" data-suf="%">0%</strong><span>source linked</span></div>
 </div></div></header>
 <div class="wrap">
 
 <section id="overview"><div class="eyebrow">Overview</div>
 <div data-rv="uk"><div class="cards reveal">
-<div class="stat"><strong class="count" data-to="21">0</strong><span>UK creators with stated figures</span></div>
-<div class="stat"><strong><em class="count" data-to="210000" data-pre="\u00a3">0</em></strong><span>Avg self-stated net worth (4 creators)</span></div>
-<div class="stat"><strong><em class="count" data-to="182500" data-pre="\u00a3">0</em></strong><span>Median self-stated net worth</span></div>
-<div class="stat"><strong><em class="count" data-to="1599099" data-pre="\u00a3">0</em></strong><span>Combined stated portfolios + invested (12 figures)</span></div>
+<div class="stat"><strong class="count" data-to="{len(set(r['handle'] for r in uk_rows))}">0</strong><span>UK creators with stated figures</span></div>
+<div class="stat"><strong><em class="count" data-to="{UK_AVG_NW}" data-pre="\u00a3">0</em></strong><span>Avg self-stated net worth ({UK_NW_N} creators)</span></div>
+<div class="stat"><strong><em class="count" data-to="{UK_MED_NW}" data-pre="\u00a3">0</em></strong><span>Median self-stated net worth</span></div>
+<div class="stat"><strong><em class="count" data-to="{sum(r['amt'] for r in uk_rows if r['kind'] in ('Portfolio value', 'Amount invested'))}" data-pre="\u00a3">0</em></strong><span>Combined stated portfolios + invested ({sum(1 for r in uk_rows if r['kind'] in ('Portfolio value', 'Amount invested'))} figures)</span></div>
 </div></div>
 <div data-rv="us"><div class="cards reveal">
-<div class="stat"><strong class="count" data-to="14">0</strong><span>US creators with stated figures</span></div>
-<div class="stat"><strong><em class="count" data-to="2000000" data-pre="$">0</em></strong><span>Avg self-stated net worth (1 creator)</span></div>
-<div class="stat"><strong><em class="count" data-to="2000000" data-pre="$">0</em></strong><span>Median self-stated net worth</span></div>
-<div class="stat"><strong><em class="count" data-to="3007000" data-pre="$">0</em></strong><span>Combined stated portfolios + invested (2 figures)</span></div>
+<div class="stat"><strong class="count" data-to="{len(set(r['handle'] for r in us_rows))}">0</strong><span>US creators with stated figures</span></div>
+<div class="stat"><strong><em class="count" data-to="{round(sum(r['amt'] for r in us_rows if r['kind']=='Net worth')/max(1,sum(1 for r in us_rows if r['kind']=='Net worth')))}" data-pre="$">0</em></strong><span>Avg self-stated net worth ({sum(1 for r in us_rows if r['kind']=='Net worth')} creators)</span></div>
+<div class="stat"><strong><em class="count" data-to="{sorted(r['amt'] for r in us_rows if r['kind']=='Net worth')[sum(1 for r in us_rows if r['kind']=='Net worth')//2] if any(r['kind']=='Net worth' for r in us_rows) else 0}" data-pre="$">0</em></strong><span>Median self-stated net worth</span></div>
+<div class="stat"><strong><em class="count" data-to="{sum(r['amt'] for r in us_rows if r['kind'] in ('Portfolio value', 'Amount invested'))}" data-pre="$">0</em></strong><span>Combined stated portfolios + invested ({sum(1 for r in us_rows if r['kind'] in ('Portfolio value', 'Amount invested'))} figures)</span></div>
 </div></div>
 </section>
 
 <section id="networth"><div class="panel reveal"><div class="eyebrow">Distribution</div><h2>Where net worth clusters</h2>
 <p class="sub">Stated net worth figures only, in original currency. Small sample, shown as counts so nothing is hidden. Hover any bar for the count.</p>
-<div data-rv="uk"><h3 style="font-size:18px;margin-bottom:10px">UK (4 stated figures)</h3><div class="anim">{uk_hist_svg}</div></div>
-<div data-rv="us"><h3 style="font-size:18px;margin-bottom:10px">US (2 stated figures)</h3><div class="anim">{us_hist_svg}</div></div>
+<div data-rv="uk"><h3 style="font-size:18px;margin-bottom:10px">UK ({sum(1 for r in uk_rows if r['kind']=='Net worth')} stated figures)</h3><div class="anim">{uk_hist_svg}</div></div>
+<div data-rv="us"><h3 style="font-size:18px;margin-bottom:10px">US ({sum(1 for r in us_rows if r['kind']=='Net worth')} stated figures)</h3><div class="anim">{us_hist_svg}</div></div>
 </div></section>
 
 <section id="allocation"><div class="panel reveal"><div class="eyebrow">Asset mix</div><h2>What creators actually talk about</h2>
