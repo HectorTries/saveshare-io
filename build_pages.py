@@ -33,7 +33,20 @@ a{{color:var(--teal)}}
 footer{{background:#fff;border-top:1px solid var(--line);padding:32px 0;font-size:13px;color:var(--muted);margin-top:48px}}
 .src{{font-size:13px;color:var(--muted)}}
 ul.tick{{list-style:none;padding:0}}
-ul.tick li::before{{content:"✓ ";color:#0F766E;font-weight:700}}"""
+ul.tick li::before{{content:"✓ ";color:#0F766E;font-weight:700}}
+.pullquote{{font-family:'Playfair Display',Georgia,serif;font-size:clamp(22px,3vw,30px);line-height:1.35;border-left:5px solid var(--teal);background:#fff;border-radius:0 16px 16px 0;padding:24px 28px;margin:28px 0;font-style:italic}}
+.pullquote .pq-who{{display:block;font-family:'Inter',system-ui,sans-serif;font-style:normal;font-size:14px;color:var(--muted);margin-top:12px}}
+.quote-unit{{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:20px 0}}
+.q-head{{display:flex;align-items:center;gap:12px;margin-bottom:10px}}
+.q-head img{{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0}}
+.q-avatar-fallback{{width:48px;height:48px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0}}
+.q-head strong a{{color:var(--ink);text-decoration:none}}
+.q-head strong a:hover{{color:var(--teal)}}
+.q-head .q-fol{{display:block;font-size:12px;color:var(--muted);font-weight:400}}
+.quote-unit .q-text{{font-family:'Playfair Display',Georgia,serif;font-size:19px;line-height:1.5;margin:6px 0 10px}}
+.quote-unit .q-src{{font-size:13px;color:var(--muted)}}
+.quote-unit .q-src a{{color:var(--teal)}}
+/* BLOG LAYOUT RULES: hero pull-quote (.pullquote) at top; quote units (.quote-unit) with avatar+name+followers, quote, single TikTok link; merge duplicate Via blocks; back link reads Blog; zero em/en dashes. */"""
 
 NAV = """<nav><div class="wrap"><a class="logo" href="../index.html">SaveShare<span>.io</span></a>
 <div class="nav-links"><a href="../index.html#creators">Creators</a><a href="index.html">Blog</a></div></div></nav>"""
