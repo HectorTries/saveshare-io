@@ -76,6 +76,7 @@ Avg engagement = (likes+comments+shares)/views averaged across 20 most recent vi
 | Ola (All Things Money) | [@allthingsmoney_](https://www.tiktok.com/@allthingsmoney_) | 6.5K |
 | Krish Kara | [@krish.kara](https://www.tiktok.com/@krish.kara) | 104K |
 | Cam | [@camrusselluk](https://www.tiktok.com/@camrusselluk) | 3.7K |
+| Georgia | [@moneywellnessgirl](https://www.tiktok.com/@moneywellnessgirl) | 9.0K | UK | Emergency fund over £2,000, goal £3,808 (self-stated 2026-10-09) |
 | Amy (Financially Her) | [@financiallyher_](https://www.tiktok.com/@financiallyher_) | 45.6K |
 | JNO | [@jno_pwnr](https://www.tiktok.com/@jno_pwnr) | 47.5K |
 | awright | [@awright.s](https://www.tiktok.com/@awright.s) | 3.3K |
