@@ -39,5 +39,75 @@
  },
  "chelsealangenstam": {
   "verdict": "UNRESOLVED: handle does not resolve on TikTok. NOT ADDED."
+ },
+ "laneA": {
+  "alexandrarodriguez": {
+   "verdict": "WRONG ACCOUNT for finance: Spanish-language comedy/music skits, zero money content in 20 transcripts. Transcripts saved, no figures.",
+   "videos_fetched": 20,
+   "job": "ts_bbf428ac",
+   "transcripts": 20,
+   "figures": 0
+  },
+  "andreijikh": {
+   "verdict": "Already fully ingested. 20 videos fetched, 0 new.",
+   "videos_fetched": 20,
+   "transcripts": 0,
+   "figures": 0
+  },
+  "beccanomics101": {
+   "verdict": "Already fully ingested. 20 videos fetched, 0 new.",
+   "videos_fetched": 20,
+   "transcripts": 0,
+   "figures": 0
+  },
+  "berna.moneyy": {
+   "verdict": "UNRESOLVED: handle does not resolve on TikTok (retried). NOT ADDED.",
+   "videos_fetched": 0,
+   "transcripts": 0,
+   "figures": 0
+  },
+  "callmeqaadir": {
+   "verdict": "UNRESOLVED: handle does not resolve on TikTok (retried). NOT ADDED.",
+   "videos_fetched": 0,
+   "transcripts": 0,
+   "figures": 0
+  },
+  "charliechang_": {
+   "verdict": "VERIFIED: Charlie Chang. 20 videos fetched, 19 new transcripts. 3 figures: $200K net worth, $87,230 AdSense single-video income, $1M cumulative first-million income (all self-stated 2022-08-29).",
+   "videos_fetched": 20,
+   "job": "ts_0fe25d64",
+   "transcripts": 19,
+   "figures": "net_worth $200000; income $87230; income $1000000"
+  },
+  "clipswithshane": {
+   "verdict": "UNRESOLVED: handle does not resolve on TikTok (retried). NOT ADDED.",
+   "videos_fetched": 0,
+   "transcripts": 0,
+   "figures": 0
+  },
+  "debt_free_dad": {
+   "verdict": "Already fully ingested. 20 videos fetched, 0 new.",
+   "videos_fetched": 20,
+   "transcripts": 0,
+   "figures": 0
+  },
+  "debtfreeamber": {
+   "verdict": "Already fully ingested. 20 videos fetched, 0 new.",
+   "videos_fetched": 20,
+   "transcripts": 0,
+   "figures": 0
+  },
+  "debtfreelivinny": {
+   "verdict": "Already fully ingested. 20 videos fetched, 0 new.",
+   "videos_fetched": 20,
+   "transcripts": 0,
+   "figures": 0
+  },
+  "drewkey5000": {
+   "verdict": "Already fully ingested. 20 videos fetched, 0 new.",
+   "videos_fetched": 20,
+   "transcripts": 0,
+   "figures": 0
+  }
  }
 }
