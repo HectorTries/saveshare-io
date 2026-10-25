@@ -98,10 +98,10 @@ def mention_bars(region):
 DATA = {}
 for key, rs, st in (("uk", uk, UKS), ("us", us, USS)):
     DATA[key] = dict(
-        stats=[{"to": st["creators"], "pre": "", "label": f"{key.upper()} creators with stated figures"},
-               {"to": st["nw_avg"], "pre": st["sym"], "label": f"Average stated net worth ({st['nw_n']} creators)"},
-               {"to": st["nw_med"], "pre": st["sym"], "label": "Median stated net worth"},
-               {"to": st["port_invested"], "pre": st["sym"], "label": f"Combined portfolios and invested ({st['port_invested_n']} figures)"}],
+        stats=[{"to": st["creators"], "pre": "", "label": f"{key.upper()} creators tracked"},
+               {"to": st["nw_avg"], "pre": st["sym"], "label": f"Avg net worth ({st['nw_n']} stated)"},
+               {"to": st["nw_med"], "pre": st["sym"], "label": "Median net worth"},
+               {"to": st["port_invested"], "pre": st["sym"], "label": f"Invested ({st['port_invested_n']} figures)"}],
         hist=hist_counts(rs), donut=type_mix(rs), bars=mention_bars(key),
         narrative="")
 
@@ -186,30 +186,61 @@ for s in snaps:
     y, m = s["snap_date"][:4], int(s["snap_date"][5:7])
     qmap[s["region"].lower()][f"{y}-Q{(m - 1) // 3 + 1}"].append(s["net_worth"])
 quarters = sorted({q for r in qmap.values() for q in r})
-def med_line(region, color):
+def med_line(region, color, gid, sym):
     vals = [(qq, statistics.median(qmap[region][qq])) if qmap[region].get(qq) else (qq, None) for qq in quarters]
     known = [v for _, v in vals if v is not None]
     if len(known) < 2:
         return ""
     lo, hi = min(known), max(known)
+    pad = (hi - lo) or 1
+    lo -= pad * 0.06
+    hi += pad * 0.16
     rng = (hi - lo) or 1
-    W, H = 560, 220
+    W, H, PT, PB, PL = 560, 252, 30, 36, 58
+    def fmt(v):
+        a = abs(v)
+        if a >= 1000000:
+            t = f"{v / 1000000:.1f}".rstrip("0").rstrip(".")
+            return f"{sym}{t}M"
+        return f"{sym}{v / 1000:.0f}k"
+    grid = ""
+    for t in range(4):
+        gv = lo + rng * t / 3
+        gy = PT + (H - PT - PB) * (1 - t / 3)
+        grid += (f'<line class="grid-l" x1="{PL}" y1="{gy:.0f}" x2="{W - 10}" y2="{gy:.0f}"/>'
+                 f'<text x="{PL - 8}" y="{gy + 4:.0f}" font-size="11" text-anchor="end">{fmt(gv)}</text>')
     pts = []
     for i, (qq, v) in enumerate(vals):
         if v is None:
             continue
-        x = 40 + (W - 60) * (i / (len(vals) - 1) if len(vals) > 1 else 0.5)
-        y = H - 30 - (H - 60) * ((v - lo) / rng)
+        x = PL + (W - PL - 14) * (i / (len(vals) - 1) if len(vals) > 1 else 0.5)
+        y = PT + (H - PT - PB) * (1 - (v - lo) / rng)
         pts.append((x, y, v, qq))
     line = " ".join(f"{x:.0f},{y:.0f}" for x, y, _, _ in pts)
-    dots = "".join(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="4" fill="{color}"><title>{qq}: {v:,.0f}</title></circle>' for x, y, v, qq in pts)
-    labels = "".join(f'<text x="{x:.0f}" y="{H - 10}" font-size="10" text-anchor="middle">{qq}</text>' for x, y, v, qq in pts)
-    return f'<polyline points="{line}" fill="none" stroke="{color}" stroke-width="3"/>' + dots + labels
+    base = H - PB
+    area = f"M{pts[0][0]:.0f},{base} " + " ".join(f"L{x:.0f},{y:.0f}" for x, y, _, _ in pts) + f" L{pts[-1][0]:.0f},{base} Z"
+    dots = "".join(
+        f'<circle cx="{x:.0f}" cy="{y:.0f}" r="5" fill="{color}" stroke="#fff" stroke-width="2"><title>{qq}: {sym}{v:,.0f}</title></circle>'
+        for x, y, v, qq in pts)
+    show_q = len(pts) > 6
+    labels = "".join(
+        f'<text x="{x:.0f}" y="{H - 12}" font-size="10" text-anchor="middle">{qq}</text>'
+        for i, (x, y, v, qq) in enumerate(pts) if not show_q or i % 2 == 0 or i == len(pts) - 1)
+    lx, ly, lv, _ = pts[-1]
+    call = (f'<text class="last-v" x="{min(lx + 10, W - 76):.0f}" y="{max(ly - 10, 14):.0f}" font-size="14" fill="#fff">{fmt(lv)}</text>')
+    return (f'<defs><linearGradient id="{gid}" x1="0" y1="0" x2="0" y2="1">'
+            f'<stop offset="0" stop-color="{color}" stop-opacity=".45"/>'
+            f'<stop offset="1" stop-color="{color}" stop-opacity="0"/></linearGradient></defs>'
+            + grid + f'<path d="{area}" fill="url(#{gid})"/>'
+            + f'<polyline points="{line}" fill="none" stroke="{color}" stroke-width="3" stroke-linecap="round"/>' + dots + labels + call)
 
-AGG_SECTION = ('<section id="aggregate"><div class="section-head"><h2>Median stated net worth by quarter</h2>'
+AGG_SECTION = ('<section id="aggregate"><div class="section-head"><h2>The headline trend</h2>'
                '<p>Median of stated net worth points per quarter, native currency, no conversion. Small samples, shown exactly as stated.</p></div>'
-               f'<div class="panel"><h3>UK (pounds)</h3><svg class="agg" viewBox="0 0 560 220" width="100%" role="img" aria-label="UK median net worth by quarter">{med_line("uk", "#0B3D2E")}</svg>'
-               f'<h3>US (dollars)</h3><svg class="agg" viewBox="0 0 560 220" width="100%" role="img" aria-label="US median net worth by quarter">{med_line("us", "#1D4ED8")}</svg></div></section>')
+               '<div class="hero-chart reveal">'
+               '<div class="hc-grid">'
+               f'<div class="hc-panel"><h3>UK trend, pounds</h3><p class="hc-sub">Median stated net worth by quarter</p><svg class="agg" viewBox="0 0 560 252" width="100%" role="img" aria-label="UK median net worth by quarter">{med_line("uk", "#EFC65C", "g-uk", chr(163))}</svg></div>'
+               f'<div class="hc-panel"><h3>US trend, dollars</h3><p class="hc-sub">Median stated net worth by quarter</p><svg class="agg" viewBox="0 0 560 252" width="100%" role="img" aria-label="US median net worth by quarter">{med_line("us", "#8FB0FF", "g-us", "$")}</svg></div>'
+               '</div></div></section>')
 
 def table_rows(rs):
     out = []
@@ -303,7 +334,7 @@ tbody tr:nth-child(even) td{background:#F8F6EF}
 .ts-trend{font-size:13px;font-weight:800;color:var(--forest);margin:4px 0 8px}
 .ts-points{list-style:none;margin:10px 0 0;padding:0;font-size:13px}
 .ts-points li{margin:8px 0}.ts-points a{color:var(--ink);text-decoration:none}.ts-points .q{display:block;color:var(--muted);font-size:12px;margin-top:2px}
-.spark{color:var(--forest)}.agg{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:8px}
+.spark{color:var(--forest)}.agg{background:none;border:none;padding:0;display:block}.kpis{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--line);border-top:3px solid var(--ink);border-radius:4px;margin:26px 0 8px;overflow:hidden}.kpi{padding:20px 22px;border-left:1px solid var(--line)}.kpi:first-child{border-left:none}.kpi strong{display:block;font-family:Playfair Display,Georgia,serif;font-size:clamp(24px,3vw,32px);font-weight:900;font-variant-numeric:tabular-nums;line-height:1.05}.kpi span{font-size:11.5px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}.hero-chart{background:linear-gradient(180deg,#0B3D2E,#082A20);border-radius:6px;padding:30px 30px 22px;margin:22px 0;color:#F5F4EF}.hc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.hc-panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:4px;padding:16px 16px 8px}.hc-panel h3{margin:0;font-size:15px;color:#fff;font-family:Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em}.hc-panel .hc-sub{color:#C9D6CC;font-size:13px;margin:4px 0 8px}.agg text{fill:#C9D6CC}.agg .grid-l{stroke:rgba(255,255,255,.16);stroke-width:1}.agg .last-v{font-weight:800;fill:#fff}#figtable thead th{position:sticky;top:104px;background:var(--card);z-index:5;box-shadow:0 2px 0 var(--line)}@media(max-width:700px){.kpis{grid-template-columns:1fr 1fr}.kpi:nth-child(3){border-left:none}.kpi:nth-child(n+3){border-top:1px solid var(--line)}.hc-grid{grid-template-columns:1fr}.hero-chart{padding:22px 16px}}
 .chart-text{margin-top:14px;font-size:13.5px;color:var(--muted)}
 .chart-text table{min-width:0;font-size:13px}
 .hist .hbar{transform:scaleY(0);transform-origin:bottom;transform-box:fill-box;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
@@ -348,7 +379,7 @@ function chartText(id,rows,head){
 }
 function render(key){
  var d=DATA[key],color=key==="uk"?"#0B3D2E":"#1D4ED8";
- document.getElementById("stats").innerHTML=d.stats.map(function(s){return '<div class="stat"><strong class="count" data-to="'+s.to+'" data-pre="'+s.pre+'">'+money(s.to,s.pre)+'</strong><span>'+s.label+'</span></div>'}).join("");
+ document.getElementById("stats").innerHTML=d.stats.map(function(s){return '<div class="kpi"><strong>'+money(s.to,s.pre)+'</strong><span>'+s.label+'</span></div>'}).join("");
  document.getElementById("story").textContent=d.narrative;
  document.getElementById("hist-title").textContent=(key==="uk"?"UK":"US")+" stated net worth distribution";
  document.getElementById("hist-box").innerHTML=histSVG(d.hist,color)+chartText("h",d.hist.map(function(c){return [c.label,c.count]}),["Band","Creators"]);
@@ -434,7 +465,7 @@ page = f"""<!DOCTYPE html>
 <body>
 {NAV}
 <nav class="subnav" aria-label="Sections"><div class="wrap">
-<a href="#overview">Overview</a><a href="#story">The story</a><a href="#networth">Net worth</a><a href="#mix">Figure mix</a><a href="#debt">Debt payoff</a><a href="#regions">UK vs US</a><a href="#overtime">Over time</a><a href="#aggregate">Aggregate</a><a href="#figures">Figures</a><a href="#method">Method</a>
+<a href="#aggregate">Trend</a><a href="#figures">Creators</a><a href="#story">The story</a><a href="#distribution">Charts</a><a href="#debt">Debt payoff</a><a href="#overtime">Journeys</a><a href="#regions">UK vs US</a><a href="#method">Method</a>
 </div></nav>
 <header class="hero"><div class="wrap">
 <div class="kicker">Analytics</div>
@@ -448,10 +479,29 @@ page = f"""<!DOCTYPE html>
 </div></div></header>
 <div class="wrap">
 
-<section id="overview"><div class="section-head"><h2>The headline numbers</h2>
-<p>Switch UK, US or All above. Every chart and story on this page follows the same switch, and the figures table at the end lists each number behind them.</p></div>
-<div id="stats" class="cards reveal"></div>
-</section>
+<div id="stats" class="kpis"></div>
+
+{AGG_SECTION}
+
+<section id="figures"><div class="section-head"><h2>Every creator, every figure</h2>
+<p>Search by creator, filter by figure type, sort by amount or date. The region switch at the top applies here too.</p></div>
+<div class="panel"><div class="controls">
+<input id="fq" type="search" placeholder="Search creator or handle..." aria-label="Search creators">
+<select id="fk" aria-label="Filter by figure type"><option value="all">All types</option>{kind_opts}</select>
+<select id="fs" aria-label="Sort figures">
+<option value="amt-desc">Amount: high to low</option>
+<option value="amt-asc">Amount: low to high</option>
+<option value="new">Newest stated</option>
+<option value="old">Oldest stated</option>
+<option value="name">Creator A to Z</option>
+</select>
+</div>
+<div class="twrap"><table id="figtable"><thead><tr>
+<th><button data-s="name" type="button">Creator</button></th><th>Region</th><th>Figure type</th>
+<th><button data-s="amt-desc" type="button">Amount</button></th><th><button data-s="new" type="button">Stated</button></th><th>Quote and source</th></tr></thead>
+<tbody>{table_rows(rows)}</tbody></table></div>
+<div id="rowcount"></div>
+</div></section>
 
 <section id="story"><div class="section-head"><h2>Two regions, two money cultures</h2>
 <p>The same method was applied on both sides of the Atlantic. What creators chose to state is where the regions diverge.</p></div>
@@ -461,20 +511,15 @@ page = f"""<!DOCTYPE html>
 {takeaway("US creators journal debt and income", f"The US record holds {USS['types'].get('income', 0)} income figures and {USS['types'].get('debt_paid', 0) + USS['types'].get('debt_total', 0)} debt figures, against {USS['nw_n']} stated net worths. Pay cheques and balances owed are the public diary.")}
 {takeaway("The retirement gap is American", f"UK creators have stated {UKS['types'].get('pension', 0)} pension figures. US creators have stated {USS['types'].get('pension', 0)}. Roth and 401(k) accounts dominate US advice while almost nobody states the balance inside one.")}
 {takeaway("Debt payoff is a US genre", f"Stated US debt payoffs total {money(USS['debt_paid'], '$')} across {USS['debt_paid_n']} figures, many filmed as daily balance countdowns. The UK equivalent is smaller and mostly student debt.")}
-{takeaway("Property prices stay unstated", f"Property is talked about constantly and priced rarely. The US record holds {USS['types'].get('property', 0)} stated property values and the UK record holds {UKS['types'].get('property', 0)}, so no property chart appears on this page. What is not stated is not estimated.")}
-{takeaway("Income has the widest spread", f"Stated income runs from an {money(824, '$')} year of savings interest to a {money(7000000, '$')} business year. Flows and totals are labelled separately throughout, and monthly figures are never annualised.")}
 </div>
 {f'<div class="pullquote">&ldquo;{html.escape(top_uk["quote"][:180])}&rdquo;<span class="pq-who">Largest UK stated net worth, {html.escape(top_uk["amt_s"])}, {html.escape(top_uk["name"])} <a href="{top_uk["url"]}" target="_blank" rel="noopener">source</a></span></div>' if top_uk else ""}
 {f'<div class="pullquote">&ldquo;{html.escape(top_us["quote"][:180])}&rdquo;<span class="pq-who">Largest US stated figure, {html.escape(top_us["amt_s"])}, {html.escape(top_us["name"])} <a href="{top_us["url"]}" target="_blank" rel="noopener">source</a></span></div>' if top_us else ""}
 </section>
 
-<section id="networth"><div class="section-head"><h2>Where net worth clusters</h2>
-<p>Stated net worth figures only, in original currency. Counts are shown in full so a small sample cannot hide behind a smooth curve.</p></div>
+<section id="distribution"><div class="section-head"><h2>Where the money sits</h2>
+<p>Net worth bands, figure mix and topic mentions in one place. Stated figures only, counts shown in full.</p></div>
 <div class="panel reveal anim"><h3 id="hist-title" style="font-size:19px;margin-bottom:12px">Stated net worth distribution</h3><div id="hist-box"></div></div>
-</section>
-
-<section id="mix"><div class="section-head"><h2>What gets a number, and what only gets talked about</h2>
-<p>The donut counts stated figures by type. The bars count topic mentions. The gap between the two is the most honest chart on this page.</p></div>
+</div>
 <div class="panel reveal"><h3 style="font-size:19px;margin-bottom:12px">Stated figures by type</h3><div id="donut-box"></div>
 <div class="bars anim" id="bars-box" style="margin-top:26px"></div><p class="sub" id="bars-note" style="color:var(--muted);font-size:13.5px;margin-top:12px"></p></div>
 </section>
@@ -506,27 +551,8 @@ page = f"""<!DOCTYPE html>
 </div></section>
 
 {TS_SECTION}
-{AGG_SECTION}
 
-<section id="figures"><div class="section-head"><h2>Every figure, with its source</h2>
-<p>Search by creator, filter by figure type, or sort by amount and date. The region switch at the top applies here too.</p></div>
-<div class="panel"><div class="controls">
-<input id="fq" type="search" placeholder="Search creator or handle..." aria-label="Search creators">
-<select id="fk" aria-label="Filter by figure type"><option value="all">All types</option>{kind_opts}</select>
-<select id="fs" aria-label="Sort figures">
-<option value="amt-desc">Amount: high to low</option>
-<option value="amt-asc">Amount: low to high</option>
-<option value="new">Newest stated</option>
-<option value="old">Oldest stated</option>
-<option value="name">Creator A to Z</option>
-</select>
-</div>
-<div class="twrap"><table id="figtable"><thead><tr>
-<th><button data-s="name" type="button">Creator</button></th><th>Region</th><th>Figure type</th>
-<th><button data-s="amt-desc" type="button">Amount</button></th><th><button data-s="new" type="button">Stated</button></th><th>Quote and source</th></tr></thead>
-<tbody>{table_rows(rows)}</tbody></table></div>
-<div id="rowcount"></div>
-</div></section>
+
 
 <section id="method"><div class="method"><h2>Methodology</h2>
 <p><b>Source.</b> Each figure was stated by the creator it belongs to, in their own content, and links to that source so you can check it yourself.</p>
