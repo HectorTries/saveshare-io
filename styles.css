@@ -20,7 +20,7 @@ a{color:var(--forest-2)}
 ::selection{background:var(--amber-soft)}
 .wrap{max-width:780px;margin:0 auto;padding:0 20px}
 /* Masthead */
-nav,nav.top{background:var(--paper);border-bottom:3px double var(--ink);position:sticky;top:0;z-index:30}
+nav:not(.pillars),nav.top{background:var(--paper);border-bottom:3px double var(--ink);position:sticky;top:0;z-index:30}
 nav .wrap{max-width:1180px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
 .logo{font-family:var(--serif);font-weight:900;font-size:26px;color:var(--ink);text-decoration:none;letter-spacing:-.02em;line-height:1}
 .logo span{color:var(--amber)}
@@ -115,7 +115,7 @@ footer a.fl,.foot-links a{color:#DCE8DE;text-decoration:none;font-size:12px;font
 [data-blog-region] .wrap>p{font-size:17.5px;line-height:1.78;color:#26302A}
 [data-blog-region] .wrap>p:first-of-type::first-letter{font-family:var(--serif);font-weight:900;font-size:58px;float:left;line-height:.82;padding:6px 12px 0 0;color:var(--forest)}
 [data-blog-region] h2:not(.creator-section){font-size:27px;margin:34px 0 10px}
-.hero .pillars{margin-top:30px;border-top:1px solid rgba(255,255,255,.3);padding-top:20px;text-align:left}
+.hero .pillars{background:transparent;position:static;border:none;margin-top:30px;border-top:1px solid rgba(255,255,255,.3);padding-top:20px;text-align:left}
 .hero .pillars h2{font-size:13px;font-family:var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#EFC65C;margin-bottom:12px}
 .hero .pillars ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}
 .hero .pillars a{display:block;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.3);padding:12px 14px;border-radius:4px;font-weight:600;font-size:14px;min-height:44px}
