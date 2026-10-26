@@ -83,7 +83,7 @@ Avg engagement = (likes+comments+shares)/views averaged across 20 most recent vi
 | Daniel (Gray Area Finance) | [@gray.area.finance](https://www.tiktok.com/@gray.area.finance) | 18.4K |
 | George Tuttle (accountant) | [@george_tuttle](https://www.tiktok.com/@george_tuttle) | 1.2K |
 | Kafilat | [@kafilat.finance](https://www.tiktok.com/@kafilat.finance) | 7.3K |
-| Charlie | [@wealthmadeaccessible](https://www.tiktok.com/@wealthmadeaccessible) | 43.9K |
+| Charlie | [@wealthmadeaccessible](https://www.tiktok.com/@wealthmadeaccessible) | 43.9K | | UK | £150K saved+invested by 28 (self-stated 2026-10-21, verified 2026-10-26) |
 | Elly (teacher, millionaire track) | [@msellyphant](https://www.tiktok.com/@msellyphant) | 36.5K |
 | Amanda | [@amandainvests](https://www.tiktok.com/@amandainvests) | 3.4K |
 | DiDi | [@didifinance](https://www.tiktok.com/@didifinance) | 18.2K |
