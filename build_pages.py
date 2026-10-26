@@ -53,7 +53,11 @@ NAV = """<nav><div class="wrap"><a class="logo" href="../index.html">SaveShare<s
 NAV_HOME = NAV.replace("../", "").replace('href="index.html#creators"', 'href="../index.html#creators"').replace('href="index.html">Money', 'href="blog/index.html">Money')
 # simpler: build nav per location explicitly below
 
-def page(title, desc, nav, hero_badge, hero_h1, hero_sub, body):
+def page(title, desc, nav, hero_badge, hero_h1, hero_sub, body, avatar=None, slug=None):
+    if avatar is None:
+        avatar = (slug + ".jpg") if slug else "miarosemcgrath.jpg"
+    og = (f'<meta property="og:image" content="https://saveshare.io/avatars/{avatar}">\n'
+          f'<meta name="twitter:image" content="https://saveshare.io/avatars/{avatar}">\n')
     return f"""<!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -61,6 +65,7 @@ def page(title, desc, nav, hero_badge, hero_h1, hero_sub, body):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
 <meta name="description" content="{desc}">
+{og}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T9QS61KD0"></script>
 <script>
@@ -95,6 +100,8 @@ NAV_BLOG = """<nav><div class="wrap"><a class="logo" href="../index.html">SaveSh
 
 TT = "https://www.tiktok.com"
 TT_HANDLE_PY = {"seansmoney": "seans.money", "drjubairsfinance": "dr.jubairsfinance", "iainmoneyinsights": "iainjgeddes"}
+AVATAR_PY = {"georgetuttle": "george_tuttle.jpg", "holl005": "holl_005.jpg", "jnopwnr": "jno_pwnr.jpg",
+             "theadebtpayoff": "theadebtpayoff.jpg", "debt_free_dad": "debt_free_dad.jpg"}
 NW_DATE_PY = {"miarosemcgrath": "Oct 2026", "itssophieblank": "Sep 2026", "seansmoney": "Aug 2026", "neilinvests": "Sep 2026", "hannahbevington": "Sep 2026", "drjubairsfinance": "2025", "iainmoneyinsights": "late 2025", "ollieinvests": "2026"}
 
 CREATORS = [
@@ -261,6 +268,6 @@ for c in CREATORS:
     html = page(c['name'] + ' (@' + h + '): Net Worth, Journey & Quotes | SaveShare.io',
                 c['name'] + ' (@' + h + '): ' + c['tagline'] + '. Self-reported net worth ' + c['nw'] + ', journey and key quotes with TikTok sources.',
                 NAV_P, 'UK MONEY CREATOR PROFILE', c['name'] + ' <span style="opacity:.8">(@' + h + ')</span>', c['tagline'],
-                body)
+                body, avatar=AVATAR_PY.get(h, h + ".jpg"))
     open('p/' + h + '.html', 'w').write(html)
     print('wrote p/' + h + '.html')
