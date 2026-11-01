@@ -39,6 +39,7 @@ Source: Hector, via Telegram. Net worth figures are SELF-DESCRIBED by the creato
 
 | chris | Intentional Finance (Chris) | [@intentional.finance](https://www.tiktok.com/@intentional.finance) | TBC (added 2026-10-05, 3.3K followers, 72 videos) |
 | ciara | Ciara / Curated Wealth | [@ciara__anne](https://www.tiktok.com/@ciara__anne) | 100,000 invested (self-stated "zero to £100K in just under five years" — verified 2026-10-12) |
+| cazzatime | Cameron 'Cazza' Smith | [@cazzatime](https://www.tiktok.com/@cazzatime) | TBC total (self-described components: ~£100K home equity on ~£280K mortgage at ~75% LTV, Oct 2026; £27,740 saved in under 3 years, Sep 2026 — verified 2026-11-01) |
 
 ## Engagement rates + video archive (2026-10-05)
 
