@@ -4,3 +4,8 @@ ts_raw/
 transcripts/
 *.sqlite
 *.db
+
+# local secrets (never commit)
+.env
+.env.*
+!.env.example
