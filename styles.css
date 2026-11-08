@@ -205,3 +205,8 @@ main .wrap>h2{letter-spacing:-.01em}
 .share-btn:hover{opacity:.9}
 .share-btn.copied{background:#22b07d;border-color:#22b07d;color:#fff}
 @media(max-width:560px){.share-btn{font-size:12px;padding:7px 11px}.share-label{width:100%}}
+
+/* Net worth over time chart */
+.nw-chart{background:var(--card);border:1px solid var(--line-dark);border-radius:var(--radius);padding:18px 16px 12px;margin:20px 0}
+.nw-chart svg{display:block;width:100%;height:auto}
+.nw-note{font-size:12.5px;color:var(--muted);margin:10px 2px 0}

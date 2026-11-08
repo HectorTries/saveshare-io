@@ -180,6 +180,99 @@ def existing_bits(handle):
     return out
 
 
+
+def nw_series(fig_rows):
+    """Self-reported net worth by year, last statement per year, min 3 points."""
+    pts = {}
+    for f in fig_rows:
+        if (f.get("figure_type") or "") != "net_worth":
+            continue
+        amt = fin(f.get("amount"))
+        year = f.get("as_of_year")
+        if not year:
+            d = (f.get("as_of_date") or "")[:4]
+            year = int(d) if d.isdigit() else None
+        if not year:
+            continue
+        pts[int(year)] = (amt, f.get("as_of_date") or "", f.get("currency") or "GBP")
+    if len(pts) < 3:
+        return []
+    return [(y, pts[y][0], pts[y][1]) for y in sorted(pts)]
+
+
+def compact_money(n, sign_ok=True):
+    neg = n < 0
+    a = abs(n)
+    if a >= 1_000_000:
+        s = f"{a/1_000_000:.1f}M"
+    elif a >= 1000:
+        s = f"{a/1000:.0f}K" if a % 1000 == 0 or a >= 10000 else f"{a/1000:.1f}K"
+    else:
+        s = f"{a:.0f}"
+    return ("-" if neg else "") + "£" + s
+
+
+def nw_chart(series, name):
+    """Inline SVG line chart of self-reported net worth, no JS."""
+    if len(series) < 3:
+        return ""
+    W, H = 720, 300
+    L, R, T, B = 70, 20, 24, 40
+    vals = [v for _, v, _ in series]
+    lo, hi = min(min(vals), 0), max(max(vals), 0)
+    if hi == lo:
+        hi = lo + 1
+    pad = (hi - lo) * 0.12
+    lo2, hi2 = lo - (pad if lo < 0 else 0), hi + pad
+    n = len(series)
+    iw, ih = W - L - R, H - T - B
+
+    def X(i):
+        return L + (iw * i / (n - 1))
+
+    def Y(v):
+        return T + ih - (v - lo2) / (hi2 - lo2) * ih
+
+    pts = " ".join(f"{X(i):.1f},{Y(v):.1f}" for i, (_, v, _) in enumerate(series))
+    base = Y(max(0, lo2))
+    area = f"{L:.1f},{base:.1f} " + pts + f" {X(n-1):.1f},{base:.1f}"
+
+    grid = ""
+    for k in range(4):
+        v = lo2 + (hi2 - lo2) * k / 3
+        y = Y(v)
+        grid += (f'<line x1="{L}" y1="{y:.1f}" x2="{W-R}" y2="{y:.1f}" stroke="#E4E0D3" stroke-width="1"/>'
+                 f'<text x="{L-10}" y="{y+4:.1f}" text-anchor="end" font-size="11" fill="#5A665E">{compact_money(v)}</text>')
+    zero = ""
+    if lo2 < 0 < hi2:
+        zy = Y(0)
+        zero = f'<line x1="{L}" y1="{zy:.1f}" x2="{W-R}" y2="{zy:.1f}" stroke="#B9B3A0" stroke-width="1.2" stroke-dasharray="4 4"/>'
+
+    dots, labels = "", ""
+    for i, (yr, v, _) in enumerate(series):
+        x, y = X(i), Y(v)
+        dots += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4.2" fill="#C07A12" stroke="#fff" stroke-width="1.6"/>'
+        step = 1 if n <= 8 else 2
+        if i % step == 0 or i == n - 1:
+            labels += f'<text x="{x:.1f}" y="{H-14}" text-anchor="middle" font-size="11" fill="#5A665E">{yr}</text>'
+    first_i, last_i = 0, n - 1
+    labels += (f'<text x="{X(first_i):.1f}" y="{Y(vals[first_i])-12:.1f}" text-anchor="middle" font-size="12" font-weight="700" fill="#17201B">{compact_money(vals[first_i])}</text>')
+    labels += (f'<text x="{X(last_i):.1f}" y="{Y(vals[last_i])-12:.1f}" text-anchor="middle" font-size="12" font-weight="700" fill="#17201B">{compact_money(vals[last_i])}</text>')
+
+    delta = vals[-1] - vals[0]
+    trend = f"{compact_money(vals[0])} to {compact_money(vals[-1])} between {series[0][0]} and {series[-1][0]}"
+    aria = f"{name} self-reported net worth over time: {trend}."
+    return f"""<div class="nw-chart">
+<svg viewBox="0 0 {W} {H}" role="img" aria-label="{html.escape(aria)}" preserveAspectRatio="xMidYMid meet">
+{grid}{zero}
+<polygon points="{area}" fill="#0B3D2E" opacity="0.08"/>
+<polyline points="{pts}" fill="none" stroke="#0B3D2E" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+{dots}{labels}
+</svg>
+<p class="nw-note">Self-reported net worth by year, from the creator's own videos. {len(series)} yearly points. Change over the period: {"+" if delta >= 0 else ""}{compact_money(delta)}.</p>
+</div>"""
+
+
 def build(handle, creators, rows, figs, ctx):
     cr = creators[handle]
     tx = [r for r in rows.get(handle, []) if fin(r["views"]) > 0]
@@ -405,6 +498,7 @@ def build(handle, creators, rows, figs, ctx):
 {"".join(f'<tr><td>{l}</td><td class="n"><b>{v}</b></td></tr>' for l, v in num_rows)}
 </tbody></table>
 {f'<p>{comp}</p>' if comp else ''}
+{nw_chart(nw_series(figs.get(handle, [])), name)}
 
 <h2 style="margin:32px 0 12px">Who is {html.escape(name)}?</h2>
 <p>{who}</p>
@@ -486,6 +580,10 @@ def main():
         ctx["related"][h] = [((o), (creators[o].get("nickname") or o).split("|")[0].strip())
                              for _, o in peers[:3]]
 
+    import sys as _sys
+    only = set(_sys.argv[1:]) if len(_sys.argv) > 1 else None
+    if only:
+        handles = [h for h in handles if h in only]
     wrote = 0
     for h in handles:
         html_out = build(h, creators, rows, figs, ctx)
