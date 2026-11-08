@@ -168,3 +168,8 @@ footer a.fl,.foot-links a{color:#DCE8DE;text-decoration:none;font-size:12px;font
 .hero .pillars a:hover{border-color:#EFC65C;color:#EFC65C}
 .hero.light .pillars a:hover{border-color:var(--amber);color:var(--forest)}
 main .wrap>h2{letter-spacing:-.01em}
+
+/* Blog hero images (generated social cards) */
+.post-hero{margin:0 0 28px}
+.post-hero img{width:100%;height:auto;border-radius:16px;display:block;border:1px solid var(--line);background:#0F766E}
+@media(max-width:640px){.post-hero img{border-radius:12px}}
