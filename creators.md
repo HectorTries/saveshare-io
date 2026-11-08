@@ -12,6 +12,7 @@ Source: Hector, via Telegram. Net worth figures are SELF-DESCRIBED by the creato
 | neil | Neil Invests | [@neilinvests](https://www.tiktok.com/@neilinvests) | 350,000 (investment portfolios, self-stated Sep 2026 — was 120,000, corrected 2026-10-05) |
 | hannah | Hannah Bevington | [@hannahbevington](https://www.tiktok.com/@hannahbevington) | 135,000 (Sep 13 2026 caption "£135K at 26" — was 120,000, corrected 2026-10-05) |
 | drjubair | Dr Jubair | [@drjubairsfinance](https://www.tiktok.com/@drjubairsfinance) | ~110,000+ (11,000 shares ≈ £110,469 in one fund — reconfirmed 2026-10-05) |
+| georgia-may | Georgia May Thornley | [@georgiamaythornley](https://www.tiktok.com/@georgiamaythornley) | Not publicly stated (added 2026-11-08; £26K salary, invests £50/month, paying off credit card debt) |
 | ben | BenFinance — REMOVED 2026-10-05 (account posts in Italian, wrong handle, needs re-identifying) | ~~@benfinance~~ | — |
 
 ### Additional creators (handles to resolve)
