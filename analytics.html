@@ -270,7 +270,7 @@ function applyFilters(){var term=q.value.trim().toLowerCase(),kind=kt.value,show
  trs.forEach(function(tr){var ok=true;total++;
   if(view!=="all"&&tr.dataset.region!==view)ok=false;
   if(ok&&kind!=="all"&&tr.dataset.kind!==kind)ok=false;
-  if(ok&&term){var t=(tr.dataset.name+" "+tr.textContent).toLowerCase();if(t.indexOf(term)<0)ok=false;}
+  if(ok&&term){var t=(tr.dataset.name+" "+tr.textContent).toLowerCase();var toks=term.split(/\s+/);for(var i=0;i<toks.length;i++){if(toks[i]&&t.indexOf(toks[i])<0){ok=false;break;}}}
   tr.style.display=ok?"":"none";if(ok)shown++;});
  var s=st.value;
  trs.sort(function(a,b){if(s==="amt-desc")return b.dataset.amt-a.dataset.amt;if(s==="amt-asc")return a.dataset.amt-b.dataset.amt;
