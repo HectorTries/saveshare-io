@@ -223,7 +223,7 @@ def build(handle, creators, rows, figs, ctx):
         stats.append((bits["followers"], "Followers"))
     if tx:
         stats.append((fmt_int(total_views), "Views archived"))
-        stats.append((fmt_money(med_views), "Median views"))
+        stats.append((fmt_int(med_views), "Median views"))
         stats.append((f"{avg_eng:.2f}%", "Avg engagement"))
     stats = stats[:4]
 
@@ -438,7 +438,11 @@ def build(handle, creators, rows, figs, ctx):
     out = page(title, desc[:180], NAV_P, "UK MONEY CREATOR PROFILE" if cr.get("region") == "UK" else "US MONEY CREATOR PROFILE",
                f'{html.escape(name)} <span style="opacity:.8">(@{handle})</span>', tagline, body,
                avatar=av if has_av else None, slug=handle)
-    out = out.replace("</head>", EXTRA_CSS + "\n</head>")
+    out = re.sub(r"<style>.*?</style>\s*", "", out, flags=re.S)
+    if 'href="../styles.css"' not in out:
+        out = out.replace("</head>",
+            '<link rel="stylesheet" href="../styles.css?v=20261108b">'
+            '<link rel="preload" href="../fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>\n</head>', 1)
     return out
 
 
