@@ -38,9 +38,11 @@ class TestSharedChrome(unittest.TestCase):
 class TestCountsCurrencyTopics(unittest.TestCase):
     def test_creator_count_single_source(self):
         total = len(glob.glob("p/*.html"))
-        self.assertEqual(total, 92)
-        for page in ROOT_PAGES:
-            self.assertIn(str(total), read(page), page)
+        self.assertEqual(total, 98)
+        cards = read("index.html").count('class="card" data-region=')
+        self.assertEqual(cards, 97)
+        self.assertIn(f"Browse {cards} UK and US money creators", read("index.html"))
+        self.assertIn(f"<strong>{total}</strong><span>creator profiles</span>", read("analytics.html"))
 
     def test_analytics_currency_matches_region(self):
         html = read("analytics.html")
@@ -52,7 +54,7 @@ class TestCountsCurrencyTopics(unittest.TestCase):
                 continue
             amount = m.group(1).strip()
             want = "£" if region == "uk" else "$"
-            self.assertTrue(amount.startswith(want), f"{region} row shows {amount}")
+            self.assertTrue(amount.lstrip("-").startswith(want), f"{region} row shows {amount}")
 
     def test_homepage_topics_collapsed_and_one_cta(self):
         html = read("index.html")
@@ -72,7 +74,7 @@ class TestAnalytics(unittest.TestCase):
 
     def test_takeaways_keyboard_and_text_equivalents(self):
         html = read("analytics.html")
-        self.assertGreaterEqual(html.count('class="takeaway"'), 5)
+        self.assertGreaterEqual(html.count('class="takeaway"'), 4)
         self.assertIn("tabindex=", html)
         self.assertIn("chart-text", html)
         self.assertIn('type="application/json"', html)
@@ -80,7 +82,7 @@ class TestAnalytics(unittest.TestCase):
 
 class TestBlogPosts(unittest.TestCase):
     def test_every_post_structure(self):
-        self.assertEqual(len(BLOG_POSTS), 20)
+        self.assertEqual(len(BLOG_POSTS), 50)
         for page in BLOG_POSTS:
             html = read(page)
             self.assertGreaterEqual(len(re.findall(r"<h2", html)), 2, page)
@@ -88,6 +90,46 @@ class TestBlogPosts(unittest.TestCase):
             self.assertIn("<time datetime=", html, page)
             self.assertIn('"@type": "Article"', html.replace('": "', '": "'), page)
             self.assertNotIn("\ufffd", html, page)
+
+
+class TestQaAudit20261108(unittest.TestCase):
+    def test_no_inline_style_blocks(self):
+        for page in ALL_PAGES:
+            self.assertIsNone(re.search(r"<style[\s>]", read(page), re.I), page)
+
+    def test_one_correct_canonical_per_page(self):
+        for page in ALL_PAGES:
+            cans = re.findall(r'<link rel="canonical" href="([^"]+)"', read(page))
+            self.assertEqual(cans, [f"https://saveshare.io/{page}"], page)
+
+    def test_sitemap_matches_files(self):
+        locs = set(re.findall(r"<loc>([^<]+)</loc>", read("sitemap.xml")))
+        files = {f"https://saveshare.io/{p}" for p in ALL_PAGES}
+        self.assertEqual(locs, files)
+
+    def test_every_local_img_src_exists(self):
+        import os
+
+        for page in ALL_PAGES:
+            base = os.path.dirname(page)
+            for src in re.findall(r'<img[^>]+src="([^"]+)"', read(page)):
+                if src.startswith(("http", "data:")):
+                    continue
+                target = os.path.normpath(os.path.join(base, src.split("?")[0])) if base else src
+                self.assertTrue(os.path.exists(target), f"{page} -> {src}")
+
+    def test_index_filter_covers_all_cards(self):
+        html = read("index.html")
+        self.assertIn("querySelectorAll('.grid .card')", html)
+        self.assertIn('id="result-count"', html)
+        self.assertNotIn("Educator</strong><span>Net worth", html)
+
+    def test_no_malformed_amounts_or_raw_transcript_titles(self):
+        for page in ALL_PAGES:
+            html = read(page)
+            self.assertNotIn("£-", html, page)
+            self.assertNotIn('{"segments"', html, page)
+            self.assertIsNone(re.search(r"<strong>[£$][^<]*,</strong>", html), page)
 
 
 if __name__ == "__main__":

@@ -80,12 +80,12 @@ Avg engagement = (likes+comments+shares)/views averaged across 20 most recent vi
 | Cam | [@camrusselluk](https://www.tiktok.com/@camrusselluk) | 3.7K |
 | Georgia | [@moneywellnessgirl](https://www.tiktok.com/@moneywellnessgirl) | 9.0K | UK | Emergency fund over £2,000, goal £3,808 (self-stated 2026-10-09) |
 | Amy (Financially Her) | [@financiallyher_](https://www.tiktok.com/@financiallyher_) | 45.6K |
-| JNO | [@jno_pwnr](https://www.tiktok.com/@jno_pwnr) | 47.5K |
+| JNO | [@jno_pwnr](https://www.tiktok.com/@jno_pwnr) | 47.5K | | UK | £37K S&S ISA + ~£15K emergency fund (self-stated 2026-11-09, verified; was £30K ISA Oct) |
 | awright | [@awright.s](https://www.tiktok.com/@awright.s) | 3.3K |
 | Daniel (Gray Area Finance) | [@gray.area.finance](https://www.tiktok.com/@gray.area.finance) | 18.4K |
 | George Tuttle (accountant) | [@george_tuttle](https://www.tiktok.com/@george_tuttle) | 1.2K |
 | Kafilat | [@kafilat.finance](https://www.tiktok.com/@kafilat.finance) | 7.3K |
-| Charlie | [@wealthmadeaccessible](https://www.tiktok.com/@wealthmadeaccessible) | 43.9K | | UK | £150K saved+invested by 28 (self-stated 2026-10-21, verified 2026-10-26) |
+| Charlie | [@wealthmadeaccessible](https://www.tiktok.com/@wealthmadeaccessible) | 43.9K | | UK | £147.6K portfolio Nov update (ISA £75,134 + Invest acct; self-stated 2026-11-09, verified; was £150K Oct 26) |
 | Elly (teacher, millionaire track) | [@msellyphant](https://www.tiktok.com/@msellyphant) | 36.5K |
 | Amanda | [@amandainvests](https://www.tiktok.com/@amandainvests) | 3.4K |
 | DiDi | [@didifinance](https://www.tiktok.com/@didifinance) | 18.2K |

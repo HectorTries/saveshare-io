@@ -19,8 +19,15 @@
 <meta property="og:title" content="Money Advice from UK Creators: Quotes with Sources | SaveShare.io">
 <meta property="og:description" content="Real money advice quoted from UK TikTok creators: saving, investing, ISAs and mindset. Every quote attributed with links to creator profiles and source videos.">
 <meta property="og:url" content="https://saveshare.io/blog/index.html">
+<meta property="og:image" content="https://saveshare.io/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Money Advice from UK Creators: Quotes with Sources | SaveShare.io">
+<meta name="twitter:description" content="Real money advice quoted from UK TikTok creators: saving, investing, ISAs and mindset. Every quote attributed with links to creator profiles and source videos.">
+<meta name="twitter:image" content="https://saveshare.io/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="Real money advice quoted from UK TikTok creators: saving, investing, ISAs and mindset. Every quote attributed with links to creator profiles and source videos.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../styles.css?v=20261108b"><link rel="preload" href="../fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
@@ -41,24 +48,19 @@
 
 </div></header>
 <main id="main"><div class="wrap">
-<div class="region-toggle" role="group" aria-label="Region" style="display:flex;gap:0;border:1px solid var(--line);border-radius:9999px;overflow:hidden;width:fit-content;margin:0 auto 24px">
-<button type="button" id="reg-uk" style="border:none;background:#fff;color:var(--muted);font-weight:600;font-size:16px;padding:12px 24px;cursor:pointer;font-family:inherit">🇬🇧 UK</button>
-<button type="button" id="reg-us" style="border:none;background:#fff;color:var(--muted);font-weight:600;font-size:16px;padding:12px 24px;cursor:pointer;font-family:inherit">🇺🇸 US</button>
+<div style="width:fit-content;margin:0 auto 24px">
+<div class="region-toggle" role="group" aria-label="Region"><button type="button" id="reg-uk" class="reg-btn">🇬🇧 UK</button>
+<button type="button" id="reg-us" class="reg-btn">🇺🇸 US</button></div>
 </div>
-<script>
-(function(){var region=localStorage.getItem('ss-region')||'uk';
-function paint(){document.getElementById('reg-uk').style.background=region==='uk'?'#0F766E':'#fff';document.getElementById('reg-uk').style.color=region==='uk'?'#fff':'#475569';document.getElementById('reg-us').style.background=region==='us'?'#0F766E':'#fff';document.getElementById('reg-us').style.color=region==='us'?'#fff':'#475569';
-document.querySelectorAll('.card[data-region]').forEach(function(c){var r=c.getAttribute('data-region');c.style.display=(r==='general'||r===region)?'':'none';});}
-document.getElementById('reg-uk').addEventListener('click',function(){region='uk';localStorage.setItem('ss-region','uk');paint();});
-document.getElementById('reg-us').addEventListener('click',function(){region='us';localStorage.setItem('ss-region','us');paint();});
-paint();})();
-</script>
+
 <p>Actionable money advice quoted word for word from UK creators' own TikTok videos. Every quote links to the creator's profile and the original video, check the source yourself.</p>
-<p><span class="tag">20 advice entries</span> <span class="tag">8 creators</span> <span class="tag">14 long form guides</span> <span class="tag">Updated 7 Nov 2026</span></p>
+<p><span class="tag">50 guides and stories</span> <span class="tag">66 creators quoted</span> <span class="tag">290 sourced quotes</span> <span class="tag">Updated 8 Nov 2026</span></p>
 <h2 style="margin:32px 0 8px">Start investing</h2>
+<div class="card" data-region="general"><h2><a href="tax-wrapper-habit-five-creators.html">The Tax Wrapper Habit: Five Creators on Keeping More of What You Earn</a></h2><p>Erika Kullberg&#39;s $80,000 wrong account lesson, the 401k match and Roth IRA order of operations, and the UK cash ISA cut coming in April 2027.</p></div>
 <div class="card" data-region="general"><h2><a href="winter-arc-year-end-money-moves.html">The Winter Arc: What 5 creators do with money before January 1st</a></h2><p>Trell&#39;s 13 moves before January, Tiffany&#39;s money winter arc, Mia&#39;s autumn lock-in, and the UK tax changes coming in April 2027.</p></div>
 <div class="card" data-region="general"><h2><a href="payday-budget-system-us-uk.html">Budget by paycheck, not by month: Five creators on systems that survive real life</a></h2>
 <p>Trell's five baby steps, Kumiko Love's paycheck ritual, Tiffany Aliche on having money instead of looking like it, Tatiana's London line by line, and Mia McGrath's guardrails.</p></div>
+<div class="card" data-region="general"><h2><a href="shopping-cart-sipp-retirement.html">The Shopping Cart and the SIPP: Open the Account, Then Actually Invest It</a></h2><p>MillennialInDebt&#39;s $3.3M ultimatum, Steve&#39;s unfunded Roth warning, and five more creators on opening retirement accounts and actually investing them, US and UK</p></div>
 <div class="card" data-region="us"><h2><a href="payday-plan-day.html">Payday is plan day: Six creators on the first hour after getting paid</a></h2>
 <p>Inspired Budget's four jobs before spending, Hannah's payslip check, Danny's $3,475 split, Ciara's £100K rules and Becca's $7.07 confession.</p></div>
 <div class="card" data-region="us"><h2><a href="stop-overcomplicating-investing-today.html">Stop overcomplicating it: The tough love case for starting to invest today</a></h2>
@@ -77,12 +79,14 @@ paint();})();
 <p>A $3.3M projection, an $11M compounding receipt, a junior pension seeded at birth, the UK average at 30, and the triple lock debate.</p></div>
 <div class="card" data-region="general"><h2><a href="stealth-wealth-millionaire-habits.html">Stealth wealth: What millionaires actually wear, drive and rent</a></h2>
 <p>A $110 outfit next to a $513,000 watch collection, a renter who ran the mortgage maths, and the systems that keep quiet money growing.</p></div>
+<div class="card" data-region="uk"><h2><a href="happy-renter-data-sophie.html">Happy Renter: The Data Behind Skipping the Mortgage</a></h2><p>Sophie Blank pays £31,000 a year in rent and will not buy. McKinsey, Schroders and four fellow creators on the rent versus mortgage question.</p></div>
 <div class="card" data-region="general"><h2><a href="budgeting-systems-that-stick.html">Budgeting systems that stick: Low buy years, meal deal maths and the 90 day reset</a></h2>
 <p>Danny's low buy year and app stack, Mia's four milestones for your 20s, Gabriel's meal deal rule, Trell's 90 day reset and Jenny's planner.</p></div>
 <div class="card" data-region="uk"><h2><a href="young-grinders-start-zero.html">He invests £10 a week: Mia, Jake, Trell and the young grinders starting from zero</a></h2>
 <p>Sean's £10 weekly habit, Mia's four milestones for your 20s, Jake's £23K payoff and Trell's first $10K rule.</p></div>
 <div class="card" data-region="uk"><h2><a href="debt-to-investing-pipeline.html">From £23K debt to £400K net worth: The debt to investing pipeline</a></h2>
 <p>Hannah's payday system, Jake's £23K payoff, Neil's contributions rule and Tatiana's £400K milestone.</p></div>
+<div class="card" data-region="us"><h2><a href="daily-systems-debt-us.html">Daily Money Systems That Actually Kill Debt</a></h2><p>Six US creators on the daily money systems that clear debt, from micropayments to direct debits</p></div>
 <div class="card" data-region="us"><h2><a href="ninety-day-reset-us.html">The 90 day reset: How US creators rebuild money before January</a></h2>
 <p>Trell 13 move year end sprint, Melissa start today orders, Josue finance maxxing, Becca seven income streams.</p></div>
 <div class="card" data-region="us"><h2><a href="low-buy-year-intentional-spending-us.html">The low buy year: How US creators spend less and keep the fun</a></h2>
@@ -195,7 +199,21 @@ paint();})();
 <p>Humphrey's rent rule, Erika's $10 a day mortgage trick, Graham's cooling market and Dahlia's bank switch keys.</p></div>
 <p style="margin-top:32px"><a href="../index.html#creators">← Browse all creators</a></p>
 </div></main>
-<footer><div class="wrap"><div><a class="logo" href="../index.html">SaveShare<span>.io</span></a><p>Sourced creator directory for UK and US personal finance.</p></div><div class="foot-links"><a href="../index.html">Home</a><a href="index.html">Blog</a><a href="../analytics.html">Analytics</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a></div></div><div class="wrap"><p class="disclaimer">Disclaimer: Net worth figures shown were stated by each creator in their own TikTok content and have not been independently verified. They may be outdated. Nothing on this site constitutes financial advice. Figures are shown with attribution and a link back to the creator original account so you can check the source yourself.</p><p>© 2026 SaveShare.io. All rights reserved.</p></div></footer>
+<footer><div class="wrap"><div><a class="logo" href="../index.html">SaveShare<span>.io</span></a><p>Sourced creator directory for UK and US personal finance.</p></div><div class="foot-links"><a href="../index.html">Home</a><a href="index.html">Blog</a><a href="../analytics.html">Analytics</a></div></div><div class="wrap"><p class="disclaimer">Disclaimer: Net worth figures shown were stated by each creator in their own TikTok content and have not been independently verified. They may be outdated. Nothing on this site constitutes financial advice. Figures are shown with attribution and a link back to the creator original account so you can check the source yourself.</p><p>© 2026 SaveShare.io. All rights reserved.</p></div></footer>
 <script src="../guard.js"></script>
-<script data-site-menu>(function(){var b=document.querySelector(".nav-toggle"),n=document.getElementById("site-nav");if(!b||!n)return;b.addEventListener("click",function(){var open=n.classList.toggle("open");b.setAttribute("aria-expanded",open?"true":"false");b.setAttribute("aria-label",open?"Close menu":"Open menu");});})();</script></body>
+<script data-site-menu>(function(){var b=document.querySelector(".nav-toggle"),n=document.getElementById("site-nav");if(!b||!n)return;b.addEventListener("click",function(){var open=n.classList.toggle("open");b.setAttribute("aria-expanded",open?"true":"false");b.setAttribute("aria-label",open?"Close menu":"Open menu");});})();</script><script>(function(){
+function storeGet(){try{return localStorage.getItem('ss-region')}catch(e){return null}}
+function storeSet(v){try{localStorage.setItem('ss-region',v)}catch(e){}}
+var region=storeGet()||'uk';
+if(region!=='uk'&&region!=='us')region='uk';
+function paint(){
+document.getElementById('reg-uk').classList.toggle('active',region==='uk');
+document.getElementById('reg-us').classList.toggle('active',region==='us');
+document.querySelectorAll('.card[data-region]').forEach(function(c){var r=c.getAttribute('data-region');c.style.display=(r==='general'||r===region)?'':'none';});
+}
+document.getElementById('reg-uk').addEventListener('click',function(){region='uk';storeSet('uk');paint();});
+document.getElementById('reg-us').addEventListener('click',function(){region='us';storeSet('us');paint();});
+paint();
+})();</script>
+</body>
 </html>
