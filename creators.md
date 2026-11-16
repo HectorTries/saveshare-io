@@ -96,7 +96,7 @@ Avg engagement = (likes+comments+shares)/views averaged across 20 most recent vi
 | Mark (pensions) | [@markonthemoney](https://www.tiktok.com/@markonthemoney) | 52.4K |
 | Adam Jay (accountant) | [@adm.jay](https://www.tiktok.com/@adm.jay) | 7K |
 | Structured Life Co (debt payoff) | [@structured.life.c](https://www.tiktok.com/@structured.life.c) | 170 |
-| Will Gryba (NGPF) | [@nextgenngpf](https://www.tiktok.com/@nextgenngpf) | 37.7K |
+| Will Gryba (NGPF) | [@nextgenngpf](https://www.tiktok.com/@nextgenngpf) | 37.7K | | UK | £120K+ net worth (S&S ISA + pension + savings + business; self-stated 2026-11-14, verified; was £39.3K Oct) |
 
 ## Handle corrections (2026-10-06)
 - Sean: [@seansmoney](https://www.tiktok.com/@seansmoney) (4.1K, wrong) → [@seans.money](https://www.tiktok.com/@seans.money) (20.6K real). Net worth corrected to £165K invested (£89K pensions + £72K ISAs + £3.5K LISA, source archived video seansmoney/7675840516411395330).
