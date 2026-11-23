@@ -5,7 +5,7 @@ Source: Hector, via Telegram. Net worth figures are SELF-DESCRIBED by the creato
 | ID | Name | TikTok | Net Worth (self-described, £) |
 |----|------|--------|-------------------------------|
 | mia-rose | Mia Rose | [@miarosemcgrath](https://www.tiktok.com/@miarosemcgrath) | 200,000+ (multiple six-figure, £100K invested — Oct 2026 videos) |
-| sophie-blank | Sophie Blank | [@itssophieblank](https://www.tiktok.com/@itssophieblank) | 230,000 (Sep 2026, aiming £250K EOY — reconfirmed 2026-10-05) |
+| sophie-blank | Sophie Blank | [@itssophieblank](https://www.tiktok.com/@itssophieblank) | 240,000 (Nov 15 2026 caption "went from -£33K to £240K", corroborated Nov 7 video "have £240k invested" — verified 2026-11-23; was £230K Sep) |
 | james | James Money Stocker | [@jamesmoneystocker](https://www.tiktok.com/@jamesmoneystocker) | 209,000 |
 | trading | Trading & Traveling | [@tradingandtraveling](https://www.tiktok.com/@tradingandtraveling) | 131,000 |
 | sean | Sean | [@seansmoney](https://www.tiktok.com/@seansmoney) | 75,000 (Sep 2026, self-stated — was 122,000, corrected 2026-10-05) |
